@@ -76,10 +76,9 @@ body{
 .controls{
 	display: flex;
 	padding: 30px ;
-  width: 100%;
-  justify-content:space-between;
+  width: 100%
+	justify-content:space-between;
 }
-
 .singlecontrol{
   padding: 30px ;
   width: 100%;
@@ -148,7 +147,7 @@ hr{
   background: #9251F7;
   color: white;
 }
-
+}
 .slider:checked~.mycontent{
    animation: check 0.4s linear forwards;
     left: -100%;
@@ -429,4 +428,86 @@ a{
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button{
    -webkit-appearance:none;
+}
+.usercontent{
+  display: flex;
+  width: 300%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.multi-selector{
+    width: 100%;
+    
+    border-radius: 10px;
+    
+    align-content: left;
+    justify-content: left;
+}
+.select-field{
+    display: flex;
+    width: 300%;
+    justify-content: left;
+    background: grey;
+
+}
+.select-field,.task,.list{
+    width: 100%;
+    background-color: white;
+    padding: 0.3rem;
+}
+.list{
+  display: flex;
+    box-shadow: 0 30px 60px rgb(0,0,0,0.2);
+    display: none;
+
+}
+.down-arrow{
+    font-size: 1.2rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s linear;
+    color: black;
+}
+.task{
+    display: block;
+    padding-left: 0;
+    color: black;
+    text-align:left;
+}
+.task span{
+    float: right;
+    font-size: 0.6rem;
+    padding-top: 6px;
+}
+.task:hover{
+    background-color: aliceblue;
+}
+.show{
+    display: block;
+   
+}
+.rotate180{
+    transform: rotate(-60deg);
+
+}
+.input-selector{
+  border: none;
+  font-size: 17px;
+  width: 100%
+}
+input[type = "checbox"]{
+  display: flex;
+   align-content: left;
+    justify-content: left;
+    display: none;
+}
+.selected{
+  background: purple;
+  display: block;
+  padding-left: 0;
+  color: white;
+  text-align:left;
 }
