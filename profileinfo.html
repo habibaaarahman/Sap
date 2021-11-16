@@ -1,119 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="A description of the page and its contents"
+        />
+    
+        <link rel="stylesheet" href="style.css" />
+        <title>Profile information</title>
+    </head>
+    <body>
+      <div class="wrapper">
+         <ul class="progressbar">
+          <li class="active" id="l-1">Profile Information</li>
+        <li  id="l-2">Medical information</li>
+        <li  id="l-3">Add <br> contacts</li>
+      </ul>
+    </div>
+    <div class = "wrapper">
+        <div class = "mycontent" id = "myslide">
+            <div class="writeup">
+            <label class = "title">Personal Information</label>
+            
+            <div class = "form-container">
+              <div class="form-inner">
+               <form action="#" class="signup">
+                <div class="field">
+                     <div class = fieldname>
+                       <label class = "summary">Name</label>
+                     </div>
+                     
+                     <input type="text" placeholder="Name" required>
+                </div>
+                <div class="field">
+                     <div class = fieldname>
+                       <label class = "summary">Age</label>
+                     </div>
+                     <input type="number" placeholder="Age" required style="width:65%;" id = "Age">
+                     <div class = "ageselect">
+                       <li id ="a+" class = "agelayer" onclick="addAge()"><label class = "prompt">+</label></li>
+                       <li id ="a-"  class = "agelayer" onclick="subtractAge()"><label class = "prompt">-</label></li>
+                     </div>
+                </div>
+                <div class="field">
+                     <div class = fieldname>
+                       <label class = "summary">Gender</label>
+                     </div>
+                     <div class = "genderselect">
+                       <li id ="m-1" onclick="male()" class = "activelayer"><label>Male</label></li>
+                       <li id ="f-1" onclick="female()" class = "genderlayer"><label>Female</label></li>
+                       <li id ="o-1" onclick="other()"class = "genderlayer"><label>Other</label></li>
+                     </div>
+                </div>
+                <div class="field">
+                     <div class = fieldname>
+                       <label class = "summary">Height(m)</label>
+                     </div>
+                     <input type="number" placeholder="475" required>
+                </div>
+                <div class="field">
+                     <div class = fieldname>
+                       <label class = "summary">Weight(kg)</label>
+                     </div>
+                     <input type="number" placeholder="85" required>
+                </div>
+                <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Proceed"onclick ="proceed()">
+                </div>
+               </form>
+              </div>
+            </div>
+          </div>
+          <div class = "writeup">
+            <label class = "title">Medical Information</label>
+                <div class="multi-selector">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A description of the page and its contents" />
-
-  <link rel="stylesheet" href="style.css" />
-  <title>Profile information</title>
-</head>
-
-<body>
-  <div class="wrapper">
-    <ul class="progressbar">
-      <li class="active" id="l-1">Profile Information</li>
-      <li id="l-2">Medical information</li>
-      <li id="l-3">Add <br> contacts</li>
-    </ul>
-  </div>
-  <div class="wrapper">
-    <div class="usercontent" id="myslide">
-      <div class="form-container">
-        <div class="form-inner">
-          <form action="#" class="signup">
-            <div class="field">
-              <div class=fieldname>
-                <label class="summary">Name</label>
-              </div>
-
-              <input type="text" placeholder="Name" required>
-            </div>
-            <div class="field">
-              <div class=fieldname>
-                <label class="summary">Age</label>
-              </div>
-              <input type="number" placeholder="Age" required style="width:65%;" id="Age">
-              <div class="ageselect">
-                <li id="a+" class="agelayer" onclick="addAge()"><label class="prompt">+</label></li>
-                <li id="a-" class="agelayer" onclick="subtractAge()"><label class="prompt">-</label></li>
-              </div>
-            </div>
-            <div class="field">
-              <div class=fieldname>
-                <label class="summary">Gender</label>
-              </div>
-              <div class="genderselect">
-                <li id="m-1" onclick="male()" class="activelayer"><label>Male</label></li>
-                <li id="f-1" onclick="female()" class="genderlayer"><label>Female</label></li>
-                <li id="o-1" onclick="other()" class="genderlayer"><label>Other</label></li>
-              </div>
-            </div>
-            <div class="field">
-              <div class=fieldname>
-                <label class="summary">Height(m)</label>
-              </div>
-              <input type="number" placeholder="Height" required>
-            </div>
-            <div class="field">
-              <div class=fieldname>
-                <label class="summary">Weight(kg)</label>
-              </div>
-              <input type="number" placeholder="Weight" required>
-            </div>
-            <div class="singlecontrol">
-              <a class="gradient-button gradient-button-2" href="#" onclick="female()">Proceed</a><br />
-            </div>
-          </form>
-        </div>
+     <div class="select-field">
+<input type="text" name="" placeholder="Select all illnesses that apply" id="" class="input-selector">
+     <span class="down-arrow">&blacktriangledown;</span>
+     </div>
+<!---------List of checkboxes and options----------->
+     <div class="list" style="overflow-y:scroll;height: 200px; ">
+       <label class="title">A</label>
+       <label id="1" class="task" onclick = "select(this.id);">
+           Illness 1
+     </label>
+       <label id="2" class="task" onclick = "select(this.id);">
+            Illness 2
+     </label>
+       <label id="3" class="task" onclick = "select(this.id);">
+            Illness 3   
+     </label>
+       <label id="4" class="task" onclick = "select(this.id);">  
+        Illness 4   
+     </label>
+    <label class="title">B</label>
+           <label id="5" class="task" onclick = "select(this.id);">
+           Illness 5
+     </label>
+       <label id="6" class="task" onclick = "select(this.id);">
+            Illness 6
+     </label>
+       <label id="7" class="task" onclick = "select(this.id);">
+            Illness 7   
+     </label>
+     </div>
+      <div class ="controls">
+        <a class="gradient-button gradient-button-1" href ="#" onclick="back1()">Back</a><br />
       </div>
 
     </div>
-  </div>
-  <script>
+          </div>
+          <div class = "writeup">
+            <label class = "title">Add Contacts</label>
+          </div>
+        </div>
+    </div>
+    <script>
 
-    var m1 = document.getElementById("m-1");
-    var aplus = document.getElementById("a+");
-    var age = document.getElementById("Age");
-    var aminus = document.getElementById("a-");
-    var f1 = document.getElementById("f-1");
-    var o1 = document.getElementById("o-1");
-    function male() {
-      m1.className = "activelayer";
-      f1.className = "genderlayer";
-      o1.className = "genderlayer";
+     document.querySelector('.select-field').addEventListener('click',()=>{
+         document.querySelector('.list').classList.toggle('show');
+         
+
+     });
+     
+      var slider = document.getElementById("myslide");
+      var m1 = document.getElementById("m-1");
+      var aplus = document.getElementById("a+");
+      var age = document.getElementById("Age");
+      var aminus = document.getElementById("a-");
+      var f1 = document.getElementById("f-1");
+      var o1 = document.getElementById("o-1");
+      var l1 = document.getElementById("l-1");
+      var l2 = document.getElementById("l-2");
+      var l3 = document.getElementById("l-3");
+      function male(){
+             m1.className ="activelayer";
+             f1.className = "genderlayer";
+             o1.className = "genderlayer";
+      }
+    function female(){
+              m1.className ="genderlayer";
+             f1.className = "activelayer";
+             o1.className = "genderlayer";
     }
-    function female() {
-      m1.className = "genderlayer";
-      f1.className = "activelayer";
-      o1.className = "genderlayer";
-    }
-    function other() {
-      o1.className = "activelayer";
-      f1.className = "genderlayer";
-      m1.className = "genderlayer";
+    function other(){
+             o1.className = "activelayer";
+             f1.className = "genderlayer";
+             m1.className = "genderlayer";
     }
     function addAge() {
-      aplus.className = "activelayer";
-      aminus.className = "agelayer";
-      var a;
-      if (Age.value.length == 0) { a = 0; }
-      else { a = parseInt(Age.value); }
-
-      Age.value = a + 1;
+          aplus.className = "activelayer";
+          aminus.className = "agelayer";
+          var a;
+          if (Age.value==""){a = 0;}
+          else{ a = parseInt(Age.value);}
+          
+          Age.value = a+1;
     }
     function subtractAge() {
-      aminus.className = "activelayer";
-      aplus.className = "agelayer";
-      var a;
-      if (Age.value.length == 0) { a = 0; }
-      else { a = parseInt(Age.value); }
-      Age.value = a - 1;
+          aminus.className = "activelayer";
+          aplus.className = "agelayer";
+          var a;
+          if (Age.value==""){a = 0;}
+          else{ a = parseInt(Age.value);}
+          if(a<1){
+             aminus.className = "agelayer";
+          }
+          else{
+          Age.value = a-1;}
 
     }
-  </script>
-</body>
+    function proceed(){
+        slider.style.marginLeft ="-100%";
+        l2.className = "active";
+    }
+    function back1(){
+    slider.style.marginLeft ="0";
+    l2.className ="";
+  }
+    function select(val){
+           var item = document.getElementById(val);
+           if(item.className == "task"){
+                item.className = "selected";
+           }else{
+               item.className = "task";
+           }
+  }
+    </script>
+    </body>
 
-
-</html>
+   
+    </html>
