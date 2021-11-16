@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="A description of the page and its contents"
+        />
+        
+        <link rel="stylesheet" href="style.css" />
+        <title>Onboarding</title>
+    </head>
+    <body>
+       <div class = "wrapper">
+        <div class = "mycontent" id = "myslide">
+          <div class = "writeup">
+            <div class = "pic">
+              <img src = "1.png" width = 250px;>
+            </div>
+            <label class = "title">Keep track of your health</label>
+            <label class = "summary">Track and log your mental and physical symptoms to keep track of how you feel</label>
+          </div>
+           <div class = "writeup">
+            <div class = "pic">
+              <img src = "2.png" width = 250px;>
+            </div>
+            <label class = "title">Get access to data insights</label>
+            <label class = "summary">Better understand yourself using data and correlations drawn from other apps</label>
+          </div>
+          <div class = "writeup">
+            <div class = "pic">
+              <img src = "3.png" width = 250px;>
+            </div>
+            
+            <label class = "title">Reach your goals using plans</label>
+            <label class = "summary">Run expirements to find the perfect plan for you to track meet your health goals</label>
+          </div>
+        </div>
+        <div class = "slider-controls">
+          <input type="radio" class = "slider" id=  "s1" name = "slider-controls" value = "0" onclick="shift(this.value)" checked>
+          <input type="radio"class = "slider" id=  "s2" name="slider-controls" value = "1" onclick="shift(this.value)"  >
+         
+          <input type="radio" class = "slider" id=  "s3" name="slider-controls" value = "2" onclick="shift(this.value)" >
+         
+        </div>
+      </div>  
+       </div>
+       <div class ="controls">
+        <a class="gradient-button gradient-button-1" href ="login.html">Log in</a><br />
+<a class="gradient-button gradient-button-2" href = "signup.html">Sign up</a><br />
+       </div>
+       <div class = "wrapper">
+         <label class = "summary">By proceeding you agree to our Terms and Conditions</label>
+       </div>
+
+  <script >
+ const Slider = document.getElementById("myslide");
+  function shift(val){
+    var a = parseInt(val)*100;
+    Slider.style.marginLeft = -a + "%"
+  }
+
+    </script>
+    </body>
+   
+  
+</html>
