@@ -6,7 +6,7 @@ Including illnesses in Dropdown menu(Styling not complete)
 - Look for comment <!---------List of checkboxes and options----------->
 - When incluiding illnesses with new letter:Copy paste below code, replace "?" with alphabet
               
-              <label class="title">?</label>\
+              <label class="title">?</label>
               
               
               
