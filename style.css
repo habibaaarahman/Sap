@@ -32,8 +32,8 @@ body{
   justify-content: center;
   align-items: center;
  
-
 }
+
 .mycontent{
   position: relative;
   overflow: hidden;
@@ -66,7 +66,6 @@ body{
     font-weight: bold;
 }
 .summary{
-  padding-top: 50%;
    color: grey;
    text-align: center;
   justify-content: center;
@@ -93,6 +92,7 @@ body{
   padding: 30px;
 }
 .line-break{
+  margin-top: 50px;
   display: flex;
   text-align: center;
 }
