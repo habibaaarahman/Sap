@@ -14,7 +14,7 @@ body{
   height: 100%;
   justify-content: center;
   align-items: center;
-  background: white;
+  background:  white;
   text-align: center;
   padding: 0px;
   margin:0px;
@@ -32,8 +32,8 @@ body{
   justify-content: center;
   align-items: center;
  
-}
 
+}
 .mycontent{
   position: relative;
   overflow: hidden;
@@ -76,7 +76,7 @@ body{
 .controls{
 	display: flex;
 	padding: 30px ;
-  width: 100%;
+  width: 100%
 	justify-content:space-between;
 }
 .singlecontrol{
@@ -147,7 +147,7 @@ hr{
   background: #9251F7;
   color: white;
 }
-
+}
 .slider:checked~.mycontent{
    animation: check 0.4s linear forwards;
     left: -100%;
@@ -510,4 +510,271 @@ input[type = "checbox"]{
   padding-left: 0;
   color: white;
   text-align:left;
+}
+#profileinfo,
+#checkup,
+#goals,
+#inspiration,
+#insights,
+#navbar
+{
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width:100%;
+  height: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align:left;
+  background: #FFFFFF;
+  margin-left: 20px;
+  margin-bottom: 5px; 
+ 
+}
+
+#checkup:hover,
+#insights:hover,
+#goals:hover,
+#inspiration:hover
+{
+  
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  margin-top: 5px;
+
+}
+#profileinfo{
+  background: transparent;
+  padding: 0;
+}
+#goals{
+  min-width: 530px;
+  height: 300px;
+}
+#checkup{
+  width: 530px;
+  min-height: 300px;
+}
+#insights{
+  width: 530px;
+  min-height: 300px;
+}
+#inspiration{
+  width: 530px;
+  min-height: 300px;
+}
+
+.goalstab{
+  overflow-x: scroll;
+}
+.username{
+  text-align:left;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  width:50%;
+  margin: 0;
+}
+.profilename{
+  text-align:left;
+  color: black;
+  font-style: bold;
+  display: flex;
+  width:50%;
+  margin: 0;
+}
+.profilepic{
+text-align:right;
+justify-content: right;
+width: 50%
+}
+.profile{
+display: flex;
+justify-content: left;
+align-items: left;
+
+}
+.nav{
+  display: flex;
+
+}
+.button{
+  display: grid;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 20%
+}
+.buttonactive{
+  color: white;
+  display: grid;
+  padding: 10px;
+  border-radius: 10px;
+ justify-content: center;
+align-items: center;
+ margin-right: 10px;
+ width: 20%;
+ background-color: #8080ff;
+}
+.buttonactive img{
+ filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(114deg) brightness(104%) contrast(101%);
+}
+.button img{
+  justify-content: center;
+align-items: center; 
+}
+.button:hover{
+  display: grid;
+  color: white;
+  background-color: #8080ff;
+  padding: 10px;
+}
+.button:hover img{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(114deg) brightness(104%) contrast(101%);
+}
+.buttonactive:hover img{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(114deg) brightness(104%) contrast(101%);
+}
+.buttonactive:hover{
+  color: white;
+  display: grid;
+  padding: 10px;
+  background-color: #8080ff;
+}
+.icon{
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+}
+
+h1 {
+  color: #63B8FF;
+  text-align: center; 
+}
+.progress-circle-container{
+  display: flex;
+  width:150px;
+}
+.goalstab{
+  display: flex;
+}
+.progress-circle {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ebebeb; }
+
+.progress-circle:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-animation: colorload 2s;
+  animation: colorload 2s; }
+
+.progress-circle span {
+  font-size: 1rem;
+  color: #8b8b8b;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
+  text-align: center;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1; }
+
+.progress-circle span:after {
+  content: "%";
+  font-weight: 100;
+  color: #8b8b8b;
+}
+.progress-circle.progress-1:after {
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(198deg, pink 50%, #ebebeb 50%, #ebebeb);
+
+}
+#navbar{
+  width: 1000px;
+}
+.progress-circle.progress-1:hover {
+      background: black;
+      border:1px solid purple;
+      width: 122px;
+      height: 122px;
+}
+::-webkit-scrollbar {
+width: 5px;
+height: 5px;
+}
+
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+background:purple; 
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background:purple; 
+}
+#checkup{
+  overflow: visible;
+  min-width: 500px;
+  height: 265px;
+}
+#log{
+  position: absolute;
+  left:0;
+  width: 100%;
+  padding: 10px;
+  margin:0;
+  height: 50px;
+  bottom:0;
+ justify-content: center;
+ align-items: center; 
+ border-radius: 10px;
+}
+#log:hover{
+  height: 60px;
+}
+.avatar{
+  position: absolute;
+  left:65%;
+  bottom:25%;
+}
+.contentwrap{
+  display: flex;
+  padding: 10px;
+}
+.mini{
+  text-align:center;
+  padding: 10px;
+}
+.nav{
+  width: 100%;
+}
+.insight{
+  display: flex;
+  height: 65px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border:1px solid grey; 
 }
