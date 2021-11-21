@@ -783,7 +783,7 @@ background:purple;
 .insightFitnessPic{
   position: absolute;
   left:75%;
-  top:10%;
+  top:0%;
 }
 .contentwrap{
   display: flex;
