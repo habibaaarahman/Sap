@@ -778,7 +778,7 @@ background:purple;
 .insightPics{
   position: absolute;
   left:65%;
-  top:25%;
+  top:10%;
 }
 .contentwrap{
   display: flex;
