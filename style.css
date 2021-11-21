@@ -565,6 +565,11 @@ input[type = "checbox"]{
   min-height: 300px;
 }
 
+#Food{
+  width: 530px;
+  min-height: 300px;
+}
+
 .goalstab{
   overflow-x: scroll;
 }
