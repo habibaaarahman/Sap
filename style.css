@@ -76,7 +76,7 @@ body{
 .controls{
 	display: flex;
 	padding: 30px ;
-  width: 100%;
+  width: 100%
 	justify-content:space-between;
 }
 .singlecontrol{
@@ -147,7 +147,7 @@ hr{
   background: #9251F7;
   color: white;
 }
-
+}
 .slider:checked~.mycontent{
    animation: check 0.4s linear forwards;
     left: -100%;
@@ -595,6 +595,15 @@ display: flex;
 justify-content: left;
 align-items: left;
 
+}
+.pageTitleInsight{
+  text-align:center;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  display: flex;
+  width:40%;
+  margin: 0;
 }
 .nav{
   display: flex;
