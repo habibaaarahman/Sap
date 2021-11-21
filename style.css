@@ -596,22 +596,7 @@ justify-content: left;
 align-items: left;
 
 }
-.titleOfInsight{
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  
-  }
 
-.pageTitleInsight{
-  text-align:center;
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
-  display: flex;
-  width:40%;
-  margin: 0;
-}
 .nav{
   display: flex;
 
