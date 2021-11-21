@@ -774,6 +774,12 @@ background:purple;
   left:65%;
   bottom:25%;
 }
+
+.insightPics{
+  position: absolute;
+  left:65%;
+  bottom:0%;
+}
 .contentwrap{
   display: flex;
   padding: 10px;
