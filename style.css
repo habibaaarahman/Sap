@@ -782,8 +782,8 @@ background:purple;
 }
 .insightFitnessPic{
   position: absolute;
-  left:95%;
-  top:25%;
+  left:85%;
+  top:15%;
 }
 .contentwrap{
   display: flex;
