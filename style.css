@@ -596,6 +596,13 @@ justify-content: left;
 align-items: left;
 
 }
+.titleOfInsight{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  
+  }
+
 .pageTitleInsight{
   text-align:center;
   color: black;
