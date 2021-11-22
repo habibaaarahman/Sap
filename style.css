@@ -79,7 +79,7 @@ body{
 .controls{
 	display: flex;
 	padding: 30px ;
-  width: 100%
+  width: 100%;
 	justify-content:space-between;
 }
 .singlecontrol{
@@ -150,7 +150,7 @@ hr{
   background: #9251F7;
   color: white;
 }
-}
+
 .slider:checked~.mycontent{
    animation: check 0.4s linear forwards;
     left: -100%;
@@ -533,8 +533,8 @@ input[type = "checbox"]{
   align-items: center;
   text-align:left;
   background: #FFFFFF;
-  margin-left: 20px;
-  margin-bottom: 5px; 
+  margin-left: 10px;
+  
  
 }
 
@@ -566,8 +566,9 @@ input[type = "checbox"]{
   min-height: 300px;
 }
 #insights{
-  width: 530px;
-  min-height: 300px;
+  min-width: 530px;
+  max-height: 300px;
+  margin-top:10px;
 }
 #inspiration{
   width: 530px;
@@ -747,7 +748,7 @@ background:purple;
 #checkup{
   overflow: visible;
   min-width: 500px;
-  height: 265px;
+  height: 630px;
 }
 #log{
   position: absolute;
@@ -755,19 +756,19 @@ background:purple;
   width: 100%;
   padding: 10px;
   margin:0;
-  height: 50px;
+  height: 70px;
   bottom:0;
  justify-content: center;
  align-items: center; 
  border-radius: 10px;
 }
 #log:hover{
-  height: 60px;
+  height: 80px;
 }
 .avatar{
   position: absolute;
   left:65%;
-  bottom:25%;
+  bottom:70%;
 }
 .contentwrap{
   display: flex;
@@ -859,5 +860,11 @@ background:purple;
   margin-top: 10px; 
   color :black;
   text-align:left;
+}
+#tab2{
+display: grid;
+}
+#column{
+  display: flex;
 }
    
