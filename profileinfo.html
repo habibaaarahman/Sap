@@ -12,6 +12,11 @@
         <title>Profile information</title>
     </head>
     <body>
+        <div class = "wrapper">
+        <div width = "50%" style="text-align:left;color: blue" onclick="backButton()">
+          < Back
+        </div>
+      </div>
       <div class="wrapper">
          <ul class="progressbar">
           <li class="active" id="l-1">Profile Information</li>
@@ -80,10 +85,10 @@
 
      <div class="select-field">
 <input type="text" name="" placeholder="Select all illnesses that apply" id="" class="input-selector">
-     <span class="down-arrow">&blacktriangledown;</span>
+     <span class="down-arrow"></span>
      </div>
 <!-----------------------------------------List of checkboxes and options----------------------------------------------->
-     <div class="list" style="overflow-y:scroll;height: 200px; ">
+     <div class="list" style="overflow-y:scroll;height: 150px; ">
       <!-----------------------------A-----------------------------> 
       <label class="title">A</label>
        <label id="1" class="task" onclick = "select(this.id);">
@@ -275,8 +280,12 @@ Shortness of Breath
      </label>
       
      </div>
+      <label class ="summary">Selected:</label>
+     <div id = "mylist"class = "illnesslist"  style="height: 120px;overflow-y: scroll">
+       
+     </div>
       <div class ="controls">
-        <a class="gradient-button gradient-button-1" href ="#" onclick="back1()">Back</a><br />
+        <a class="gradient-button gradient-button-2" href ="#" onclick="proceed2()">Proceed</a><br />
       </div>
 
     </div>
@@ -295,6 +304,7 @@ Shortness of Breath
      });
      
       var slider = document.getElementById("myslide");
+      var list = document.getElementById("mylist");
       var m1 = document.getElementById("m-1");
       var aplus = document.getElementById("a+");
       var age = document.getElementById("Age");
@@ -341,18 +351,38 @@ Shortness of Breath
           Age.value = a-1;}
 
     }
+    function backButton(){
+      if (slider.style.marginLeft =="-100%"){
+        slider.style.marginLeft ="0";
+        l2.className ="";
+        l3.className ="";
+      }else if(slider.style.marginLeft =="-200%"){
+               slider.style.marginLeft ="-100%";
+               l2.className = "active" ;
+               l3.className ="";
+      }else{
+        window.location.href = "signup.html";
+      }
+    }
     function proceed(){
         slider.style.marginLeft ="-100%";
         l2.className = "active";
+        l3.className = "";
+    }
+    function proceed2(){
+        slider.style.marginLeft ="-200%";
+        l3.className = "active";
     }
     function back1(){
     slider.style.marginLeft ="0";
     l2.className ="";
+    l3.className="";
   }
     function select(val){
            var item = document.getElementById(val);
            if(item.className == "task"){
                 item.className = "selected";
+               list.innerHTML += val + "<br>";
            }else{
                item.className = "task";
            }
