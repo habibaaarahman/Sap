@@ -2,7 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 *, *:before, *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -65,25 +68,18 @@ body{
     color: Black;
     font-weight: bold;
 }
-
 .summary{
    color: grey;
    text-align: center;
   justify-content: center;
   align-items: center;
  
-}
-.foodSec{
-  color: rgb(3, 3, 3);
-  text-align: center;
- justify-content: center;
- align-items: center;
 
 }
 .controls{
 	display: flex;
 	padding: 30px ;
-  width: 100%;
+  width: 100%
 	justify-content:space-between;
 }
 .singlecontrol{
@@ -154,7 +150,7 @@ hr{
   background: #9251F7;
   color: white;
 }
-
+}
 .slider:checked~.mycontent{
    animation: check 0.4s linear forwards;
     left: -100%;
@@ -234,7 +230,7 @@ input[type="radio"]:checked:after {
   transition: all 0.3s ease;
 }
 .form-inner form .field input:focus{
-  border-color:#9251f7;
+  border-color:#9251F7;
 ;
   /* box-shadow: inset 0 0 3px #fb6aae; */
 }
@@ -466,9 +462,9 @@ input[type="number"]::-webkit-outer-spin-button{
     padding: 0.3rem;
 }
 .list{
-  display: flex;
-    box-shadow: 0 30px 60px rgb(0,0,0,0.2);
-    display: none;
+  display: block;
+   height: 500px;
+
 
 }
 .down-arrow{
@@ -523,8 +519,8 @@ input[type = "checbox"]{
 #goals,
 #inspiration,
 #insights,
-#Food,
-#navbar
+#navbar,
+#grapher
 {
   position: relative;
   overflow: hidden;
@@ -545,7 +541,8 @@ input[type = "checbox"]{
 #checkup:hover,
 #insights:hover,
 #goals:hover,
-#inspiration:hover
+#inspiration:hover,
+#grapher:hover
 {
   
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -558,6 +555,10 @@ input[type = "checbox"]{
 }
 #goals{
   min-width: 530px;
+  height: 300px;
+}
+#grapher{
+ min-width: 1030px;
   height: 300px;
 }
 #checkup{
@@ -573,13 +574,8 @@ input[type = "checbox"]{
   min-height: 300px;
 }
 
-#Food{
-  width: 530px;
-  min-height: 300px;
-}
-
 .goalstab{
-  overflow-x: scroll;
+
 }
 .username{
   text-align:left;
@@ -609,7 +605,6 @@ justify-content: left;
 align-items: left;
 
 }
-
 .nav{
   display: flex;
 
@@ -633,7 +628,7 @@ align-items: left;
 align-items: center;
  margin-right: 10px;
  width: 20%;
- background-color: #9251f7;
+ background-color: #8080ff;
 }
 .buttonactive img{
  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(114deg) brightness(104%) contrast(101%);
@@ -645,7 +640,7 @@ align-items: center;
 .button:hover{
   display: grid;
   color: white;
-  background-color: #9251f7;
+  background-color: #8080ff;
   padding: 10px;
 }
 .button:hover img{
@@ -658,7 +653,7 @@ align-items: center;
   color: white;
   display: grid;
   padding: 10px;
-  background-color: #9251f7;
+  background-color: #8080ff;
 }
 .icon{
  display: flex;
@@ -774,17 +769,6 @@ background:purple;
   left:65%;
   bottom:25%;
 }
-
-.insightFoodPic{
-  position: absolute;
-  left:75%;
-  bottom:70%;
-}
-.insightFitnessPic{
-  position: absolute;
-  left:80%;
-  top:5%;
-}
 .contentwrap{
   display: flex;
   padding: 10px;
@@ -801,5 +785,79 @@ background:purple;
   height: 65px;
   border-radius: 10px;
   margin-bottom: 10px;
-  border:1px solid grey; 
 }
+.insight:hover{
+  background-color: pink;
+  margin-top: 5px; 
+}
+.para{
+  display: grid;
+  margin-left:20px;
+}
+.diagram{
+  width: 50%;
+  justify-content: right;
+  text-align:right;
+}.illu{
+  display: flex;
+  margin-left: 20px;
+  align-content: center;
+  text-align:center;
+  justify-content: center;
+  align-items:center;
+}
+#filler{
+  height: 102px;
+}
+#details{
+  position: absolute;
+  left:10px;
+  width: 95%;
+  padding: 10px;
+  margin:0;
+  height: 50px;
+  bottom: 10px;
+ justify-content: center;
+ align-items: center; 
+ border-radius: 10px;
+}
+.block{
+  height: 50%;
+  margin-top:30px;
+  border-radius: 20px;
+ background: #E5E5E5;
+ padding: 10px;
+}
+#graphslide{
+ height: 80%;
+}
+.graphcontent{
+  width: 200%;
+  height: 75%;
+  display: flex;
+
+}
+.graphslide{
+  width: 100%;
+  display: flex;
+   height: 100%;
+   justify-content: center;
+ align-items: center; 
+ overflow: hidden;
+}
+.graph{
+  width: 25%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  padding: 10px;
+   justify-content: center;
+ align-items: center; 
+}
+
+.illnesslist{
+  margin-top: 10px; 
+  color :black;
+  text-align:left;
+}
+   
