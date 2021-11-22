@@ -63,13 +63,13 @@
                      <div class = fieldname>
                        <label class = "summary">Height(m)</label>
                      </div>
-                     <input type="number" placeholder="475" required>
+                     <input type="number" placeholder="475" required id = "weight">
                 </div>
                 <div class="field">
                      <div class = fieldname>
                        <label class = "summary">Weight(kg)</label>
                      </div>
-                     <input type="number" placeholder="85" required>
+                     <input type="number" placeholder="85" required id = "height">
                 </div>
                 <div class="field btn">
                      <div class="btn-layer"></div>
@@ -309,6 +309,9 @@ Shortness of Breath
       var m1 = document.getElementById("m-1");
       var aplus = document.getElementById("a+");
       var age = document.getElementById("Age");
+      var name = document.getElementById("name");
+      var height = document.getElementById("height");
+      var weight = document.getElementById("Age");
       var aminus = document.getElementById("a-");
       var f1 = document.getElementById("f-1");
       var o1 = document.getElementById("o-1");
@@ -366,9 +369,11 @@ Shortness of Breath
       }
     }
     function proceed(){
-        slider.style.marginLeft ="-100%";
-        l2.className = "active";
-        l3.className = "";
+        if(height.value!="" && age.value!="" && name.value!="" && weight.value!=""){
+            slider.style.marginLeft ="-100%";
+             l2.className = "active";
+              l3.className = "";
+        }
     }
     function proceed2(){
         slider.style.marginLeft ="-200%";
