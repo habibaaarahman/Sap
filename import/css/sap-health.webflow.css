@@ -231,7 +231,7 @@ a {
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto;
   grid-template-rows: auto auto;
-  background-color: #ebeaf3;
+  background-color: #eeedf3;
   font-family: Poppins, sans-serif;
   font-weight: 300;
   -o-object-fit: fill;
