@@ -167,10 +167,9 @@
 				myilnesses.push(ilnesses[val])
 			}
 			  
-			else
+			else if(item.className == "task" && id == val)
 			{
 				selected = false;
-				list.innerHTML -= myilnesses[id];
 
 				item.className = "task";
 
