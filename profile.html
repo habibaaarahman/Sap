@@ -166,20 +166,10 @@
 				}
 
 				
-				if(item.className == selected)
-				{
-					id = 0;
-					item.className = "task";
-				}
-					
-				else
-				{
-					id = val;
-					selected = true;
+				id = val;
+				selected = true;
 
-					item.className = "selected";
-				}
-
+				item.className = "selected";
 
 				myilnesses.push(ilnesses[val])
 			}
@@ -188,7 +178,7 @@
 			{
 				if(val == id)
 				{
-					item.clasName = task;
+					item.clasName = "task";
 				}
 
 				else
