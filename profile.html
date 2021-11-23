@@ -140,7 +140,6 @@
 		document.querySelector('.select-field').addEventListener('click',()=>{
 			document.querySelector('.list').classList.toggle('show');
 			
-   
 		});
 		
 		
@@ -165,6 +164,14 @@
 
 				item.className = "selected";
 				myilnesses.push(ilnesses[val])
+
+
+				list.innerHTML= "";
+
+				for (a in myilnesses)
+				{
+					list.innerHTML += myilnesses[a] + "<br>";
+				}
 			}
 			  
 			else
@@ -182,13 +189,14 @@
 				}
 
 				myilnesses.splice(a,1);
-			}
 
-			list.innerHTML= "";
 
-			for (a in myilnesses)
-			{
-				list.innerHTML += myilnesses[a] + "<br>";
+				list.innerHTML= "";
+
+				for (a in myilnesses)
+				{
+					list.innerHTML += myilnesses[a] + "<br>";
+				}
 			}
 	 }
 
