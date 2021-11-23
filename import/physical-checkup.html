@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Tue Nov 23 2021 06:49:42 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Tue Nov 23 2021 21:50:13 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="619c3dfcf650fa45d6c3915b" data-wf-site="6199562479ca2ddc30e8e28f">
 <head>
   <meta charset="utf-8">
@@ -45,10 +45,14 @@
     <div id="w-node-af6b3c05-1a56-9997-e00c-ca32e613edb1-d6c3915b" class="page-title-wrapper">
       <h1 class="heading">Physical Well Being Checkup</h1>
     </div>
-    <div id="w-node-af6b3c05-1a56-9997-e00c-ca32e613edb2-d6c3915b" class="profile-wrapper"><img src="images/matthew.png" loading="lazy" width="75" sizes="100px" srcset="images/matthew-p-500.png 500w, images/matthew.png 960w" alt="" class="image"></div>
+    <div id="w-node-af6b3c05-1a56-9997-e00c-ca32e613edb2-d6c3915b" class="profile-wrapper"><img src="images/matthew-p-500.png" loading="lazy" width="60" sizes="60px" srcset="images/matthew-p-500-p-500.png 500w, images/matthew-p-500.png 775w" alt="" class="image"></div>
     <div id="w-node-_1987673c-f1fb-f761-31e6-b3182e0a68e5-d6c3915b" class="select-symtoms-widget-wrapper top">
       <div class="widget-title-div">
         <h1 class="widget-title-heading">Select symptoms and rate severity</h1>
+      </div>
+      <div class="symptom-list-empty-state-div">
+        <div class="emoji-text">👈🏼</div>
+        <div class="text-block-6">Please select body part to start <br>seeing symptoms.</div>
       </div>
       <ol role="list" class="symptom-list w-list-unstyled">
         <li related-part="left-eye" symptom-name="fatigue" scale-id="left-eye-fatigue" class="symptom head-detail left-eye">
@@ -107,11 +111,11 @@
             </div>
           </div>
         </li>
-        <li related-part="right-eye" symptom-name="fatigue" class="symptom">
+        <li related-part="head" symptom-name="ache" scale-id="head-ache" class="symptom head">
           <div class="symptom-text">This is some text inside of a div block.</div>
           <div data-w-id="28fe3725-17b2-8a64-42f8-49a5882326ea" class="scale-submit">
             <div class="form-block w-form">
-              <form id="wf-form-scale-form" name="wf-form-scale-form" data-name="scale form" method="post" class="form"><input type="number" class="scale-field w-input" max="10" autofocus="true" maxlength="256" name="scale-2" data-name="Scale 2" min="0" placeholder="0" id="scale-2" required=""><input type="submit" value="+" data-wait="..." class="add-symptom w-button"></form>
+              <form id="wf-form-scale-form" name="wf-form-scale-form" data-name="scale form" method="post" class="form"><input type="number" class="scale-field w-input" max="10" autofocus="true" maxlength="256" name="scale-2" data-name="Scale 2" min="0" placeholder="0" id="head-ache" required=""><input type="submit" value="+" data-wait="..." class="add-symptom w-button"></form>
               <div class="success-message w-form-done">
                 <div class="success-message-text">Symptom Added</div>
               </div>
@@ -156,19 +160,25 @@
         <h1 class="widget-title-heading">Symptoms you&#x27;ve selected</h1>
       </div>
       <div id="symptoms-selected-div" class="symptoms-selected-div">
-        <p class="symptoms-selected-text test"></p>
+        <p data-w-id="94fa7911-b2f9-314a-6791-5729300315da" class="symptoms-selected-text test"></p>
       </div>
-      <a href="#" class="submit-entry-button w-button">Submit entry</a>
+      <div class="div-block-2">
+        <a href="index.html" aria-current="page" class="delete w-inline-block w--current"><img src="images/3668837.png" loading="lazy" width="20" height="20" alt="" class="back-icon">
+          <div class="delete-entry-text">Start over</div>
+        </a>
+        <link rel="prefetch" href="/">
+        <a href="#" class="submit-entry-button w-button">Submit entry</a>
+      </div>
     </div>
     <div id="w-node-b3f8fae8-b2b2-649e-95f3-b88f10a734e4-d6c3915b" class="_3d-human-widget-wrapper long">
       <div class="directions">
         <h1 class="selected-part-name">Select a body part</h1>
         <h1 class="part-name">Hovered part</h1>
       </div>
-      <a data-w-id="3079750d-b15a-0e31-25ad-91f83011f800" href="#" class="reset-selection w-inline-block"><img src="images/x-svgrepo-com.svg" loading="lazy" width="20" alt="" class="x-icon">
+      <a data-w-id="91bc99b3-671f-68a4-8b20-8b5826efa078" href="#" class="reset-selection w-inline-block"><img src="images/x-svgrepo-com.svg" loading="lazy" width="20" alt="" class="x-icon">
         <div class="reset-selection-text">Unselect part</div>
       </a>
-      <a data-w-id="02901d52-a5b4-d036-0644-dbb7d0dce108" href="#" class="back-to-start w-inline-block"><img src="images/reset-svgrepo-com.svg" loading="lazy" width="20" alt="" class="back-icon">
+      <a data-w-id="be064e99-200b-bf1d-ceb2-35877f5de780" href="#" class="back-to-start w-inline-block"><img src="images/reset-svgrepo-com.svg" loading="lazy" width="20" alt="" class="back-icon">
         <div class="back-to-start-text">Back</div>
       </a>
       <div data-w-id="92833de1-21a5-e63e-3bdd-b88fd9f88a0f" class="human">
@@ -250,6 +260,9 @@
                 </g>
               </g>
             </svg></div>
+        </a>
+        <a href="#" class="general-symptoms body w-inline-block">
+          <div class="general-symptom-text body">General</div>
         </a><img src="images/Screen-Shot-2021-11-20-at-11.26.49-PM.png" loading="lazy" sizes="(max-width: 991px) 100vw, 1070px" srcset="images/Screen-Shot-2021-11-20-at-11.26.49-PM-p-500.png 500w, images/Screen-Shot-2021-11-20-at-11.26.49-PM-p-800.png 800w, images/Screen-Shot-2021-11-20-at-11.26.49-PM-p-1080.png 1080w, images/Screen-Shot-2021-11-20-at-11.26.49-PM-p-1600.png 1600w, images/Screen-Shot-2021-11-20-at-11.26.49-PM-p-2000.png 2000w, images/Screen-Shot-2021-11-20-at-11.26.49-PM.png 2466w" alt="" class="body-img">
       </div>
       <div id="head" data-w-id="6a4d3d22-c8d3-5746-2d39-8c01ccad34a0" class="head-detail">
@@ -353,10 +366,13 @@
               </g>
             </svg></div>
         </a><img src="images/head.png" loading="lazy" sizes="100vw" srcset="images/head-p-500.png 500w, images/head-p-800.png 800w, images/head.png 979w" alt="" class="body-img">
+        <a href="#" class="general-symptoms head w-inline-block">
+          <div class="general-symptom-text head">General</div>
+        </a>
       </div>
     </div>
     <div id="w-node-_89a1d9bb-f3b4-f8bd-1ad6-67033c7daaef-d6c3915b" class="nav-wrapper">
-     <a href="../homepage.html" class="nav-buttons w-inline-block"><img src="images/home.png" loading="lazy" width="25" height="25" alt="" class="icon">
+<a href="../homepage.html" class="nav-buttons w-inline-block"><img src="images/home.png" loading="lazy" width="25" height="25" alt="" class="icon">
         <div class="tab-label">Home</div>
       </a>
       <a href="../goals.html" class="nav-buttons w-inline-block"><img src="images/goals.png" loading="lazy" width="25" height="25" alt="" class="icon">
