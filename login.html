@@ -30,7 +30,7 @@
             <div class="form-inner">
                <form action="#" class="login">
                   <div class="field">
-                     <input type="text" placeholder="Email" required>
+                     <input type="text" placeholder="Email" required id = "email">
                   </div>
                   <div class="field">
                      <input type="password" placeholder="Password" required autocomplete="current-password" required="" id="id_password">
@@ -40,7 +40,7 @@
                   </div>
                   <div class="field btn">
                      <div class="btn-layer"></div>
-                     <input type="submit" value="Log in">
+                     <input type="submit" value="Log in" onclick = "proceed()">
                   </div>
                </form>
             </div>
@@ -60,9 +60,21 @@
      </div>
 
      <div class="row-full">
-        <label>Don’t have an account?</label> <a href = "signup.html">Sign up</a>
+        <label>Don’t have an account?</label> <a href = "signup.html?#">Sign up</a>
       </div>
-         
+         <script>
+            var email = document.getElementById("email");
+            var pass1 = document.getElementById("id_password");
+        
+            
+            function proceed(){
+               if(email.value!="" &&pass1.value!="" ){
+                  window.location.href='profileinfo.html';
+               }
+            }
+            
+            
+         </script>
    </body>
     
 </html>
