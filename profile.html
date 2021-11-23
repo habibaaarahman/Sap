@@ -168,7 +168,10 @@
 				id = val;
 				selected = true;
 
-				item.className = "selected";
+				if(item.className == selected)
+					item.className = "task";
+				else
+					item.className = "selected";
 
 				myilnesses.push(ilnesses[val])
 			}
