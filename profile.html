@@ -98,6 +98,10 @@
 
 		<div class = "wrapper" id = "goals">
         	<label class = "title">Entry Information</label>
+
+			<div id="paragraph" class="entry-information">
+				<p class="entry-information-text test"></p>
+			</div>
         </div>
 
 		<div class = "wrapper" id = "goals">
@@ -145,6 +149,12 @@
 
 		var selected = false;
 		var id = 0;
+		var selectedID = 0;
+
+
+		$(".paragraph").click(function(event) {
+    	$('.entry-information').text($(this).attr('description'));
+		})
 
 	   function refresh()
 	   {
@@ -170,6 +180,7 @@
 				selected = true;
 
 				item.className = "selected";
+				selectedID = val;
 
 				myilnesses.push(ilnesses[val])
 			}
@@ -189,6 +200,7 @@
 					id = val;
 
 					item.className = "selected";
+					selectedID = val;
 
 					myilnesses.push(ilnesses[val])
 				}
