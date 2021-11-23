@@ -168,8 +168,10 @@
 				myilnesses.push(ilnesses[val])
 			}
 			  
-			else if(item.className == "selected")
+			else
 			{
+				document.getElementById(id).className = "task";
+
 				selected = false;
 
 				item.className = "task";
