@@ -555,7 +555,7 @@ input[type = "checbox"]{
 #goals{
   min-width: 530px;
   height: 300px;
-  border: 0.5px rgba(0, 0, 0, 0.5);;
+  border: 0.5px rgba(0, 0, 0, 0.5);
 }
 #grapher{
  min-width: 1030px;
@@ -564,14 +564,14 @@ input[type = "checbox"]{
 #checkup{
   width: 530px;
   min-height: 300px;
-  border: 0.5px rgba(0, 0, 0, 0.5);;
+  border: 0.5px rgba(0, 0, 0, 0.5);
 
 }
 #insights{
   min-width: 530px;
   max-height: 300px;
   margin-top:10px;
-  border: 0.5px rgba(0, 0, 0, 0.5);;
+  border: 0.5px rgba(0, 0, 0, 0.5);
 
 }
 #inspiration{
