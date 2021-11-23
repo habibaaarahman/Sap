@@ -34,7 +34,6 @@ body{
   border-radius: 20px;
   justify-content: center;
   align-items: center;
-  border: 0.5px rgba(0, 0, 0, 0.5);;
 }
 
 .mycontent{
@@ -556,6 +555,7 @@ input[type = "checbox"]{
 #goals{
   min-width: 530px;
   height: 300px;
+  border: 0.5px rgba(0, 0, 0, 0.5);;
 }
 #grapher{
  min-width: 1030px;
@@ -564,11 +564,15 @@ input[type = "checbox"]{
 #checkup{
   width: 530px;
   min-height: 300px;
+  border: 0.5px rgba(0, 0, 0, 0.5);;
+
 }
 #insights{
   min-width: 530px;
   max-height: 300px;
   margin-top:10px;
+  border: 0.5px rgba(0, 0, 0, 0.5);;
+
 }
 #inspiration{
   width: 530px;
@@ -629,7 +633,7 @@ align-items: left;
 align-items: center;
  margin-right: 10px;
  width: 20%;
- background-color: #8080ff;
+ background-color: #9251F7;
 }
 .buttonactive img{
  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(114deg) brightness(104%) contrast(101%);
