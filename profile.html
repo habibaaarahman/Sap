@@ -170,14 +170,22 @@
 			  
 			else
 			{
-				document.getElementById(id).className = "task";
+				if(val == id)
+				{
+					item.clasName = task;
+				}
 
-				item.className = "selected";
+				else
+				{
+					document.getElementById(id).className = "task";
 
-				myilnesses.push(ilnesses[val])
+					item.className = "selected";
 
+					myilnesses.push(ilnesses[val])
+				}
+				
 				selected = false;
-
+				
 
 				for( a in myilnesses)
 				{
