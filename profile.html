@@ -160,11 +160,16 @@
 
 			if(item.className == "task" && !selected)
 			{
-				if(id != 0 || id == val)
+				if(id != 0)
 				{
 					document.getElementById(id).className = "task";
 				}
 				
+				if(id = val)
+				{
+					item.className = "task";	
+				}
+
 				else
 				{
 					id = val;
