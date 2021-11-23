@@ -645,7 +645,7 @@ align-items: center;
 .button:hover{
   display: grid;
   color: white;
-  background-color: #8080ff;
+  background-color: #9251F7;
   padding: 10px;
 }
 .button:hover img{
