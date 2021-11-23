@@ -170,9 +170,12 @@
 
 	   function select(val){
 			  var item = document.getElementById(val);
-			  
-			  if(item.className == "task")
+			  var cond = false;
+
+			  if(item.className == "task" && !cond)
 			  {
+				  cond = true;
+
 				   item.className = "selected";
 				   myilnesses.push(ilnesses[val])
 				   list.innerHTML= "";
@@ -186,6 +189,8 @@
 			  
 			  else
 			  {
+				  cond = false;
+				  
 				  item.className = "task";
 
 				  for( a in myilnesses)
