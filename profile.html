@@ -32,7 +32,7 @@
 	</div>
 
 	
-	<div class = "wrapper" id = "checkup">
+	<div class = "wrapper" id = "goals">
 
         <label class = "title">Log History</label>
             <div class="multi-selector">
@@ -65,22 +65,21 @@
        <label id="5" class="task" onclick = "select(this.id);">
             11/18/21 - Reported difficulty focusing
      </label>
+
+	 <script>
+
+		document.querySelector('.select-field').addEventListener('click',()=>{
+			document.querySelector('.list').classList.toggle('show');
+			
+		});
+   
+		</script>
 	 
      </div>
 	 
 
     </div>
           </div>
-
-    <script>
-
-     document.querySelector('.select-field').addEventListener('click',()=>{
-         document.querySelector('.list').classList.toggle('show');
-         
-
-     });
-
-	 </script>
 
 	</div>
 
