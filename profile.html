@@ -160,102 +160,31 @@
 		 var l1 = document.getElementById("l-1");
 		 var l2 = document.getElementById("l-2");
 		 var l3 = document.getElementById("l-3");
-		 function male(){
-				m1.className ="activelayer";
-				f1.className = "genderlayer";
-				o1.className = "genderlayer";
-		 }
-	   function female(){
-				 m1.className ="genderlayer";
-				f1.className = "activelayer";
-				o1.className = "genderlayer";
-	   }
-	   function other(){
-				o1.className = "activelayer";
-				f1.className = "genderlayer";
-				m1.className = "genderlayer";
-	   }
-	   function addAge() {
-			 aplus.className = "activelayer";
-			 aminus.className = "agelayer";
-			 var a;
-			 if (Age.value==""){a = 0;}
-			 else{ a = parseInt(Age.value);}
-			 
-			 Age.value = a+1;
-	   }
-	   function subtractAge() {
-			 aminus.className = "activelayer";
-			 aplus.className = "agelayer";
-			 var a;
-			 if (Age.value==""){a = 0;}
-			 else{ a = parseInt(Age.value);}
-			 if(a<1){
-				aminus.className = "agelayer";
-			 }
-			 else{
-			 Age.value = a-1;}
-   
-	   }
-	   function backButton(){
-		 if (slider.style.marginLeft =="-100%"){
-		   slider.style.marginLeft ="0";
-		   l2.className ="";
-		   l3.className ="";
-		 }else if(slider.style.marginLeft =="-200%"){
-				  slider.style.marginLeft ="-100%";
-				  l2.className = "active" ;
-				  l3.className ="";
-		 }else{
-		   window.location.href = "signup.html";
-		 }
-	   }
-	   function proceed(){
-		   if(height.value!="" && age.value!="" && name.value!="" && weight.value!=""){
-			   slider.style.marginLeft ="-100%";
-				l2.className = "active";
-				 l3.className = "";
-		   }
-	   }
-	   function proceed2(){
-		   slider.style.marginLeft ="-200%";
-		   l3.className = "active";
-	   }
-	   function back1(){
-	   slider.style.marginLeft ="0";
-	   l2.className ="";
-	   l3.className="";
-	 }
+
+
 	   function refresh(){
 					  docname.value = "";
 					  docem.value = "";
 					  docnum.value = "";
 	   }
+
 	   function select(val){
 			  var item = document.getElementById(val);
-			  if(item.className == "task"){
+
+			  if(item.className == "task")
+			  {
 				   item.className = "selected";
 				   myilnesses.push(ilnesses[val])
 				   list.innerHTML= "";
+
 				   for (a in myilnesses)
 				   {
 					 list.innerHTML += myilnesses[a] + "<br>";
 				   }
 				  
-			  }else{
-				  item.className = "task";
-				  for( a in myilnesses){
-				   if(myilnesses[a] == ilnesses[val]){break;}
-				  }
-				  myilnesses.splice(a,1);
-				  list.innerHTML= "";
-				   for (a in myilnesses)
-				   {
-					 list.innerHTML += myilnesses[a] + "<br>";
-				   }
-   
 			  }
 	 }
+
 	   </script>
 </body>
 </html>
