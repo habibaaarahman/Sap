@@ -161,14 +161,15 @@
       	var l2 = document.getElementById("l-2");
       	var l3 = document.getElementById("l-3");
 		var selected = false;
-		var id = 0;
 
 
-	   function refresh(){
-					  docname.value = "";
-					  docem.value = "";
-					  docnum.value = "";
+	   function refresh()
+	   {
+			docname.value = "";
+			docem.value = "";
+			docnum.value = "";
 	   }
+
 
 	   function select(val)
 	   {
@@ -176,7 +177,6 @@
 
 			if(item.className == "task" && !cond)
 			{
-				id = val;
 				selected = true;
 
 				item.className = "selected";
