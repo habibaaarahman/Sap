@@ -31,17 +31,17 @@
             <div class="form-inner">
                <form action="#" class="login">
                   <div class="field">
-                     <input type="text" placeholder="Email" required>
+                     <input type="text" placeholder="Email" required id ="email">
                   </div>
                   <div class="field">
                      <input type="password" placeholder="Password" required autocomplete="current-password" required="" id="id_password">
                   </div>
                   <div class="field">
-                     <input type="password" placeholder="Confirm Password" required autocomplete="current-password" required="" id="id_password">
+                     <input type="password" placeholder="Confirm Password" required autocomplete="current-password" required="" id="id_confirm_password">
                   </div>
                   <div class="field btn">
                      <div class="btn-layer"></div>
-                     <input type="submit" value="Sign up" onclick="location.href = 'profileinfo.html?#'">
+                     <input type="submit" value="Sign up" onclick="location.href = 'proceed()'">
                   </div>
                </form>
             </div>
@@ -63,7 +63,19 @@
      <div class="row-full">
         <label>Have an account?</label> <a href="login.html">Log in</a>
       </div>
-         
+         <script>
+            var email = document.getElementById("email");
+            var pass1 = document.getElementById("id_password");
+            var pass2 = document.getElementById("id_confirm_password");
+            
+            function proceed(){
+               if(email.value!="" &&pass1.value!="" &&pass2.value!="" ){
+                  window.location.href='profileinfo.html';
+               }
+            }
+            
+            
+         </script>
    </body>
     
 </html>
