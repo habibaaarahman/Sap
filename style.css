@@ -539,6 +539,7 @@ input[type = "checbox"]{
 
 #checkup:hover,
 #insights:hover,
+#keyinsights:hover,
 #goals:hover,
 #inspiration:hover,
 #grapher:hover
@@ -567,6 +568,12 @@ input[type = "checbox"]{
 #insights{
   min-width: 530px;
   max-height: 300px;
+  margin-top:10px;
+}
+
+#keyinsights{
+  min-width: 530px;
+  max-height: 500px;
   margin-top:10px;
 }
 #inspiration{
