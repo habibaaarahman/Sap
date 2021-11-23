@@ -154,38 +154,42 @@
 					  docnum.value = "";
 	   }
 
-	   function select(val){
-			  var item = document.getElementById(val);
+	   function select(val)
+	   {
+			var item = document.getElementById(val);
 
-			  if(item.className == "task" && !cond)
-			  {
-				  id = val;
-				  selected = true;
+			if(item.className == "task" && !cond)
+			{
+				id = val;
+				selected = true;
 
-				   item.className = "selected";
-				   myilnesses.push(ilnesses[val])
-			  }
+				item.className = "selected";
+				myilnesses.push(ilnesses[val])
+			}
 			  
-			  else
-			  {
-				  selected = false;
+			else
+			{
+				selected = false;
 
-				  item.className = "task";
+				item.className = "task";
 
-				  for( a in myilnesses)
-				  {
-				   if(myilnesses[a] == ilnesses[val]){break;}
-				  }
-
-				  myilnesses.splice(a,1);
-			  }
-
-			  list.innerHTML= "";
-
-			   for (a in myilnesses)
+				for( a in myilnesses)
 				{
-					list.innerHTML += myilnesses[a] + "<br>";
+					if(myilnesses[a] == ilnesses[val])
+					{
+						break;
+					}
 				}
+
+				myilnesses.splice(a,1);
+			}
+
+			list.innerHTML= "";
+
+			for (a in myilnesses)
+			{
+				list.innerHTML += myilnesses[a] + "<br>";
+			}
 	 }
 
 	   </script>
