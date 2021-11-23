@@ -137,31 +137,14 @@
 	<script>
 		var ilnesses  = ["Allergies","Anxiety","Athritis","Asthma","Binge Eating","Breast Cancer","Bulimia","Chest Pain"];
 		var myilnesses = [];
+
 		document.querySelector('.select-field').addEventListener('click',()=>{
-			document.querySelector('.list').classList.toggle('show');
-			
+			document.querySelector('.list').classList.toggle('show');	
 		});
 		
-		
-		var slider = document.getElementById("myslide");
-      	var list = document.getElementById("mylist");
-      	var m1 = document.getElementById("m-1");
-       	var docname = document.getElementById("docname");
-       	var docem = document.getElementById("docem");
-       	var docnum = document.getElementById("docnum");
-      	var aplus = document.getElementById("a+");
-      	var age = document.getElementById("Age");
-      	var name = document.getElementById("name");
-      	var height = document.getElementById("height");
-      	var weight = document.getElementById("Age");
-      	var aminus = document.getElementById("a-");
-      	var f1 = document.getElementById("f-1");
-      	var o1 = document.getElementById("o-1");
-      	var l1 = document.getElementById("l-1");
-      	var l2 = document.getElementById("l-2");
-      	var l3 = document.getElementById("l-3");
-		var selected = false;
 
+		var selected = false;
+		var id = 0;
 
 	   function refresh()
 	   {
@@ -170,13 +153,14 @@
 			docnum.value = "";
 	   }
 
-
+	   
 	   function select(val)
 	   {
 			var item = document.getElementById(val);
 
-			if(item.className == "task" && !cond)
+			if(item.className == "task" && !selected)
 			{
+				id = val;
 				selected = true;
 
 				item.className = "selected";
