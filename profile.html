@@ -20,21 +20,7 @@
 	<div class = contentwrap>
 	<div class = "wrapper" id = "checkup">
 		<label class = "title" width="100%">Log Entries</label>
-		<br>
-		<br>
-		<label class = "foodSec" >Add entries of your symptoms <br> to gain new insights from your log</label>
-		
-		<a class="gradient-button gradient-button-2" onclick = "location.href='import/physical-checkup.html';" id="log">Add new entry</a><br/>
-
-		<div class = "avatar">
-			<img class="logo" src="1.png" width = "200px">
-		</div>
-	</div>
-
-	
-	<div class = "wrapper" id = "goals">
-
-        <label class = "title">Log History</label>
+		<label class = "title">Log History</label>
             <div class="multi-selector">
 
      <div class="select-field">
@@ -65,15 +51,6 @@
        <label id="5" class="task" onclick = "select(this.id);">
             11/18/21 - Reported difficulty focusing
      </label>
-
-	 <script>
-
-		document.querySelector('.select-field').addEventListener('click',()=>{
-			document.querySelector('.list').classList.toggle('show');
-			
-		});
-   
-		</script>
 	 
      </div>
 	 
@@ -81,7 +58,29 @@
     </div>
           </div>
 
+    <script>
+
+     document.querySelector('.select-field').addEventListener('click',()=>{
+         document.querySelector('.list').classList.toggle('show');
+         
+	 });
+
+	 </script>
+
 	</div>
+		<label class = "foodSec" >Add entries of your symptoms <br> to gain new insights from your log</label>
+		
+		<a class="gradient-button gradient-button-2" onclick = "location.href='import/physical-checkup.html';" id="log">Add new entry</a><br/>
+
+		<div class = "avatar">
+			<img class="logo" src="1.png" width = "200px">
+		</div>
+	</div>
+
+	
+	<div class = "wrapper" id = "goals">
+
+        
 
 </div>
 
