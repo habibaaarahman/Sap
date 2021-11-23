@@ -295,22 +295,29 @@ Shortness of Breath
               <label class = "summary">You can add your doctors information to send them reports through the app</label>
                <div class = "form-container">
                     <div class="form-inner">
-                        <form action="#" class="signup" id = "myform">
-                            <label>Doctor name</label>
-                                <br>
+                        <form action="#" class="signup" >
+                            <div class = fieldname>
+                       <label class = "summary">Doctor Name</label>
+                     </div>
+                            <br>
                             <div class="field">
                                  <input type="text" placeholder="Full Name" id = "docname">
                             </div>
-                            <label>Doctor email</label>
+                            <div class = fieldname>
+                       <label class = "summary">Doctor Email</label>
+                     </div>
                                 <br>
                             <div class="field">
                                  <input type="text" placeholder="email@email.com"id = "docem>
                             </div>
-                            <label>Doctor Phone number</label>
+                            <div class = fieldname>
+                       <label class = "summary">Doctor Phone Number</label>
+                     </div>
                                 <br>
                             <div class="field">
                                  <input type="number" placeholder="+1204234567" id ="docnum">
                             </div>
+                             <br>
                             <a onclick = "refresh()">Add another contact </a>
                         </form>
                      </div>
