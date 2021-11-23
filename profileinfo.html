@@ -296,29 +296,25 @@ Shortness of Breath
                <div class = "form-container">
                     <div class="form-inner">
                         <form action="#" class="signup" >
-                            <div class = fieldname>
-                       <label class = "summary">Doctor Name</label>
-                     </div>
-                            <br>
+                            <div class = "fieldname">
+                                <label class = "summary">Doctor Name</label>
+                            </div>
                             <div class="field">
                                  <input type="text" placeholder="Full Name" id = "docname">
                             </div>
-                            <div class = fieldname>
-                       <label class = "summary">Doctor Email</label>
-                     </div>
-                                <br>
+                            <div class = "fieldname">
+                                <label class = "summary">Doctor Email</label>
+                            </div>
                             <div class="field">
                                  <input type="text" placeholder="email@email.com"id = "docem>
                             </div>
-                            <div class = fieldname>
-                       <label class = "summary">Doctor Phone Number</label>
-                     </div>
-                                <br>
+                            <div class = "fieldname">
+                                 <label class = "summary">Doctor Phone Number</label>
+                             </div>   
                             <div class="field">
                                  <input type="number" placeholder="+1204234567" id ="docnum">
                             </div>
-                             <br>
-                            <a onclick = "refresh()">Add another contact </a>
+                             <a onclick = "refresh()">Add another contact </a>
                         </form>
                      </div>
               </div>
@@ -327,7 +323,7 @@ Shortness of Breath
         </div>
     </div>
     <script>
-     var ilnesses  = ["A","B","C","D","E","F"];
+     var ilnesses  = ["Allergies","Anxiety","Athritis","Asthma","E","F"];
      var myilnesses = [];
      document.querySelector('.select-field').addEventListener('click',()=>{
          document.querySelector('.list').classList.toggle('show');
