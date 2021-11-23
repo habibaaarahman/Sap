@@ -160,6 +160,7 @@
 		 var l1 = document.getElementById("l-1");
 		 var l2 = document.getElementById("l-2");
 		 var l3 = document.getElementById("l-3");
+		 var cond = false;
 
 
 	   function refresh(){
@@ -170,7 +171,6 @@
 
 	   function select(val){
 			  var item = document.getElementById(val);
-			  var cond = false;
 
 			  if(item.className == "task" && !cond)
 			  {
@@ -190,7 +190,7 @@
 			  else
 			  {
 				  cond = false;
-				  
+
 				  item.className = "task";
 
 				  for( a in myilnesses)
