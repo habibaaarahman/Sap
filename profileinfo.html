@@ -295,22 +295,23 @@ Shortness of Breath
               <label class = "summary">You can add your doctors information to send them reports through the app</label>
                <div class = "form-container">
                     <div class="form-inner">
-                        <form action="#" class="signup">
-                            <label class ="summary">Doctor name</label>
+                        <form action="#" class="signup" id = "myform">
+                            <label>Doctor name</label>
                                 <br>
                             <div class="field">
-                                 <input type="text" placeholder="Full Name">
+                                 <input type="text" placeholder="Full Name" id = "docname">
                             </div>
-                            <label class ="summary">Doctor email</label>
+                            <label>Doctor email</label>
                                 <br>
                             <div class="field">
-                                 <input type="text" placeholder="email@email.com">
+                                 <input type="text" placeholder="email@email.com"id = "docem>
                             </div>
-                            <label class ="summary">Doctor Phone number</label>
+                            <label>Doctor Phone number</label>
                                 <br>
                             <div class="field">
-                                 <input type="number" placeholder="+1204234567">
+                                 <input type="number" placeholder="+1204234567" id ="docnum">
                             </div>
+                            <a onclick = "refresh()">Add another contact </a>
                         </form>
                      </div>
               </div>
@@ -330,6 +331,9 @@ Shortness of Breath
       var slider = document.getElementById("myslide");
       var list = document.getElementById("mylist");
       var m1 = document.getElementById("m-1");
+       var docname = document.getElementById("docname");
+       var docem = document.getElementById("docem");
+       var docnum = document.getElementById("docnum");
       var aplus = document.getElementById("a+");
       var age = document.getElementById("Age");
       var name = document.getElementById("name");
@@ -407,6 +411,11 @@ Shortness of Breath
     l2.className ="";
     l3.className="";
   }
+    function refresh{
+                   docname.value = "";
+                   docem.value = "";
+                   docnum.value = "";
+    }
     function select(val){
            var item = document.getElementById(val);
            if(item.className == "task"){
