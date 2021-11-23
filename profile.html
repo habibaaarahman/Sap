@@ -164,13 +164,16 @@
 				{
 					document.getElementById(id).className = "task";
 				}
+				
+				else
+				{
+					id = val;
+					selected = true;
 
-				id = val;
-				selected = true;
+					item.className = "selected";
 
-				item.className = "selected";
-
-				myilnesses.push(ilnesses[val])
+					myilnesses.push(ilnesses[val])
+				}
 			}
 			  
 			else
