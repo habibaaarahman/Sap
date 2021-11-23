@@ -1,0 +1,55 @@
+<script>
+    
+$('.body-part').mouseenter(function() {
+$('.part-name').text("Hovering over: " + $(this).attr('part-name')); 
+});
+
+
+$('.body-part').mouseleave(function() {
+$('.part-name').text('No hovered part'); 
+});
+
+$(".body-part").click(function(event) {
+          $('.selected-part-name').text($(this).attr('part-name'));
+})
+
+ $(".body-part").click(function (event) {
+        // remove classes from all
+        $('.part').find('path').removeClass('override'); //line changed to remove back-Active from all
+        // add class to the one we clicked
+        $(this).find('.part').find('path').toggleClass("override"); //this line changed to add back-Active to only current element
+    });
+    
+ $(".reset-selection").click(function (event) {
+      $('.part').find('path').removeClass('override'); //line changed to remove back-Active from all
+                  $('.selected-part-name').text('Select a body part');  
+    });
+ 
+ $('#scale').keydown(function (e) {
+    if (e.keyCode == 13) {
+        e.preventDefault();
+        return false;
+    }
+});
+
+  $('.add-symptom').click(function() { 
+    var $this = $(this);
+    var scaleID = $this.closest('.symptom').attr('scale-id').toString();
+
+    setTimeout(function() { 
+         if(($this.closest('.form').siblings('.error-message').css('display')) == 'block'){
+             $this.closest('.symptom').addClass('click-override');
+             $("#symptoms-selected-div").prepend($('.symptoms-selected-text:first-child').clone().removeClass('test').text(($this.closest('.symptom').attr('related-part') + " : " + ($this.closest('.symptom').attr('symptom-name')) + " (" + document.getElementById(scaleID).value + ")")))
+             };
+    }, 500);
+    });
+
+  $('.symptoms-selected-text').click(function() { 
+    var $this = $(this);
+    var scaleID = $this.attr('scale-id').toString();
+    $("#symptoms-selected-div").remove($('.symptoms-selected-text:first-child').clone().removeClass('test').text(($this.closest('.symptom').attr('related-part') + " : " + ($this.closest('.symptom').attr('symptom-name')) + " (" + document.getElementById(scaleID).value + ")")))
+    });
+
+
+
+</script>

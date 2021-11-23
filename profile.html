@@ -9,7 +9,7 @@
   <title>Profile</title>
 </head>
 
-<body style="background:#eeedf3;display: grid;">
+<body style="background:#f0effa;display: grid;">
 
 	<div class = "contentwrap">
 	<div class = "wrapper" id = "profileinfo">
@@ -35,7 +35,7 @@
 
 		<div class= "multi-selector">
 		<div class = "select-field">
-			<label class = "summary" >Click on a date to see entry info and key insights</label>
+			<input type = "text" name ="" placeholder= "Click on a date to see entry info and key insights" id = "" class = "input-selector">
 				 </div>
 			<!---------List of checkboxes and options----------->
 				 <div class = "list" style = "overflow-y:scroll;height: 300px; ">
@@ -98,10 +98,6 @@
 
 		<div class = "wrapper" id = "goals">
         	<label class = "title">Entry Information</label>
-
-			<div id="paragraph" class="entry-information">
-				<p class="entry-information-text test"></p>
-			</div>
         </div>
 
 		<div class = "wrapper" id = "goals">
@@ -149,12 +145,6 @@
 
 		var selected = false;
 		var id = 0;
-		var selectedID = 0;
-
-
-		$(".1").click(function(event) {
-    	$('.entry-information').text($(this).attr('description'));
-		})
 
 	   function refresh()
 	   {
@@ -168,43 +158,21 @@
 	   {
 			var item = document.getElementById(val);
 
-			if(!selected)
+			if(item.className == "task" && !selected)
 			{
-				if(id != 0)
-				{
-					document.getElementById(id).className = "task";
-				}
-
-
 				id = val;
 				selected = true;
 
 				item.className = "selected";
-				selectedID = val;
 
 				myilnesses.push(ilnesses[val])
 			}
 			  
-			else
+			else if(item.className == "selected")
 			{
-				if(val == id)
-				{
-					selected = false;
+				selected = false;
 
-					item.clasName = "task";
-				}
-
-				else
-				{
-					document.getElementById(id).className = "task";
-					id = val;
-
-					item.className = "selected";
-					selectedID = val;
-
-					myilnesses.push(ilnesses[val])
-				}
-
+				item.className = "task";
 
 				for( a in myilnesses)
 				{
