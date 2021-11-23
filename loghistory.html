@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A description of the page and its contents" />
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Profile</title>
+</head>
+
+<body style="background:#eeedf3;display: grid;">
+
+	<div class = "contentwrap">
+	<div class = "wrapper" id = "profileinfo">
+
+		<div class = "profile">
+			<div class = "username">Your Log</div>
+		</div>
+
+	</div>
+
+		<div class = profilepic>
+			<img class = "logo" src="matthew.png" width = "100px">
+		</div>
+	</div>
+
+	<div class = contentwrap>
+	<div class = "wrapper" id = "checkup">
+		<label class = "title" width="100%">Log Entries</label>
+		<br>
+		<br>
+		<label class = "profilename">Add and review entries of your symptoms to gain new insights from your log</label>
+		<br> 
+
+		<div class= "multi-selector">
+		<div class = "select-field">
+			<input type = "text" name ="" placeholder= "Click on a date to see entry info and key insights" id = "" class = "input-selector">
+				 </div>
+			<!---------List of checkboxes and options----------->
+				 <div class = "list" style = "overflow-y:scroll;height: 300px; ">
+				   <label class = "title"></label>
+			
+				   <label id = "1" class = "task" onclick = "select(this.id);">
+					11/01/21 - Reported headaches 
+				</label>
+			
+				  <label id = "2" class = "task" onclick = "select(this.id);">  
+					11/03/21 - Reported nausea
+				  </label>
+			
+				   <label id = "3" class = "task" onclick = "select(this.id);">
+						11/16/21 - Reported achiness  
+				 </label>
+			
+				 <label class = "title"></label>
+					   <label id = "4" class= "task" onclick = "select(this.id);">
+					   11/17/21 - Reported stomach pain
+				 </label>
+			
+				   <label id = "5" class = "task" onclick = "select(this.id);">
+						11/18/21 - Reported difficulty focusing
+				 </label>
+			
+				 <label id = "5" class = "task" onclick = "select(this.id);">
+					11/18/21 - Reported difficulty focusing
+				 </label>
+			
+				 <label id = "5" class = "task" onclick = "select(this.id);">
+					11/18/21 - Reported difficulty focusing
+				</label>
+			
+				<label id = "5" class = "task" onclick = "select(this.id);">
+					11/18/21 - Reported difficulty focusing
+				</label>
+			
+				<label id = "5" class = "task" onclick = "select(this.id);">
+					11/18/21 - Reported difficulty focusing
+				</label>
+			
+				<label id = "5" class = "task" onclick = "select(this.id);">
+					11/18/21 - Reported difficulty focusing
+				</label>
+				 
+				 </div>
+
+		</div>
+		
+		<a class= "gradient-button gradient-button-2" onclick = "location.href='import/physical-checkup.html';" id="log">Add new entry</a><br/>
+
+		<div class = "avatar">
+			<img class="logo" src="1.png" width = "200px">
+		</div>
+	</div>
+
+	
+	<div class = "contentwrap" id = tab2>
+
+		<div class = "wrapper" id = "goals">
+        	<label class = "title">Entry Information</label>
+        </div>
+
+		<div class = "wrapper" id = "insights">
+			<label class = "title">Key Insights</label>
+		</div>
+	</div>
+</div>
+
+
+</div>
+
+
+	<div class = "contentwrap">
+		<div class = "nav">
+			<div class="button" onclick = "location.href='homepage.html';">
+				<div class = "icon"><img src="home.png" width = "30px"></div>
+				<label>Home</label>
+		    </div>
+			<div class="button" onclick = "location.href='goals.html';">
+				<div class = "icon"><img src="goals.png" width = "30px" ></div>
+				<label>Goals</label>
+			</div>
+			<div class="button" onclick = "location.href='insight.html';">
+				<div class = "icon"><img src="insight.png" width = "30px"></div>
+				<label>Insight</label>
+			</div>
+			<div class="button" onclick = "location.href='import/physical-checkup.html';">
+				<div class = "icon"><img src="checkup.png" width = "30px"></div>
+				<label>Checkup</label>
+			</div>
+			<div class="buttonactive">
+				<div class = "icon"><img src="profile.png" width = "30px"></div>
+				<label>Log History</label>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
