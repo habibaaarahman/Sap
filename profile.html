@@ -170,7 +170,7 @@
 
 	   function select(val){
 			  var item = document.getElementById(val);
-
+			  
 			  if(item.className == "task")
 			  {
 				   item.className = "selected";
@@ -182,6 +182,26 @@
 					 list.innerHTML += myilnesses[a] + "<br>";
 				   }
 				  
+			  }
+			  
+			  else
+			  {
+				  item.className = "task";
+
+				  for( a in myilnesses)
+				  {
+				   if(myilnesses[a] == ilnesses[val]){break;}
+				  }
+
+				  myilnesses.splice(a,1);
+
+
+				  list.innerHTML= "";
+
+				   for (a in myilnesses)
+				   {
+					 list.innerHTML += myilnesses[a] + "<br>";
+				   }
 			  }
 	 }
 
