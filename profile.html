@@ -159,13 +159,7 @@
 			var item = document.getElementById(val);
 
 			if(!selected)
-			{
-				if(id != 0)
-				{
-					document.getElementById(id).className = "task";
-				}
-
-				
+			{				
 				id = val;
 				selected = true;
 
@@ -178,9 +172,8 @@
 			{
 				if(val == id)
 				{
-					id = 0;
 					selected = false;
-					
+
 					item.clasName = "task";
 				}
 
