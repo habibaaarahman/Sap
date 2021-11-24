@@ -40,7 +40,7 @@
                   </div>
                   <div class="field btn">
                      <div class="btn-layer"></div>
-                     <input type="submit" value="Log in" onclick = "proceed()">
+                     <input type="button" value="Log in" onclick = "proceed()">
                   </div>
                </form>
             </div>
@@ -69,7 +69,7 @@
             
             function proceed(){
                if(email.value!="" &&pass1.value!="" ){
-                  document.location.href = "homepage.html",true;
+                  window.location.replace("homepage.html);
                   
                }
             }
