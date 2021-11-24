@@ -907,6 +907,6 @@ display: grid;
 }
 .avatar2{
   position: absolute;
-  left: 95%;
-  bottom: 95%;
+  left: 75%;
+  bottom: 75%;
 }
