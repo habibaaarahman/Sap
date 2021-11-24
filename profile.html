@@ -213,6 +213,9 @@
 	   
 	   function select(val)
 	   {
+			var entryInfo = document.getElementById("entry-info");
+			entryInfo.innerHTML = entryContent[val - 1];
+
 			var item = document.getElementById(val);
 
 
@@ -269,10 +272,6 @@
 			{
 				list.innerHTML += myilnesses[a] + "<br>";
 			}
-
-
-			var entryInfo = document.getElementById("entry-info");
-			entryInfo.innerHTML = entryContent[val - 1];
 	    }
 
 	</script>
