@@ -884,8 +884,8 @@ display: grid;
 
 }
 .empty-insight{
-  width: 75%;
-  height: 85%;
+  width: 350px;
+  height: 270px;
   display: block;
   border-radius: 10px;
   margin-right: 0px;
