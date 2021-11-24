@@ -99,7 +99,7 @@
         	<label class = "title">Entry Information</label>
 			<br>
 
-			<p class = "entry-info"></p>
+			<div id = "entry-info"></div>
 
 
 			<div class = "avatar" style = "top:8px; left:330px">
@@ -190,7 +190,7 @@
 		var id = 0;
 
 
-		$(list[id]).click(function(event) { $('.entry-info').text($(this).attr('details')); })
+		$(list.getElementById()).click(function(event) { $('.entry-info').text($(this).attr('details')); })
 
 
 	   function refresh()
@@ -204,6 +204,8 @@
 	   function select(val)
 	   {
 			var item = document.getElementById(val);
+			var entryInfo = document.getElementById('entry-info');
+			entryInfo.innerHTML = "insert text here";
 
 			if(!selected)
 			{
