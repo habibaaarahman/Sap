@@ -202,28 +202,6 @@
 	   function select(val)
 	   {
 			var item = document.getElementById(val);
-			var entryInfo = document.getElementById("entry-info");
-
-			if(id = 1)
-				entryInfo.innerHTML = "Reported headache, depression and difficulty focusing";
-			if(id = 2)
-				entryInfo.innerHTML = "Reported nausea and flu symptoms";
-			if(id = 3)
-				entryInfo.innerHTML = "Reported headache and difficulty focusing";
-			if(id = 4)
-				entryInfo.innerHTML = "Reported stomach pain, nausea and flu symptoms";
-			if(id = 5)
-				entryInfo.innerHTML = "Reported weakness and achiness";
-			if(id = 6)
-				entryInfo.innerHTML = "Reported difficulty breathing";
-			if(id = 7)
-				entryInfo.innerHTML = "Reported depression and anxiety";
-			if(id = 8)
-				entryInfo.innerHTML = "Reported depression and anxiety";
-			if(id = 9)
-				entryInfo.innerHTML = "Reported depression";
-			if(id = 10)
-				entryInfo.innerHTML = "Reported weakness";
 
 
 			if(!selected)
@@ -279,6 +257,30 @@
 			{
 				list.innerHTML += myilnesses[a] + "<br>";
 			}
+
+			
+			var entryInfo = document.getElementById("entry-info");
+
+			if(id = 1)
+				entryInfo.innerHTML = "Reported headache, depression and difficulty focusing";
+			else if(id = 2)
+				entryInfo.innerHTML = "Reported nausea and flu symptoms";
+			else if(id = 3)
+				entryInfo.innerHTML = "Reported headache and difficulty focusing";
+			else if(id = 4)
+				entryInfo.innerHTML = "Reported stomach pain, nausea and flu symptoms";
+			else if(id = 5)
+				entryInfo.innerHTML = "Reported weakness and achiness";
+			else if(id = 6)
+				entryInfo.innerHTML = "Reported difficulty breathing";
+			else if(id = 7)
+				entryInfo.innerHTML = "Reported depression and anxiety";
+			else if(id = 8)
+				entryInfo.innerHTML = "Reported depression and anxiety";
+			else if(id = 9)
+				entryInfo.innerHTML = "Reported depression";
+			else if(id = 10)
+				entryInfo.innerHTML = "Reported weakness";
 	    }
 
 	</script>
