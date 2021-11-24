@@ -72,8 +72,12 @@ body{
    text-align: center;
   justify-content: center;
   align-items: center;
- 
-
+}
+.entryinfo{
+  color: black;
+  text-align: center;
+ justify-content: center;
+ align-items: center;
 }
 .controls{
 	display: flex;

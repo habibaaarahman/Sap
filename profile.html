@@ -43,44 +43,44 @@
 				 <div class = "list" style = "overflow-y:scroll;height: 300px; ">
 				   <label class = "title"></label>
 			
-				   <label id = "1" details = "Reported headache, depression and difficulty focusing" class = "task" onclick = "select(this.id);">
+				   <label id = "1" class = "task" details = "Reported headache, depression and difficulty focusing" onclick = "select(this.id);">
 						September 1st 2021 
 				</label>
 			
-				  <label id = "2" details = "Reported nausea and flu symptoms" class = "task" onclick = "select(this.id);">  
+				  <label id = "2" class = "task" details = "Reported nausea and flu symptoms" onclick = "select(this.id);">  
 						September 9th 2021
 				  </label>
 			
-				   <label id = "3" details = "Reported headache and difficulty focusing" class = "task" onclick = "select(this.id);">
+				   <label id = "3" class = "task" details = "Reported headache and difficulty focusing" onclick = "select(this.id);">
 						September 25th 2021  
 				 </label>
 			
 				 <label class = "title"></label>
-					   <label id = "4" details = "Reported stomach pain, nausea and flu symptoms" class= "task" onclick = "select(this.id);">
+					   <label id = "4" class = "task" details = "Reported stomach pain, nausea and flu symptoms" onclick = "select(this.id);">
 						October 3rd 2021
 				 </label>
 			
-				   <label id = "5" details = "Reported weakness and achiness" class = "task" onclick = "select(this.id);">
+				   <label id = "5" class = "task" details = "Reported weakness and achiness" onclick = "select(this.id);">
 						October 12th 2021
 				 </label>
 			
-				 <label id = "6" details = "Reported difficulty breathing" class = "task" onclick = "select(this.id);">
+				 <label id = "6" class = "task" details = "Reported difficulty breathing" onclick = "select(this.id);">
 						October 20th 2021
 				 </label>
 			
-				 <label id = "7" details = "Reported depression and anxiety" class = "task" onclick = "select(this.id);">
+				 <label id = "7" class = "task" details = "Reported depression and anxiety" onclick = "select(this.id);">
 						November 1st 2021
 				</label>
 			
-				<label id = "8" details = "Reported depression and anxiety" class = "task" onclick = "select(this.id);">
+				<label id = "8" class = "task" details = "Reported depression and anxiety" onclick = "select(this.id);">
 						November 2nd 2021
 				</label>
 			
-				<label id = "9" details = "Reported depression" class = "task" onclick = "select(this.id);">
+				<label id = "9" class = "task" details = "Reported depression" onclick = "select(this.id);">
 						November 3rd 2021
 				</label>
 			
-				<label id = "10" details = "Reported weakness" class = "task" onclick = "select(this.id);">
+				<label id = "10" class = "task" details = "Reported weakness" onclick = "select(this.id);">
 						November 4th 2021
 				</label>
 				 
@@ -99,6 +99,8 @@
 
 		<div class = "wrapper" id = "goals" style = "top:-11px">
         	<label class = "title">Entry Information</label>
+			<br>
+			<div class = "entryinfo"></div>
 
 
 			<div class = "avatar" style = "top:8px; left:330px">
@@ -189,7 +191,7 @@
 		var id = 0;
 
 
-		$(".body-part").click(function(event) {
+		$(".task").click(function(event) {
           $('.entry-information').text($(this).attr('details'));
 		})
 
