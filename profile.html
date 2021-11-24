@@ -190,9 +190,6 @@
 		var id = 0;
 
 
-		$(".task").click(function(event) {
-          $('.summary').text($(this).attr('details'));
-		})
 
 
 	   function refresh()
@@ -260,6 +257,8 @@
 			{
 				list.innerHTML += myilnesses[a] + "<br>";
 			}
+
+			$('.summary').text($(this).attr('details'));
 	 }
 
 	   </script>
