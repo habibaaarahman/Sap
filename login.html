@@ -28,7 +28,7 @@
      <div class = "wrapper">
         <div class = "form-container">
             <div class="form-inner">
-               <form action="#" class="login">
+               <form action="#" class="login" onsubmit="proceed()">
                   <div class="field">
                      <input type="text" placeholder="Email" required id = "email">
                   </div>
@@ -40,7 +40,7 @@
                   </div>
                   <div class="field btn">
                      <div class="btn-layer"></div>
-                     <input type="button" value="Log in" onclick = "proceed()">
+                     <input type="sumbmit" value="Log in">
                   </div>
                </form>
             </div>
@@ -69,7 +69,7 @@
             
             function proceed(){
                if(email.value!="" &&pass1.value!="" ){
-                  window.location.replace("homepage.html");
+                  window.location.href = "homepage.html";
                   
                }
             }
