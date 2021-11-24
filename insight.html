@@ -6,76 +6,97 @@
   <meta name="description" content="A description of the page and its contents" />
 
   <link rel="stylesheet" href="style.css" />
-  <title>Insight</title>
+  <title>Homepage</title>
 </head>
-<body style="background:#f0effa;display: grid;">
+<br>
+<body style="background:#f0effa;display: grid;" >
+	
+    <div class = "contentwrap">
+	<div class = "wrapper" id = "profileinfo">
+		<div class ="profile">
+			<div class = "username">Insight and Correlations</div>
+			
+		</div>
 
-<!--trying to add profile pic-->
-<div class = "contentwrap">
-
+	</div>
 	<div class = profilepic>
-			<img class = "logo" src="matthew.png" width = "70px">
+			
 		</div>
 </div>
-
-<div class = "contentwrap">
-	<div class = "wrapper" id = "Food">		
-		<label class = "title" width="100%">Food</label>
-
-		<br>
-		<br>
-		<label class = "foodSec" >Stomach pain is reported more often with higher levels of glucose intake</label>
-
-
-		<a class="gradient-button gradient-button-2" href ="#" id="log">See Details</a><br />
-
-		<div class = "insightFoodPic">
-			<img class="logo" src="food_1.png" width = "100px">
-		</div>
-	</div>
-
-	<div class = "wrapper" id = "insights">		
-		<label class = "title" width="100%">Physical Activity</label>
-
-		<br>
-		<br>
-		<label class = "foodSec" >Less activity associated with more frequent headaches</label>
-
-		
-		<a class="gradient-button gradient-button-2" href ="#" id="log">See Details</a><br />
-		
-		<div class = "insightFitnessPic">
-			<img class="logo" src="fitness.png" width = "70px">
-		</div>
-		
-	</div>
-</div>	
-
-
+<div id = "column">
+	<div class = "contentwrap" id = "tab1">
 	<div class = "contentwrap">
+	<div class = "wrapper" id = "checkup">
+		<label class = "profilename" style="color: purple;">Insights</label>
+		
+
+		<label class = "title" width="100%">How do you feel today?</label>
+		
+		<br>
+		<label class = "summary" >“Amazing great awesome<br> motivational quote here”</label>
+		
+		
+		<a class="gradient-button gradient-button-2" href ="#" id="log">Log your symptoms</a><br />
+		<div class = "avatar">
+			<img class="logo" src="avatar.png" width = "100px">
+		</div>
+	</div>
+</div>
+	
+</div>
+	
+	<div class="contentwrap" id = "tab2">
+	<div class = "wrapper" id = "goals">
+		
+			</div>
+			
+		</div>
+		<div class = "wrapper" id = "insights">
+			<label class = "profilename">Insights</label>
+			<label class = "title" width="100%">Positive correlation between exercise and sleep</label>
+			<br>
+			
+			
+		
+			</div>
+			
+		</div>
+    
+	</div>
+</div>
+	
+	
+
+	
+	
+</div>
+<div class = "contentwrap">
 		<div class = "nav">
-			<div class="button" onclick = "location.href='homepage.html';">
+			<div class="buttonactive">
 				<div class = "icon"><img src="home.png" width = "30px"></div>
 				<label>Home</label>
 		    </div>
-			<div class="button" onclick = "location.href='goals.html';">
-				<div class = "icon"><img src="goals.png" width = "30px" ></div>
-				<label>Goals</label>
-			</div>
-			<div class="buttonactive">
-				<div class = "icon"><img src="insight.png" width = "30px"></div>
-				<label>Insight</label>
-			</div>
 			<div class="button" onclick = "location.href='import/physical-checkup.html';">
 				<div class = "icon"><img src="checkup.png" width = "30px"></div>
 				<label>Checkup</label>
 			</div>
+			<div class="button" onclick = "location.href='goals.html';">
+				<div class = "icon"><img src="goals.png" width = "30px" ></div>
+				<label>Goals</label>
+			</div>
+			<div class="button" onclick = "location.href='insight.html';">
+				<div class = "icon"><img src="insight.png" width = "30px"></div>
+				<label>Insight</label>
+			</div>
+			
 			<div class="button" onclick = "location.href='profile.html';">
 				<div class = "icon"><img src="profile.png" width = "30px"></div>
 				<label>Log History</label>
 			</div>
 		</div>
 	</div>
+    <script>
 
+    </script>
 </body>
 </html>
