@@ -888,7 +888,7 @@ display: grid;
   height: 85%;
   display: block;
   border-radius: 10px;
-  margin: 0;
+  margin-right: 0px;
   background-color: rgba(171, 168, 168, 0.12);
 
 }
