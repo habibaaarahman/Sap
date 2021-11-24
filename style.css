@@ -771,11 +771,6 @@ background:purple;
   left:65%;
   bottom:70%;
 }
-.lightbulb{
-  position: absolute;
-  left:70%;
-  bottom:70%;
-}
 .contentwrap{
   display: flex;
   padding: 10px;
