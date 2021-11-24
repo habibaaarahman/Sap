@@ -99,7 +99,7 @@
         	<label class = "title">Entry Information</label>
 			<br>
 
-			<div id = "entry-info"></div>
+			<div id = "entry-info">Text</div>
 
 
 			<div class = "avatar" style = "top:8px; left:330px">
@@ -201,7 +201,8 @@
 	   function select(val)
 	   {
 			var item = document.getElementById(val);
-			item.innerHTML = "insert text here";
+			var entryInfo = document.getElementById('entry-info');
+			entryInfo.innerHTML = "insert text here";
 
 			if(!selected)
 			{
