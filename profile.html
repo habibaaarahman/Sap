@@ -190,6 +190,18 @@
 		var selected = false;
 		var id = 0;
 
+		var entryContent = [
+				"Reported headache, depression and difficulty focusing",
+				"Reported nausea and flu symptoms",
+				"Reported headache and difficulty focusing",
+				"Reported stomach pain, nausea and flu symptoms",
+				"Reported weakness and achiness",
+				"Reported difficulty breathing",
+				"Reported depression and anxiety",
+				"Reported depression and anxiety",
+				"Reported weakness"
+			];
+
 
 	   function refresh()
 	   {
@@ -260,27 +272,7 @@
 
 
 			var entryInfo = document.getElementById("entry-info");
-
-			if(val = 1)
-				entryInfo.innerHTML = "Reported headache, depression and difficulty focusing";
-			else if(val = 2)
-				entryInfo.innerHTML = "Reported nausea and flu symptoms";
-			else if(val = 3)
-				entryInfo.innerHTML = "Reported headache and difficulty focusing";
-			else if(val = 4)
-				entryInfo.innerHTML = "Reported stomach pain, nausea and flu symptoms";
-			else if(val = 5)
-				entryInfo.innerHTML = "Reported weakness and achiness";
-			else if(val = 6)
-				entryInfo.innerHTML = "Reported difficulty breathing";
-			else if(val = 7)
-				entryInfo.innerHTML = "Reported depression and anxiety";
-			else if(val = 8)
-				entryInfo.innerHTML = "Reported depression and anxiety";
-			else if(val = 9)
-				entryInfo.innerHTML = "Reported depression";
-			else if(val = 10)
-				entryInfo.innerHTML = "Reported weakness";
+			entryInfo.innerHTML = entryContent[val];
 	    }
 
 	</script>
