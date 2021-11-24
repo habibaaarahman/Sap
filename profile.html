@@ -99,7 +99,7 @@
         	<label class = "title">Entry Information</label>
 			<br>
 
-			<div class = "summary" onclick = "displayInfo(this.class);">Text</div>
+			<div class = "summary" onclick = "displayInfo(this.className);">Text</div>
 
 
 			<div class = "avatar" style = "top:8px; left:330px">
@@ -260,7 +260,7 @@
 
 		function displayInfo(classType)
 		{
-			var entryInfo = document.getElementByClassName('summary');
+			var entryInfo = document.getElementByClassName(classType);
 
 			if(id = 1)
 				entryInfo.innerHTML = "insert text here";
