@@ -33,6 +33,8 @@
 		<label class = "profilename">Add and review entries of your symptoms to gain new insights from your log</label>
 		<br> 
 
+		<label class = "entry-information"> </label>
+
 		<div class= "multi-selector">
 		<div class = "select-field">
 			<label class = "summary" >Click on a date to see entry information</label>
@@ -186,8 +188,8 @@
 		var id = 0;
 
 
-		$(".body-part").click(function(event) {
-          $('.selected-part-name').text($(this).attr('details'));
+		$(".task").click(function(event) {
+          $('.entry-information').text($(this).attr('details'));
 		})
 
 
