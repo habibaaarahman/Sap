@@ -896,7 +896,7 @@ display: grid;
 
 }
 .emptyemoji{
-  padding: 20px;; 
+   padding: 20px;
    font-size: 50px;
    text-align: center;
 }
@@ -904,4 +904,9 @@ display: grid;
   color:grey;
   font-size: 15px;
   text-align: center;
+}
+.avatar2{
+  position: absolute;
+  left: 95%;
+  bottom: 95%;
 }
