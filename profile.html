@@ -99,7 +99,7 @@
         	<label class = "title">Entry Information</label>
 			<br>
 
-			<label class = "summary"></label>
+			<p class = "summary"></p>
 
 
 			<div class = "avatar" style = "top:8px; left:330px">
@@ -190,6 +190,7 @@
 		var id = 0;
 
 
+		$(".task").click(function(event) { $('.summary').text($(this).attr('details')); })
 
 
 	   function refresh()
@@ -257,8 +258,6 @@
 			{
 				list.innerHTML += myilnesses[a] + "<br>";
 			}
-
-			$('.summary').text(item.attr('details'));
 	 }
 
 	   </script>
