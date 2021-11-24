@@ -29,7 +29,7 @@
      <div class = wrapper>
       <div class = "form-container">
             <div class="form-inner">
-               <form action="#" class="login">
+               <form action="#" class="login" onsubmit = "return proceed(this);">
                   <div class="field">
                      <input type="text" placeholder="Email" required id ="email">
                   </div>
@@ -41,7 +41,7 @@
                   </div>
                   <div class="field btn">
                      <div class="btn-layer"></div>
-                     <input type="submit" value="Sign up" onclick="proceed()">
+                     <input type="submit" value="Sign up">
                   </div>
                </form>
             </div>
@@ -68,9 +68,10 @@
             var pass1 = document.getElementById("id_password");
             var pass2 = document.getElementById("id_confirm_password");
             
-            function proceed(){
+            function proceed(val){
                if(email.value!="" &&pass1.value!="" &&pass2.value!="" ){
                   window.location.href = "profileinfo.html?#";
+                  return false;
                }
             }
             
