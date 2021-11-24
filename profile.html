@@ -99,7 +99,7 @@
         	<label class = "title">Entry Information</label>
 			<br>
 
-			<div class = "summary">Text</div>
+			<div class = "summary" onclick = "displayInfo(this.class);">Text</div>
 
 
 			<div class = "avatar" style = "top:8px; left:330px">
@@ -201,8 +201,6 @@
 	   function select(val)
 	   {
 			var item = document.getElementById(val);
-			var entryInfo = document.getElementByClassName('summary');
-			entryInfo.innerHTML = "insert text here";
 
 			if(!selected)
 			{
@@ -258,6 +256,33 @@
 				list.innerHTML += myilnesses[a] + "<br>";
 			}
 	    }
+
+
+		function displayInfo(classType)
+		{
+			var entryInfo = document.getElementByClassName('summary');
+
+			if(id = 1)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 2)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 3)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 4)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 5)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 6)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 7)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 8)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 9)
+				entryInfo.innerHTML = "insert text here";
+			if(id = 10)
+				entryInfo.innerHTML = "insert text here";
+		}
 
 	</script>
 </body>
