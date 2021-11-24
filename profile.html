@@ -42,44 +42,44 @@
 				   <label class = "title"></label>
 			
 				   <label id = "1" class = "task" onclick = "select(this.id);">
-					11/01/21 - Reported headaches 
+						September 1st 2021 
 				</label>
 			
 				  <label id = "2" class = "task" onclick = "select(this.id);">  
-					11/03/21 - Reported nausea
+						September 9th 2021
 				  </label>
 			
 				   <label id = "3" class = "task" onclick = "select(this.id);">
-						11/16/21 - Reported achiness  
+						September 25th 2021  
 				 </label>
 			
 				 <label class = "title"></label>
 					   <label id = "4" class= "task" onclick = "select(this.id);">
-					   11/17/21 - Reported stomach pain
+						October 3rd 2021
 				 </label>
 			
 				   <label id = "5" class = "task" onclick = "select(this.id);">
-						11/18/21 - Reported depressive symptoms
+						October 12th 2021
 				 </label>
 			
 				 <label id = "6" class = "task" onclick = "select(this.id);">
-					11/18/21 - Reported weakness
+						October 20th 2021
 				 </label>
 			
 				 <label id = "7" class = "task" onclick = "select(this.id);">
-					11/18/21 - Reported flu symptoms
+						November 1st 2021
 				</label>
 			
 				<label id = "8" class = "task" onclick = "select(this.id);">
-					11/18/21 - Reported difficulty breathing
+						November 2nd 2021
 				</label>
 			
 				<label id = "9" class = "task" onclick = "select(this.id);">
-					11/18/21 - Reported symptoms of anxiety
+						November 3rd 2021
 				</label>
 			
 				<label id = "10" class = "task" onclick = "select(this.id);">
-					11/18/21 - Reported difficulty focusing
+						November 4th 2021
 				</label>
 				 
 				 </div>
@@ -148,6 +148,19 @@
 		var selected = false;
 		var id = 0;
 		var selectedID = 0;
+
+		var entryInfo = [
+			"Reported headache, depression and difficulty focusing",
+			"Reported nausea and flu symptoms",
+			"Reported headache and difficulty focusing",
+			"Reported stomach pain, nausea and flu symptoms",
+			"Reported weakness and achiness",
+			"Reported difficulty breathing",
+			"Reported depression and anxiety",
+			"Reported depression and anxiety",
+			"Reported depression",
+			"Reported weakness"
+		]
 
 
 		$(".select-field").click(function(event) {
