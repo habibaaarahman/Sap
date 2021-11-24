@@ -6,7 +6,7 @@
   <meta name="description" content="A description of the page and its contents" />
 
   <link rel="stylesheet" href="style.css" />
-  <title>Homepage</title>
+  <title>Insights</title>
 </head>
 <br>
 <body style="background:#f0effa;display: grid;" >
@@ -14,32 +14,24 @@
     <div class = "contentwrap">
 	<div class = "wrapper" id = "profileinfo">
 		<div class ="profile">
-			<div class = "username">Insight and Correlations</div>
+			<div class = "username">Insights and Correlations</div>
 			
 		</div>
 
 	</div>
 	<div class = profilepic>
-			
+			<img class = "logo" src="matthew.png" width = "70px">
 		</div>
 </div>
 <div id = "column">
 	<div class = "contentwrap" id = "tab1">
 	<div class = "contentwrap">
 	<div class = "wrapper" id = "checkup">
-		<label class = "profilename" style="color: purple;">Insights</label>
+		<label class = "profilename" style="color: purple;"Insights</label>
 		
 
-		<label class = "title" width="100%">How do you feel today?</label>
-		
-		<br>
-		<label class = "summary" >“Amazing great awesome<br> motivational quote here”</label>
 		
 		
-		<a class="gradient-button gradient-button-2" href ="#" id="log">Log your symptoms</a><br />
-		<div class = "avatar">
-			<img class="logo" src="avatar.png" width = "100px">
-		</div>
 	</div>
 </div>
 	
@@ -47,18 +39,20 @@
 	
 	<div class="contentwrap" id = "tab2">
 	<div class = "wrapper" id = "goals">
-		
-	</div>
-	<div class = "wrapper" id = "insights">
-		<label class = "profilename">Insights</label>
-		
-	<br>
+		<label class = "profilename" style="color: red;">Goals overview</label>
+		<div class = "goalstab">
 			
-			
-		
 			</div>
+			
 		</div>
-		
+		<div class = "wrapper" id = "insights">
+			<label class = "profilename">Insights</label>
+			
+			
+				
+			
+				
+			
 			
 		</div>
     
@@ -72,7 +66,7 @@
 </div>
 <div class = "contentwrap">
 		<div class = "nav">
-			<div class="buttonactive">
+			<div class="button" onclick = "location.href='goals.html';">
 				<div class = "icon"><img src="home.png" width = "30px"></div>
 				<label>Home</label>
 		    </div>
@@ -84,7 +78,7 @@
 				<div class = "icon"><img src="goals.png" width = "30px" ></div>
 				<label>Goals</label>
 			</div>
-			<div class="button" onclick = "location.href='insight.html';">
+			<div class="buttonactive" onclick = "location.href='insight.html';">
 				<div class = "icon"><img src="insight.png" width = "30px"></div>
 				<label>Insight</label>
 			</div>
