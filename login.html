@@ -28,7 +28,7 @@
      <div class = "wrapper">
         <div class = "form-container">
             <div class="form-inner">
-               <form action="#" class="login" onsubmit="proceed()">
+               <form action="#" class="login" onsubmit="return proceed(this);">
                   <div class="field">
                      <input type="text" placeholder="Email" required id = "email">
                   </div>
@@ -67,10 +67,10 @@
             var pass1 = document.getElementById("id_password");
         
             
-            function proceed(){
+            function proceed(val){
                if(email.value!="" &&pass1.value!="" ){
                   window.location.href = "homepage.html";
-                  console.log("Here");
+                  return false;
                   
                }
             }
