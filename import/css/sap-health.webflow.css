@@ -164,7 +164,7 @@ a {
   -ms-flex: 1;
   flex: 1;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: #fff;
   color: #000;
   text-decoration: none;
 }
@@ -203,6 +203,11 @@ a {
 
 .nav-buttons.last {
   margin-right: 0px;
+  background-color: #fff;
+}
+
+.nav-buttons.last:hover {
+  background-color: #9251f7;
 }
 
 .body {
@@ -383,10 +388,7 @@ a {
 .human {
   position: relative;
   z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   height: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -406,6 +408,7 @@ a {
   height: 100%;
   max-width: none;
   min-width: auto;
+  border: 1px none #000;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -423,7 +426,7 @@ a {
 .body-part.chest {
   width: 125px;
   margin-top: 100px;
-  margin-left: 197px;
+  margin-left: 195px;
 }
 
 .body-part.head {
@@ -469,13 +472,13 @@ a {
 .body-part.right-leg {
   display: block;
   width: 62px;
-  margin-top: 309px;
+  margin-top: 307px;
   margin-left: 265px;
 }
 
 .body-part.left-leg {
   width: 62px;
-  margin-top: 309px;
+  margin-top: 308px;
   margin-left: 195px;
 }
 
@@ -580,7 +583,11 @@ a {
 .head-detail {
   position: relative;
   z-index: 1;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
   height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -613,7 +620,7 @@ a {
   left: 40px;
   top: auto;
   right: auto;
-  bottom: 210px;
+  bottom: 199px;
   z-index: 3;
   display: -webkit-box;
   display: -webkit-flex;
@@ -621,7 +628,7 @@ a {
   display: flex;
   padding: 5px;
   border-radius: 5px;
-  background-color: rgba(146, 81, 247, 0.12);
+  background-color: rgba(240, 92, 0, 0.2);
   color: #9251f7;
   text-decoration: none;
   text-transform: capitalize;
@@ -632,7 +639,7 @@ a {
   left: 40px;
   top: auto;
   right: auto;
-  bottom: 19%;
+  bottom: 18%;
   z-index: 3;
   display: -webkit-box;
   display: -webkit-flex;
@@ -731,6 +738,10 @@ a {
   flex-direction: row;
 }
 
+.symptom.body-general {
+  display: none;
+}
+
 .scale-field {
   width: 65px;
   height: 35px;
@@ -800,6 +811,10 @@ a {
   background-color: #9251f7;
   font-weight: 400;
   text-align: center;
+}
+
+.add-symptom:active {
+  background-color: #703ac4;
 }
 
 .scale-submit {
@@ -987,8 +1002,12 @@ a {
 }
 
 .submit-entry-button:hover {
-  background-color: rgba(70, 175, 59, 0.26);
-  color: #019055;
+  background-color: #9251f7;
+  color: #fff;
+}
+
+.submit-entry-button:active {
+  background-color: #703ac4;
 }
 
 .image-2 {
@@ -1041,8 +1060,7 @@ a {
 }
 
 .symptoms-selected-div {
-  display: -ms-grid;
-  display: grid;
+  display: none;
   overflow: scroll;
   height: 120px;
   margin: 0px 25px 12px;
@@ -1068,8 +1086,6 @@ a {
   -ms-flex-line-pack: justify;
   align-content: space-between;
   grid-auto-columns: 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 4px;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto;
@@ -1078,15 +1094,18 @@ a {
 
 .symptoms-selected-text {
   display: block;
+  margin-right: 10px;
   margin-bottom: 0px;
   padding: 10px;
   border-radius: 10px;
-  background-color: rgba(146, 81, 247, 0.12);
-  color: #333;
+  background-color: #e5f8e3;
+  color: #019055;
+  font-weight: 400;
   text-align: center;
 }
 
 .symptoms-selected-text.test {
+  margin-right: 10px;
   padding: 0px;
   background-color: transparent;
 }
@@ -1110,9 +1129,9 @@ a {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-style: none;
+  border-style: solid;
   border-width: 0.5px;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.25);
   background-color: #fff;
 }
 
@@ -1202,9 +1221,9 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border-style: none;
+  border-style: solid;
   border-width: 0.5px;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
 .select-symtoms-widget-wrapper.bottom {
@@ -1294,9 +1313,9 @@ a {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  border-style: none;
+  border-style: solid;
   border-width: 0.5px;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
 .page-title-wrapper {
@@ -1318,6 +1337,7 @@ a {
   display: none;
   margin-left: 10px;
   padding-right: 10px;
+  color: #883400;
   font-weight: 400;
 }
 
@@ -1382,15 +1402,16 @@ a {
   padding: 0px;
 }
 
-.text-block-6 {
+.empty-state-div-text {
   color: #505050;
   font-weight: 400;
   text-align: center;
 }
 
-.emoji-text {
-  margin-bottom: 30px;
-  font-size: 60px;
+.emoji-text-symptom-added {
+  margin-right: 0px;
+  margin-bottom: 25px;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -1407,10 +1428,27 @@ a {
   display: flex;
   padding: 5px;
   border-radius: 5px;
-  background-color: #e5f8e3;
-  color: #019055;
+  background-color: rgba(146, 81, 247, 0.12);
+  color: #9251f7;
   text-decoration: none;
   text-transform: capitalize;
+}
+
+.general-symptoms.body {
+  right: 31px;
+  bottom: 4%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.general-symptoms.body:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+.general-symptoms.head {
+  right: 31px;
+  bottom: 4%;
 }
 
 .general-symptom-text {
@@ -1431,11 +1469,8 @@ a {
   background-color: rgba(238, 237, 243, 0);
 }
 
-.div-block-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.start-over-submit {
+  display: none;
   padding-right: 25px;
   padding-left: 25px;
   -webkit-box-pack: justify;
@@ -1528,6 +1563,60 @@ a {
   display: flex;
 }
 
+.symptoms-selected-div-empty-state {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  height: 200px;
+  margin: 0px 25px 8px;
+  padding-right: 0px;
+  padding-left: 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  border-radius: 25px;
+  background-color: rgba(171, 168, 168, 0.12);
+}
+
+.symptoms-selected-div-empty-state.hide {
+  display: none;
+}
+
+.empty-state-div-text-symptom-added {
+  color: #505050;
+  font-weight: 400;
+  text-align: center;
+}
+
+.emoji-text-symptom-select-symtom {
+  margin-bottom: 30px;
+  font-size: 60px;
+  text-align: center;
+}
+
 @media screen and (max-width: 991px) {
   .reset-selection {
     bottom: 20px;
@@ -1555,17 +1644,17 @@ a {
   grid-column-start: span 1;
   -ms-grid-column-span: 1;
   grid-column-end: span 1;
-  -ms-grid-row-align: center;
-  align-self: center;
+  -ms-grid-row-align: end;
+  align-self: end;
   -ms-grid-column-align: start;
   justify-self: start;
 }
 
 #w-node-af6b3c05-1a56-9997-e00c-ca32e613edb2-d6c3915b {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+  -webkit-align-self: end;
+  -ms-flex-item-align: end;
+  -ms-grid-row-align: end;
+  align-self: end;
   -ms-grid-column-align: end;
   justify-self: end;
 }
