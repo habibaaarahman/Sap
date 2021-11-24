@@ -890,5 +890,17 @@ display: grid;
   border-radius: 10px;
   margin-right: 0px;
   background-color: rgba(171, 168, 168, 0.12);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
+}
+.emptyemoji{
+   font-size: 50px;
+   text-align: center;
+}
+.emptytext{
+  color:grey;
+  font-size: 15px;
+  text-align: center;
 }
