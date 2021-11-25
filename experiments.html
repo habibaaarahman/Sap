@@ -64,8 +64,8 @@
 			<br>
 			
 
-			<a class= "gradient-button gradient-button-2" style = "background-color:rgb(4, 216, 4); width:40%; left:20px; top:170px" onclick = "location.href='loghistory.html';" id="log">Generate new experiment</a><br/>
-    		<a class= "gradient-button gradient-button-2" style = "width:40%; left:290px; top:170px" onclick = "location.href='loghistory.html';" id="log">Add to goals</a><br/>
+			<a class= "gradient-button gradient-button-2" style = "background-color:rgb(4, 216, 4); width:43%; left:20px; top:170px" onclick = "location.href='loghistory.html';" id="log">Generate new experiment</a><br/>
+    		<a class= "gradient-button gradient-button-2" style = "width:43%; left:290px; top:170px" onclick = "location.href='loghistory.html';" id="log">Add experiment to goals</a><br/>
 
 			<div class = "avatar" style = "left:450px; top:10px">
 				<img class="logo" src="magnifying-glass.png" width = "70px">
@@ -116,7 +116,7 @@
 		var selected = false;
 		var id = 0;
 
-		var entryContent = [
+		var experimentTitle = [
 				"Reported: headaches, depression and difficulty focusing",
 				"Reported: nausea and flu symptoms",
 				"Reported: headaches and difficulty focusing",
@@ -128,6 +128,10 @@
 				"Reported: depression",
 				"Reported: weakness"
 			];
+
+	var experimentDescription = [
+
+	];
 
 
 	   function refresh()
