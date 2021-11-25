@@ -132,8 +132,8 @@ a {
     "Area-4 Area-5"
     "Area-4 Area-8"
     "Area-3 Area-3";
-  -ms-grid-rows: minmax(80px, 100px) 25px minmax(auto, 350px) 25px minmax(auto, 250px) 25px minmax(100px, 0.5fr);
-  grid-template-rows: minmax(80px, 100px) minmax(auto, 350px) minmax(auto, 250px) minmax(100px, 0.5fr);
+  -ms-grid-rows: minmax(100px, 100px) 25px minmax(auto, 350px) 25px minmax(auto, 250px) 25px minmax(100px, 100px);
+  grid-template-rows: minmax(100px, 100px) minmax(auto, 350px) minmax(auto, 250px) minmax(100px, 100px);
 }
 
 .nav-buttons {
@@ -934,7 +934,7 @@ a {
 
 .directions {
   position: absolute;
-  top: 172px;
+  top: 160px;
   right: 558px;
   z-index: 1;
   display: -webkit-box;
@@ -1168,34 +1168,33 @@ a {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  justify-items: stretch;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  justify-items: center;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: space-between;
-  -ms-flex-line-pack: justify;
-  align-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: start;
+  -ms-flex-line-pack: start;
+  align-content: start;
   grid-auto-flow: row;
   grid-auto-columns: 1fr;
-  grid-auto-rows: minmax(auto, auto);
+  grid-auto-rows: auto;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: minmax(auto, auto) auto auto auto;
-  grid-template-rows: minmax(auto, auto) auto auto auto;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
 }
 
 .symptoms-selected-text {
   display: block;
-  margin-right: 0px;
-  margin-bottom: 0px;
+  margin: 0px 10px 10px 0px;
   padding: 10px;
   border-radius: 10px;
   background-color: #e5f8e3;
@@ -1206,8 +1205,7 @@ a {
 
 .symptoms-selected-text.test {
   display: block;
-  margin-right: 0px;
-  margin-bottom: 0px;
+  margin: 0px;
   padding: 7px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1316,7 +1314,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  padding-top: 33px;
+  padding-top: 20px;
   padding-bottom: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1408,7 +1406,7 @@ a {
   display: flex;
   overflow: auto;
   height: 100%;
-  padding-top: 33px;
+  padding-top: 20px;
   padding-bottom: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1809,7 +1807,7 @@ a {
 .help-text-symptom {
   position: absolute;
   left: 914px;
-  top: 169px;
+  top: 157px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1824,7 +1822,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 3px;
-  background-color: rgba(146, 81, 247, 0.16);
+  background-color: rgba(171, 168, 168, 0.12);
   text-decoration: none;
 }
 
@@ -1968,6 +1966,100 @@ a {
 }
 
 #w-node-_89a1d9bb-f3b4-f8bd-1ad6-67033c7daaef-d6c3915b {
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+  -ms-grid-column: span 2;
+  grid-column-start: span 2;
+  -ms-grid-column-span: 2;
+  grid-column-end: span 2;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -webkit-box-ordinal-group: 10000;
+  -webkit-order: 9999;
+  -ms-flex-order: 9999;
+  order: 9999;
+}
+
+#w-node-fe5eefe5-dd2c-9c07-4446-6712ec17b124-a5f6f5de {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: center;
+  justify-self: center;
+}
+
+#w-node-af6b3c05-1a56-9997-e00c-ca32e613edb1-a5f6f5de {
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: start;
+  justify-self: start;
+}
+
+#w-node-af6b3c05-1a56-9997-e00c-ca32e613edb2-a5f6f5de {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
+
+#w-node-b3f8fae8-b2b2-649e-95f3-b88f10a734e4-a5f6f5de {
+  -ms-grid-column-align: stretch;
+  justify-self: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  -ms-grid-row: span 2;
+  grid-row-start: span 2;
+  -ms-grid-row-span: 2;
+  grid-row-end: span 2;
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+}
+
+#w-node-_1987673c-f1fb-f761-31e6-b3182e0a68e5-a5f6f5de {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-align: stretch;
+  justify-self: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  grid-area: Area-5;
+}
+
+#w-node-_5da85a94-9579-637c-09f2-7cb0da371976-a5f6f5de {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-align: stretch;
+  justify-self: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  grid-area: Area-8;
+}
+
+#w-node-_9bb44174-3cc7-0429-ac89-60fd407a3727-a5f6f5de {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
+  -ms-grid-column-align: stretch;
+  justify-self: stretch;
+}
+
+#w-node-_89a1d9bb-f3b4-f8bd-1ad6-67033c7daaef-a5f6f5de {
   -ms-grid-row: span 1;
   grid-row-start: span 1;
   -ms-grid-row-span: 1;
