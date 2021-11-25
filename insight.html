@@ -8,41 +8,7 @@
   <link rel="stylesheet" href="style.css" />
   <title>Insights</title>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-
-      // Load the Visualization API and the corechart package.
-      google.charts.load('current', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
-
-        // Create the data table.
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Topping');
-        data.addColumn('number', 'Slices');
-        data.addRows([
-          ['Mushrooms', 3],
-          ['Onions', 1],
-          ['Olives', 1],
-          ['Zucchini', 1],
-          ['Pepperoni', 2]
-        ]);
-
-        // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       'width':400,
-                       'height':300};
-
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
+   
 </head>
 <br>
 <body style="background:#f0effa;display: grid;" >
@@ -75,7 +41,7 @@
 		<br>
 		<br>
 		<br>
-        <div class="insight">
+        <div class="insight" id ="in1" onclick="drawChart(this.id);select(this.id);">
 			<div class="illu">
 				<img class="pic" src="up.png" width="30px" height="30px">
 			</div>
@@ -85,14 +51,14 @@
 			
 			<div class="para">
 			<label class="title">Sleep</label>
-			<label class="summary">0.7% - 1.5hr</label>
+			<label class="summary">1.5hr</label>
 
 			 </div>
 			 <div class="diagram">
 		  
 			 </div>
 		</div>
-		<div class="insight">
+		<div class="insight" id ="in2" onclick="drawChart(this.id);select(this.id);">
 			<div class="illu">
 				<img class="pic" src="up.png" width="30px" height="30px">
 			</div>
@@ -102,13 +68,13 @@
 			
 			<div class="para">
 			<label class="title">Activity</label>
-			<label class="summary">0.7% - 1.5hr</label>
+			<label class="summary">3.25 mi.</label>
 			 </div>
 			 <div class="diagram">
 		  
 			 </div>
 		</div>
-		<div class="insight">
+		<div class="insight" id ="in3"onclick="drawChart(this.id);select(this.id);">
 			<div class="illu">
 				<img class="pic" src="down.png" width="30px" height="30px">
 			</div>
@@ -116,9 +82,9 @@
 				<img class="pic" src="food_1.png" width="30px" height="30px">
 			</div>
 			
-			<div class="para">
-			<label class="title">Food (Calories)</label>
-			<label class="summary">0.7% - 1.5hr</label>
+			<div class="para" style="text-align: left;">
+			<label class="title">Calories</label>
+			<label class="summary">2.5kcal</label>
 			 </div>
 			 <div class="diagram">
 		  
@@ -132,21 +98,26 @@
 </div>
 	
 	<div class="contentwrap" id = "tab2">
-		<div class = "wrapper" id = "goals">
+		<div class = "wrapper" id = "goals" >
 			<label class = "title">Data</label>
-			<!--<div class="empty-insight">
-				<div class = "emptyemoji">👈🏼</div>
-				<div class="emptytext">Select one of these insights to view data</div>
-			</div>-->
-			<div id="chart_div"></div>
+			<div id = "changer">
+				<div class="empty-insight">
+					<div class = "emptyemoji">👈🏼</div>
+					<div class="emptytext">Select one of these insights to view data</div>
+				</div>
+			</div>
+			
 			
 		</div>
 		<div class = "wrapper" id = "goals">
 	 		<label class = "title">Correlation</label>
-			 <div class="empty-insight">
+			 <div id = "changer2">
+			  <div class="empty-insight">
 				<div class="emptyemoji">☝🏼</div>
 				<div class="emptytext">Correlations derived from data above</div>
 			</div>
+			</div>
+			
                 
 		</div>
     
@@ -179,7 +150,138 @@
 			</div>
 		</div>
 	</div>
-    <script>
+    <script type="text/javascript" >
+           var i1 = document.getElementById("in1");
+		   var i2 = document.getElementById("in2");
+		   var i3 = document.getElementById("in3");
+		   var changer = document.getElementById("changer");
+		   var changer2 = document.getElementById("changer2");
+
+		   function select(val){
+			   if(val=="in1"){
+				   i1.className = "insightselected";
+				   i2.className = "insight";
+				   i3.className = "insight";
+			   }
+			   if(val=="in2"){
+				   i1.className = "insight";
+				   i2.className = "insightselected";
+				   i3.className = "insight";
+			   }
+			   if(val=="in3"){
+				   i1.className = "insight";
+				   i2.className = "insight";
+				   i3.className = "insightselected";
+			   }
+		   }
+		   
+     
+
+	 // Load the Visualization API and the corechart package.
+	 google.charts.load('current', {'packages':['corechart']});
+
+	 // Set a callback to run when the Google Visualization API is loaded.
+	 google.charts.setOnLoadCallback(drawChart);
+
+	 // Callback that creates and populates a data table,
+	 // instantiates the pie chart, passes in the data and
+	 // draws it.
+	 function drawChart(val) {
+	 
+   
+	   if(val=="in1"){
+		   changer.innerHTML = "<div id = chart_div></div>";
+		   changer2.innerHTML = "<div class = \"correlation\">There was an upward trend in your sleep time this week<br>We also found that you reported less headaches and stress-related symptopms<br><br>Did you know : Sleeping can increase productivity? Start an experiment now<br><a class=\"gradient-button gradient-button-2\" href=\"goals.html\" style=\"width: 95%;\" >Start Experiment</a><br /></div>"
+		   console.log("here");
+	   var data = new google.visualization.DataTable();
+	   data.addColumn('string', 'Day');
+	   data.addColumn('number', 'Hours');
+	   data.addRows([
+		 ['Sun', 7],
+		 ['Mon', 6],
+		 ['Tue',5],
+		 ['Wed', 7],
+		 ['Thur', 8],
+		 ['Fri', 7],
+		 ['Sat', 6],
+	   ]);
+
+	   // Set chart options
+	   var options = {'title': "            Sleep times for Nov 21st - Nov 27th\nUp 1.5 hours from last week",
+					  'width':500,
+					  'height':220,
+					  'legend':'bottom',
+					  is3D: true,
+				};
+
+	   // Instantiate and draw our chart, passing in some options.
+	   var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+	   chart.draw(data, options);
+	   }
+	   if(val=="in2"){
+		changer.innerHTML = "<div id = chart_div></div>";
+		changer2.innerHTML = "<div class = \"correlation\">Your total walking and running distances increased this week<br>We also found that you reported less headaches and stress-related symptopms<br><br>Did you know : Walking reduces risk of heart diseases? Start an experiment now<br><a class=\"gradient-button gradient-button-2\" href=\"goals.html\" style=\"width: 95%;\" >Start Experiment</a><br /></div>"
+		var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Day');
+      data.addColumn('number', 'Running Distance');
+      data.addColumn('number', 'Walking Distance');
+
+      data.addRows([
+        [{v: 'Monday', f: 'Sun'}, 3, 1.5],
+        [{v:'Monday', f: 'Mon'}, 2, .25],
+        [{v: 'Monday', f: 'Tue'}, 2, .5],
+        [{v: 'Monday', f:'Wed'}, 3, 1],
+        [{v: 'Monday', f: 'Thur'}, 2, 1.25],
+        [{v: 'Monday', f: 'Fri'}, 4, 1.25],
+        [{v: 'Monday', f: 'Sat'}, 5, .5],
+        
+      ]);
+
+      var options = {
+        title: 'Distance travelled from Nov 21st - Nov 28th\nTotal: 25.25 miles Up 3.25 total miles from last week',
+		is3D: true,
+        legend:'bottom',
+        hAxis: {
+          
+          viewWindow: {
+            min: [7, 30, 0],
+            max: [17, 30, 0]
+          }
+        },
+        vAxis: {
+          title: 'Distance(Miles)'
+        }
+      };
+
+      var chart = new google.visualization.ColumnChart(
+        document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+	   }
+	   if(val == "in3"){
+		changer.innerHTML = "<div id = chart_div></div>";
+		changer2.innerHTML = "<div class = \"correlation\">Your total calorie consuption is down this week<br>We also found that you did not report any stomach aches<br><br>Did you know : Studies show high protein diets promote metabolic health? Start an experiment now<br><a class=\"gradient-button gradient-button-2\" href=\"goals.html\" style=\"width: 95%;\" >Start Experiment</a><br /></div>"
+		var data = google.visualization.arrayToDataTable([
+          ['Diet class', 'Hours per Day'],
+          ['Protein',     11],
+          ['Fibre',      2],
+          ['Carbs',  2],
+          ['Fat', 1],
+        
+        ]);
+
+        var options = {
+          title: 'Diet from Nov 21st - Nov 28th\nTotal Colorie consumption: 15kcal dowm 2.5Kcal from last week',
+          is3D: true,
+		  width:500,
+		  height:200,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+	   }
+	 }
+   
 
     </script>
 </body>
