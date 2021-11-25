@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A description of the page and its contents" />
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Profile</title>
+</head>
+
+<body style="background:#eeedf3;display: grid;">
+
+	<div class = "contentwrap">
+	<div class = "wrapper" id = "profileinfo">
+
+		<div class = "profile">
+			<div class = "username">Experiments</div>
+		</div>
+
+	</div>
+
+		<div class = profilepic>
+			<img class = "logo" src="matthew.png" width = "70px">
+		</div>
+	</div>
+
+	<div class = contentwrap>
+	<div class = "wrapper" id = "checkup">
+		<div id = "experiment-title" class = "title" style = "width:100%">Log Entries</label>
+		<br>
+		<br>
+		<label class = "profilename">Review the most recent entries of your symptoms to gain new insights</label>
+		<br> 
+
+		<div class= "multi-selector">
+		<div class = "select-field">
+			<label class = "summary" style = "color:red">Click on a date to see entry information</label>
+				 </div>
+			<!---------List of checkboxes and options----------->
+				 <div class = "list" style = "overflow-y:scroll;height: 300px;">
+				   <label class = "title"></label>
+			
+				   <label id = "1" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						September 1st 2021 
+				</label>
+			
+				  <label id = "2" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">  
+						September 9th 2021
+				  </label>
+			
+				   <label id = "3" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						September 25th 2021  
+				 </label>
+			
+				 <label class = "title"></label>
+					   <label id = "4" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						October 3rd 2021
+				 </label>
+			
+				   <label id = "5" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						October 12th 2021
+				 </label>
+			
+				 <label id = "6" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						October 20th 2021
+				 </label>
+			
+				 <label id = "7" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						November 1st 2021
+				</label>
+			
+				<label id = "8" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						November 2nd 2021
+				</label>
+			
+				<label id = "9" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						November 3rd 2021
+				</label>
+			
+				<label id = "10" class = "task" onclick = "select(this.id);" style = "padding-top:5px; padding-bottom:5px">
+						November 4th 2021
+				</label>
+				 
+			</div>
+		</div>
+		
+		<a class= "gradient-button gradient-button-2" onclick = "location.href='loghistory.html';" id="log">See all entries</a><br/>
+
+		<div class = "avatar">
+			<img class="logo" src="1.png" width = "200px">
+		</div>
+	</div>
+
+	
+	<div class = "contentwrap" id = tab2>
+
+		<div class = "wrapper" id = "goals" style = "top:-11px">
+        	<label class = "title">Entry Information</label>
+			<br>
+			<br>
+
+			<div id = "entry-info" class = "profilename" style = "width:70%; font-size:30px; color:purple;"></div>
+
+
+			<div class = "avatar" style = "top:8px; left:330px">
+				<img class="logo" src="3.png" width = "210px">
+			</div>
+        </div>
+
+		<div class = "wrapper" id = "goals" style = "top:16px">
+			<label class = "title">Key Insights</label>
+			<br>
+			<br>
+
+			<div class = "wrapper" id = "goals">
+                <label class = "title">Correlation</label>
+                <div id = "changer2">
+                 <div class="empty-insight">
+               </div>
+               </div>
+               
+                   
+           </div>
+			
+
+			<a class= "gradient-button gradient-button-2" onclick = "location.href='insight.html';" id="log">View more insights</a><br/>
+
+			<div class = "avatar" style = "left:450px; top:10px">
+				<img class="logo" src="magnifying-glass.png" width = "70px">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<div class = "contentwrap">
+		<div class = "nav">
+			<div class="button" onclick = "location.href='homepage.html';">
+				<div class = "icon"><img src="home.png" width = "30px"></div>
+				<label>Home</label>
+		    </div>
+			<div class="button" onclick = "location.href='import/physical-checkup.html';">
+				<div class = "icon"><img src="checkup.png" width = "30px"></div>
+				<label>Checkup</label>
+			</div>
+			<div class="button" onclick = "location.href='goals.html';">
+				<div class = "icon"><img src="goals.png" width = "30px" ></div>
+				<label>Goals</label>
+			</div>
+			<div class="button" onclick = "location.href='insight.html';">
+				<div class = "icon"><img src="insight.png" width = "30px"></div>
+				<label>Insight</label>
+			</div>
+			
+			<div class="buttonactive">
+				<div class = "icon"><img src="profile.png" width = "30px"></div>
+				<label>Log History</label>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>
+		var ilnesses  = ["Allergies","Anxiety","Athritis","Asthma","Binge Eating","Breast Cancer","Bulimia","Chest Pain"];
+		var myilnesses = [];
+
+		document.querySelector('.select-field').addEventListener('click',()=>{
+			document.querySelector('.list').classList.toggle('show');	
+		});
+		
+
+		var selected = false;
+		var id = 0;
+
+		var entryContent = [
+				"Reported: headaches, depression and difficulty focusing",
+				"Reported: nausea and flu symptoms",
+				"Reported: headaches and difficulty focusing",
+				"Reported: stomachache, nausea and flu symptoms",
+				"Reported: weakness and achiness",
+				"Reported: difficulty breathing",
+				"Reported: depression and anxiety",
+				"Reported: depression and anxiety",
+				"Reported: depression",
+				"Reported: weakness"
+			];
+
+
+	   function refresh()
+	   {
+			docname.value = "";
+			docem.value = "";
+			docnum.value = "";
+	   }
+
+	   
+	   function select(val)
+	   {
+			var entryInfo = document.getElementById("entry-info");
+			entryInfo.innerHTML = entryContent[val - 1];
+
+			var item = document.getElementById(val);
+
+
+			if(!selected)
+			{
+				if(id != 0)
+				{
+					document.getElementById(id).className = "task";
+				}
+
+				id = val;
+				selected = true;
+
+				item.className = "selected";
+
+				myilnesses.push(ilnesses[val])
+			}
+			  
+			else
+			{
+				if(val == id)
+				{
+					selected = false;
+
+					item.clasName = "task";
+				}
+
+				else
+				{
+					document.getElementById(id).className = "task";
+					id = val;
+
+					item.className = "selected";
+
+					myilnesses.push(ilnesses[val])
+				}
+
+
+				for( a in myilnesses)
+				{
+					if(myilnesses[a] == ilnesses[val])
+					{
+						break;
+					}
+				}
+
+				myilnesses.splice(a,1);
+			}
+
+
+			list.innerHTML= "";
+
+			for (a in myilnesses)
+			{
+				list.innerHTML += myilnesses[a] + "<br>";
+			}
+	    }
+
+	</script>
+</body>
+</html>
