@@ -9,12 +9,30 @@
   <title>Profile</title>
 
   <style>
-
+	* {
+	  box-sizing: border-box;
+	}
+	
+	body {
+	  font: 16px Arial;  
+	}
 	
 	/*the container must be positioned relative:*/
 	.autocomplete {
 	  position: relative;
 	  display: inline-block;
+	}
+	
+	input {
+	  border: 1px solid transparent;
+	  background-color: #f1f1f1;
+	  padding: 10px;
+	  font-size: 16px;
+	}
+	
+	input[type=text] {
+	  background-color: #f1f1f1;
+	  width: 120%;
 	}
 	
 	.autocomplete-items {
@@ -68,14 +86,73 @@
 		<br>
 		<label class = "profilename">Keep track of all your entries by date and the most common symptoms you have recently logged</label>
 		<br> 
-
-		<div class= "multi-selector">
-			<form autocomplete="off" action="/action_page.php">
-				<div class="autocomplete" style="width:300px;">
-				  <input id="inputEntry" type="text" name="logHistory" placeholder="Search for entries by date (ex. 06/05/21)">
-				</div>
-			  </form>
-		</div>
+     
+		
+		<body>
+		  
+		  <!--Make sure the form has the autocomplete function switched off:-->
+		  <form autocomplete="off" action="/action_page.php">
+			<div class="autocomplete" style="width:300px;">
+			  <input id="inputEntry" type="text" name="logHistory" placeholder="Search for entries by date (ex. 06/05/21)">
+			</div>
+		  </form>
+		  
+		  <script>
+		  function autocomplete(inp, arr) {
+			/*the autocomplete function takes two arguments,
+			the text field element and an array of possible autocompleted values:*/
+			var currentFocus;
+			/*execute a function when someone writes in the text field:*/
+			inp.addEventListener("input", function(e) {
+				var a, b, i, val = this.value;
+				/*close any already open lists of autocompleted values*/
+				closeAllLists();
+				if (!val) { return false;}
+				currentFocus = -1;
+				/*create a DIV element that will contain the items (values):*/
+				a = document.createElement("DIV");
+				a.setAttribute("id", this.id + "autocomplete-list");
+				a.setAttribute("class", "autocomplete-items");
+				/*append the DIV element as a child of the autocomplete container:*/
+				this.parentNode.appendChild(a);
+				/*for each item in the array...*/
+				for (i = 0; i < arr.length; i++) {
+				  /*check if the item starts with the same letters as the text field value:*/
+				  if (arr[i].substr(0, val.length) == val) {
+					/*create a DIV element for each matching element:*/
+					b = document.createElement("DIV");
+					/*make the matching letters bold:*/
+					b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+					b.innerHTML += arr[i].substr(val.length);
+					/*insert a input field that will hold the current array item's value:*/
+					b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+					a.appendChild(b);
+				  }
+				}
+			});
+			
+		  
+			function closeAllLists(elmnt) {
+			  /*close all autocomplete lists in the document,
+			  except the one passed as an argument:*/
+			  var x = document.getElementsByClassName("autocomplete-items");
+			  for (var i = 0; i < x.length; i++) {
+				if (elmnt != x[i] && elmnt != inp) {
+				  x[i].parentNode.removeChild(x[i]);
+				}
+			  }
+			}
+		  
+		  }
+		  
+		  /*An array containing all the country names in the world:*/
+		  var entries = ["06/05/21 - back pain", "06/10/21 - back pain, achiness, tired", "06/18/21 - eye strain", "06/24/21 - eye strain, headaches", "07/01/21 - flu symptoms", "07/09/21 - stomachache", "07/20/21 - sore throat, common cold", "07/29/21 - stress, headaches", "08/08/21 - depression", "08/19/21 - nausea", "09/01/21 - headaches, depression", "09/09/21 - nausea, flu symptoms", "09/25/21 - headaches, difficulty focusing", "10/12/21 - weakness, achiness", "10/20/21 - difficulty breathing", "11/01/21 - depression, anxiety", "11/02/21 - depression, anxiety", "11/03/21 - depression", "11/04/21 - weakness"];
+		  
+		  /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+		  autocomplete(document.getElementById("inputEntry"), entries);
+		  </script>
+		  
+		  </body>
 		
 		<a class= "gradient-button gradient-button-2" onclick = "location.href='import/physical-checkup.html';" id="log">Add new entry</a><br/>
 
@@ -152,59 +229,7 @@
 
 
 
-	<script>
-function autocomplete(inp, arr) {
-  /*the autocomplete function takes two arguments,
-  the text field element and an array of possible autocompleted values:*/
-  var currentFocus;
-  /*execute a function when someone writes in the text field:*/
-  inp.addEventListener("input", function(e) {
-      var a, b, i, val = this.value;
-      /*close any already open lists of autocompleted values*/
-      closeAllLists();
-      if (!val) { return false;}
-      currentFocus = -1;
-      /*create a DIV element that will contain the items (values):*/
-      a = document.createElement("DIV");
-      a.setAttribute("id", this.id + "autocomplete-list");
-      a.setAttribute("class", "autocomplete-items");
-      /*append the DIV element as a child of the autocomplete container:*/
-      this.parentNode.appendChild(a);
-      /*for each item in the array...*/
-      for (i = 0; i < arr.length; i++) {
-        /*check if the item starts with the same letters as the text field value:*/
-        if (arr[i].substr(0, val.length) == val) {
-          /*create a DIV element for each matching element:*/
-          b = document.createElement("DIV");
-          /*make the matching letters bold:*/
-          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-          b.innerHTML += arr[i].substr(val.length);
-          /*insert a input field that will hold the current array item's value:*/
-          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          a.appendChild(b);
-        }
-      }
-  });
-  
-
-  function closeAllLists(elmnt) {
-    /*close all autocomplete lists in the document,
-    except the one passed as an argument:*/
-    var x = document.getElementsByClassName("autocomplete-items");
-    for (var i = 0; i < x.length; i++) {
-      if (elmnt != x[i] && elmnt != inp) {
-        x[i].parentNode.removeChild(x[i]);
-      }
-    }
-  }
-
-}
-
-/*An array containing all the country names in the world:*/
-var entries = ["06/05/21 - back pain", "06/10/21 - back pain, achiness, tired", "06/18/21 - eye strain", "06/24/21 - eye strain, headaches", "07/01/21 - flu symptoms", "07/09/21 - stomachache", "07/20/21 - sore throat, common cold", "07/29/21 - stress, headaches", "08/08/21 - depression", "08/19/21 - nausea", "09/01/21 - headaches, depression", "09/09/21 - nausea, flu symptoms", "09/25/21 - headaches, difficulty focusing", "10/12/21 - weakness, achiness", "10/20/21 - difficulty breathing", "11/01/21 - depression, anxiety", "11/02/21 - depression, anxiety", "11/03/21 - depression", "11/04/21 - weakness"];
-
-/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-autocomplete(document.getElementById("inputEntry"), entries);
+<script>
 
 	function backButton(){
         window.open("profile.html?#");
