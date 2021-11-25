@@ -949,3 +949,10 @@ display: grid;
   color: black;
   font-size: 14px;
 }
+.insightselected{
+  display: flex;
+  height: 65px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: plum;
+}
