@@ -908,3 +908,44 @@ display: grid;
   left: 80%;
   bottom: 80%;
 }
+.empty-insight{
+  width: 485x;
+  height: 210px;
+  display: block;
+  border-radius: 10px;
+  margin-right: 0px;
+  background-color: rgba(171, 168, 168, 0.12);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+}
+.emptyemoji{
+   padding: 20px;
+   font-size: 50px;
+   text-align: center;
+}
+.emptytext{
+  color:grey;
+  font-size: 15px;
+  text-align: center;
+}
+.avatar2{
+  position: absolute;
+  left: 80%;
+  bottom: 80%;
+}
+.correlation{
+  width: 485x;
+  height: 210px;
+  padding: 10px;
+  display: block;
+  border-radius: 10px;
+  margin-right: 0px;
+  background-color: rgba(171, 168, 168, 0.12);
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: black;
+  font-size: 14px;
+}
