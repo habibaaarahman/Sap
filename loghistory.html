@@ -22,12 +22,13 @@
 		<div class = profilepic>
 			<img class = "logo" src="matthew.png" width = "70px">
 		</div>
-
-		<div width = "50%" style="text-align:left;color: blue" onclick="backButton()">
-			< Back
-		  </div>
 	</div>
 
+	<div class = "wrapper">
+        <div width = "50%" style="text-align:left;color: blue" onclick="backButton()">
+          < Back
+        </div>
+    </div>
 
 	<div class = contentwrap>
 	<div class = "wrapper" id = "checkup">
@@ -202,17 +203,7 @@
 	<script>
 
 	function backButton(){
-      if (slider.style.marginLeft =="-100%"){
-        slider.style.marginLeft ="0";
-        l2.className ="";
-        l3.className ="";
-      }else if(slider.style.marginLeft =="-200%"){
-               slider.style.marginLeft ="-100%";
-               l2.className = "active" ;
-               l3.className ="";
-      }else{
         window.open("profile.html?#");
-      }
     }
 
 	</script>
