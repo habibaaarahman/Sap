@@ -522,16 +522,16 @@ input[type = "checbox"]{
   position: relative;
   overflow: hidden;
   display: block;
-  width:100%;
+  width:520.5px;
   height: 100%;
-  max-width: 500px;
+  max-width: 520.5px;
   border-radius: 20px;
 
   justify-content: center;
   align-items: center;
   text-align:left;
   background: #FFFFFF;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
  
 }
 #checkup,
