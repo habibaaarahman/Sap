@@ -30,7 +30,7 @@ body{
   width:100%;
   height: 100%;
   padding: 30px;
-  max-width: 500px;
+  max-width: 520.5px;
   border-radius: 20px;
   justify-content: center;
   align-items: center;
@@ -561,7 +561,7 @@ input[type = "checbox"]{
   padding: 0;
 }
 #goals{
-  min-width: 530px;
+  min-width: 520.5px;
   height: 300px;
 }
 #grapher{
@@ -569,17 +569,17 @@ input[type = "checbox"]{
   height: 300px;
 }
 #checkup{
-  width: 530px;
+  width: 520.5px;
   min-height: 300px;
 
 }
 #insights{
-  min-width: 530px;
+  min-width: 520.5px;
   max-height: 300px;
   margin-top:10px;
 }
 #inspiration{
-  width: 530px;
+  width: 520.5px;
   min-height: 300px;
 }
 
@@ -733,7 +733,7 @@ h1 {
 
 }
 #navbar{
-  width: 1000px;
+  width: 1070px;
 }
 .progress-circle.progress-1:hover {
       background: black;
