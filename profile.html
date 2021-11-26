@@ -213,7 +213,9 @@
 	   
 	   function select(val)
 	   {
+		    
 			var entryInfo = document.getElementById("entry-info-text");
+			entryInfo.classList.remove("test");
 			entryInfo.innerHTML = entryContent[val - 1];
 
 			var item = document.getElementById(val);
