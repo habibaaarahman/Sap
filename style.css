@@ -66,14 +66,14 @@ body{
 .type-of-log{
   font-size: 13px;
   font-weight: 400;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-right: 6px;
   padding-right: 6px;
   border-radius: 10px;
   color: #019055;
   background-color: #E5f8e3;
-  margin-left: 30px;
+  margin-left: 70px;
 }
 
 .title{
