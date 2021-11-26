@@ -266,7 +266,7 @@
 				<div class="emptyemoji" style = "padding: 9px;">👈🏼</div>
 				<div class="emptytext">Select one of these insights to view data</div>
 			</div>
-			<div id = "entry-info" class = "symptoms-selected-div-block" id= "entry-details">
+			<div id = "entry-info" class = "symptoms-selected-div-block">
 				<p id = "entry-info-text" class = "symptoms-selected-text test"> </p>
 			</div>
 
@@ -388,70 +388,69 @@
 			showDiv.style.display = "block"; */
 
 
-	   function select(val)
+			function select(val)
 	   {
-		var entryInfo = document.getElementById("entry-info-text");
-		entryInfo.classList.remove("test");
+			var entryInfo = document.getElementById("entry-info-text");
+			entryInfo.innerHTML = entryContent[val - 1];
+			entryInfo.classList.remove("test");
 
-		entryInfo.innerHTML = entryContent[val - 1];
-
-		var item = document.getElementById(val);
+			var item = document.getElementById(val);
 
 
-		if(!selected)
-		{
-			if(id != 0)
+			if(!selected)
 			{
-				document.getElementById(id).className = "task";
-			}
+				if(id != 0)
+				{
+					document.getElementById(id).className = "task";
+				}
 
-			id = val;
-			selected = true;
-
-			item.className = "selected";
-
-			myilnesses.push(ilnesses[val])
-		}
-		
-		else
-		{
-			if(val == id)
-			{
-				selected = false;
-
-				item.clasName = "task";
-			}
-
-			else
-			{
-				document.getElementById(id).className = "task";
 				id = val;
+				selected = true;
 
 				item.className = "selected";
 
 				myilnesses.push(ilnesses[val])
 			}
-
-
-			for( a in myilnesses)
+			  
+			else
 			{
-				if(myilnesses[a] == ilnesses[val])
+				if(val == id)
 				{
-					break;
+					selected = false;
+
+					item.clasName = "task";
 				}
+
+				else
+				{
+					document.getElementById(id).className = "task";
+					id = val;
+
+					item.className = "selected";
+
+					myilnesses.push(ilnesses[val])
+				}
+
+
+				for( a in myilnesses)
+				{
+					if(myilnesses[a] == ilnesses[val])
+					{
+						break;
+					}
+				}
+
+				myilnesses.splice(a,1);
 			}
 
-			myilnesses.splice(a,1);
-		}
 
+			list.innerHTML= "";
 
-		list.innerHTML= "";
-
-		for (a in myilnesses)
-		{
-			list.innerHTML += myilnesses[a] + "<br>";
-		}
-	}
+			for (a in myilnesses)
+			{
+				list.innerHTML += myilnesses[a] + "<br>";
+			}
+	    }
 
 	</script>
 </body>
