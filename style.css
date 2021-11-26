@@ -359,13 +359,13 @@ a{
   content: none;
 }
 .progressbar li.active {
-  color: purple;
+  color: #9251F7;
 }
 .progressbar li.active:before {
-  border-color: purple;
+  border-color: #9251F7;
 } 
 .progressbar li.active + li:after {
-  background-color: purple;
+  background-color: #9251F7;
 }
 .fieldname{
   width:40%;
@@ -521,6 +521,7 @@ input[type = "checbox"]{
 }
 .selected{
   background: #f0effa;
+  border-width: 0.5px;
   border-color: #9251F7;
   display: block;
   padding-left: 5px;
@@ -787,12 +788,12 @@ border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-background:purple; 
+background:#9251F7; 
 border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background:purple; 
+background:#9251F7; 
 }
 #checkup{
   overflow: visible;
@@ -1031,6 +1032,7 @@ display: grid;
   margin-bottom: 10px;
   background: #f0effa;
   border-color: #9251F7;
+  border-width: 0.5px;
 }
 .symptoms-selected-div {
   display: grid;
