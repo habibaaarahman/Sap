@@ -60,7 +60,7 @@
 			<br>
 			<br>
 
-			<div id = "entry-info" class = "profilename" style = "width:70%; font-size:30px; color:purple;"></div>
+			
 
 
 			<div class = "avatar" style = "top:8px; left:390px">
@@ -75,7 +75,7 @@
 			<br>
 			
 
-			<a class= "gradient-button gradient-button-2" style = "background-color:rgb(4, 216, 4); width:49%; top:140px" onclick="refreshExperiment()" id="log">Generate new experiment</a><br/>
+			<a class= "gradient-button gradient-button-2" style = "background-color:rgb(4, 216, 4); width:49%; top:140px" onclick="refreshExperiment()">Generate new experiment</a><br/>
     		<a class= "gradient-button gradient-button-2" style = "width:49%; left:270px; top:140px" onclick = "location.href='loghistory.html';" id="log">Register new experiment</a><br/>
 
 			<div class = "avatar" style = "left:-30px; top:130px">
@@ -154,7 +154,7 @@
 	   }
 
 	   
-	   function refreshExperiment()
+	   function refreshExperiment(val)
 	   {
 		    nextTile = (nextTitle + 1) % experimentTitles.length;
 			nextDescription = (nextDescription + 1) % experimentDescriptions.length;
