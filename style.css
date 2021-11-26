@@ -818,11 +818,15 @@ background:purple;
 .insight{
   display: flex;
   height: 65px;
+  padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
 }
 .insight:hover{
-  background-color: pink;
+  background-color: #f4f0fb;
+  border: #9251f7;
+  padding: 10px;
+  border-width: 0.5px;
   margin-top: 5px; 
 }
 .para{
