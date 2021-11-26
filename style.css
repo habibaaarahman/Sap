@@ -519,9 +519,10 @@ input[type = "checbox"]{
     display: none;
 }
 .selected{
-  background: purple;
+  background: #f0effa;
+  border-color: #9251F7;
   display: block;
-  padding-left: 0;
+  padding-left: 5px;
   color: white;
   text-align:left;
 }
