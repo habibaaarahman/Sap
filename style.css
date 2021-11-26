@@ -956,7 +956,7 @@ display: grid;
 .empty-insight-history{
   width: 485x;
   height: 210px;
-  display: block;
+  display: none;
   border-radius: 10px;
   margin-right: 0px;
   background-color: rgba(171, 168, 168, 0.12);
