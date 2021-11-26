@@ -61,7 +61,7 @@
 			<br>
 			<label class = "profilename" style = "font-size:31px">Run this experiment for</label>
 
-			<div class="field" id = "number">
+			<div class="field">
 				<input type="number" placeholder="0" required style="width:15%; font-size:31px" id = "Age">
 
 				<div class = "ageselect" style = "height:105%">
@@ -217,7 +217,7 @@
 
 		function confirmExperiment()
 		{
-			var contents = document.getElementById("number");
+			var contents = document.getElementById("Age");
 
 			if(inputTime || (contents.value != "0" && parseInt(contents.value) === number))
 				alert("You have successfully registered for this experiment!");
