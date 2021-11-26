@@ -616,7 +616,7 @@ align-items: left;
 }
 .nav{
   display: flex;
-
+  margin-left: 10px;
 }
 
 .last{
@@ -787,6 +787,7 @@ background:purple;
 }
 .contentwrap{
   display: flex;
+  max-width: 1090px;
   /*padding: 10px;*/
 }
 .mini{
