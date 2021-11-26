@@ -87,10 +87,9 @@
 		
 		<a class= "gradient-button gradient-button-2" onclick = "location.href='loghistory.html';" id="log">See all entries</a><br/>
 
-		<!-- <div class = "avatar">
+		<div class = "avatar">
 			<img class="logo" src="1.png" width = "200px">
-		</div> -->
-	
+		</div>
 	</div>
 
 	
@@ -101,16 +100,12 @@
 			<br>
 			<br>
 
-			<div id = "entry-info" class = "symptoms-selected-div-block">
-		
-				<p id = "entry-info-text" class = "symptoms-selected-text test"> </p>
+			<div id = "entry-info" class = "profilename" style = "width:70%; font-size:30px; color:purple;"></div>
 
-			</div>
-			
 
-			<!-- <div class = "avatar" style = "top:8px; left:330px">
+			<div class = "avatar" style = "top:8px; left:330px">
 				<img class="logo" src="3.png" width = "210px">
-			</div> -->
+			</div>
         </div>
 
 		<div class = "wrapper" id = "goals" style = "top:16px">
@@ -191,9 +186,7 @@
 
 		var entryContent = [
 				"Reported: headaches, depression and difficulty focusing",
-				"head: pain (8)",
-				"mental: sleep (10)",
-				"Reported: nausea and flu symptoms <br> nauea <br>",
+				"Reported: nausea and flu symptoms",
 				"Reported: headaches and difficulty focusing",
 				"Reported: stomachache, nausea and flu symptoms",
 				"Reported: weakness and achiness",
@@ -215,9 +208,7 @@
 	   
 	   function select(val)
 	   {
-		    
-			var entryInfo = document.getElementById("entry-info-text");
-			entryInfo.classList.remove("test");
+			var entryInfo = document.getElementById("entry-info");
 			entryInfo.innerHTML = entryContent[val - 1];
 
 			var item = document.getElementById(val);
@@ -250,7 +241,6 @@
 				else
 				{
 					document.getElementById(id).className = "task";
-					
 					id = val;
 
 					item.className = "selected";
