@@ -123,6 +123,10 @@
 
 
 	<script>	
+		var cycle = 0;
+
+		var inputTime = false;
+
 		var notified = [false, false, false];
 		var notifiedIndex = 0;
 
@@ -147,7 +151,7 @@
 	];
 	var nextDescription = 0;
 
-
+		
 	   function refresh()
 	   {
 			docname.value = "";
@@ -157,6 +161,8 @@
 
 	   function addWeek() 
 	   {
+		   inputTime = true;
+
 		   timePlus.className = "activelayer";
            timeMinus.className = "agelayer";
 
@@ -171,6 +177,12 @@
 
    	 	function subtractWeek() 
 		{
+			if(time.value > 1)
+				inputTime = true;
+			else
+				inputTime = false;
+
+
 			timeMinus.className = "activelayer";
             timePlus.className = "agelayer";
             var a;
@@ -201,9 +213,16 @@
 
 		function confirmExperiment()
 		{
+			if(cycle == 0 && !inputTime)
+			{
+				time.value++;
+				cycle++;
+			}
+				
+
 			if(!registered[registeredIndex])
 			{
-				if(time.value != 0 && time.value === 'number')
+				if((time.value != 0 && inputTime) || (time.value != 0 && time.value === 'number'))
 				{
 					registered[registeredIndex] = true;
 
