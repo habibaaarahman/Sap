@@ -1027,7 +1027,8 @@ display: grid;
   height: 65px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background-color: plum;
+  background: #f0effa;
+  border-color: #9251F7;
 }
 .symptoms-selected-div {
   display: grid;
