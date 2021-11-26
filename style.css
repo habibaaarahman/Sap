@@ -799,6 +799,12 @@ background:purple;
   width: 1070px;
   margin-left: 10px;
 }
+.nav-home{
+  display: flex;
+  align-items: center;
+  width: 1070px;
+  margin-left: 20px;
+}
 .insight{
   display: flex;
   height: 65px;
