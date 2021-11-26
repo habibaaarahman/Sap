@@ -164,6 +164,8 @@
 
 		   timePlus.className = "activelayer";
            timeMinus.className = "agelayer";
+
+
            var a;
 
            if(time.value == "") {a = 0;}
@@ -207,8 +209,10 @@
 		function confirmExperiment(){
 			if(inputTime)
 				alert("You have successfully registered for this experiment!");
+			else if(time.value == 0)
+				alert("You cannot run the experiment for 0 weeks!")
 			else
-				alert("Please enter your age to register this experiment.")
+				alert("Please enter the number of weeks you'd like to register for this experiment above.")
 		}
 
 		function consultDoctor(){
