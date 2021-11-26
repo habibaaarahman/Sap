@@ -151,7 +151,7 @@
 	];
 	var nextDescription = 0;
 
-	
+
 		
 	   function refresh()
 	   {
@@ -220,10 +220,9 @@
 			}
 			
 
-
 			if(!registered[registeredIndex])
 			{
-				if((time.value > 0 || (time.value === 'number')) || (trueTime.value === 'number' && cycle == 0))
+				if((time.value > 0 || (time.value === 'number')) || (validTime && cycle == 0))
 				{
 					cycle++; 
 
@@ -241,6 +240,7 @@
 				alert("You have already registered for this experiment.");
 			
 		}
+
 
 		function consultDoctor()
 		{
