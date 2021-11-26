@@ -740,15 +740,15 @@ h1 {
   color: #8b8b8b;
 }
 .progress-circle.progress-1:after {
-  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(126deg, #f05c00 30%, #ebebeb 50%, #ebebeb);
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(126deg, #f05c0033 50%, #ebebeb 50%, #ebebeb);
 
 }
 .progress-circle.progress-2:after {
-  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(198deg, #f05c00 30%, #ebebeb 50%, #ebebeb);
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(198deg, #f05c0033 50%, #ebebeb 50%, #ebebeb);
 
 }
 .progress-circle.progress-3:after {
-  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(360deg, #f05c00 30%, #ebebeb 50%, #ebebeb);
+  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(360deg, #f05c0033 50%, #ebebeb 50%, #ebebeb);
 
 }
 #navbar{
