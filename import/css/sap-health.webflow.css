@@ -388,7 +388,10 @@ a {
 .human {
   position: relative;
   z-index: 1;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -583,10 +586,7 @@ a {
 .head-detail {
   position: relative;
   z-index: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   overflow: hidden;
   height: 100%;
   -webkit-box-orient: vertical;
@@ -1872,9 +1872,9 @@ a {
 }
 
 .step-text-1 {
-  position: relative;
-  left: 28px;
-  top: 22px;
+  position: absolute;
+  left: 39px;
+  top: 159px;
   z-index: 3;
   display: block;
   margin-top: 0px;
