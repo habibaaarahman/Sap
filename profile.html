@@ -262,11 +262,11 @@
         	<label class = "title">Entry Information</label>
 			<br>
 			<br>
-			<div class="empty-insight-history" id="empty-div" style = "height:158px; display:none;">
+			<div class="empty-insight-history" id="empty-div" style = "height:158px; display:block;">
 				<div class="emptyemoji" style = "padding: 9px;">👈🏼</div>
 				<div class="emptytext">Select one of these insights to view data</div>
 			</div>
-			<div id = "entry-info" class = "symptoms-selected-div-block">
+			<div id = "entry-info" class = "symptoms-selected-div-block" style = "display:none;">
 				<p id = "entry-info-text" class = "symptoms-selected-text test"> </p>
 			</div>
 
@@ -381,19 +381,19 @@
 	   }
 
 
-	   /*var hideDiv = document.getElementById("empty-div");
-			var showDiv = document.getElementById("entry-details-block");
 
-			hideDiv.style.display = "none";
-			showDiv.style.display = "block"; */
-
-
-			function select(val)
+		function select(val)
 	   {
 			var entryInfo = document.getElementById("entry-info-text");
 			entryInfo.innerHTML = entryContent[val - 1];
 			
 			entryInfo.classList.remove("test");
+
+			var hideDiv = document.getElementById("empty-div");
+			var showDiv = document.getElementById("entry-info");
+
+			hideDiv.style.display = "none";
+			showDiv.style.display = "block"; 
 
 			var item = document.getElementById(val);
 
