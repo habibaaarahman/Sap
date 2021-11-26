@@ -209,7 +209,7 @@
 		function confirmExperiment(){
 			if(inputTime)
 				alert("You have successfully registered for this experiment!");
-			else if(time.value == 0)
+			else if(parseInt(time.value) == 0)
 				alert("You cannot run the experiment for 0 weeks!")
 			else
 				alert("Please enter the number of weeks you'd like to register for this experiment above.")
