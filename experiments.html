@@ -65,8 +65,8 @@
 				<input type="number" placeholder="0" required style="width:15%; font-size:31px" id = "Age">
 
 				<div class = "ageselect" style = "height:105%">
-				  <li id ="a+" class = "agelayer" onclick="addAge()"><label class = "prompt">+</label></li>
-				  <li id ="a-"  class = "agelayer" onclick="subtractAge()"><label class = "prompt">-</label></li>
+				  <li id ="a+" class = "agelayer" onclick="addWeek()"><label class = "prompt">+</label></li>
+				  <li id ="a-"  class = "agelayer" onclick="subtractWeek()"><label class = "prompt">-</label></li>
 				</div>
 		   </div>
 
@@ -130,11 +130,11 @@
 
 
 	<script>	
-		var age = 0;
+		var inputTime = false;
 
-		var age = document.getElementById("Age");
-		var aplus = document.getElementById("a+");
-		var aminus = document.getElementById("a-");
+		var time = document.getElementById("Age");
+		var timePlus = document.getElementById("a+");
+		var timeMinus = document.getElementById("a-");
 
 		var experimentTitles = [
 				"Increasing sleep time",
@@ -158,29 +158,33 @@
 			docnum.value = "";
 	   }
 
-	   function addAge() 
+	   function addWeek() 
 	   {
-		   aplus.className = "activelayer";
-           aminus.className = "agelayer";
+		   inputTime = true;
+
+		   timePlus.className = "activelayer";
+           timeMinus.className = "agelayer";
            var a;
 
-           if(Age.value == "") {a = 0;}
-           else {a = parseInt(Age.value);}
+           if(time.value == "") {a = 0;}
+           else {a = parseInt(time.value);}
           
-           Age.value = a+1;
+           time.value = a+1;
         }
 
-   	 	function subtractAge() 
+   	 	function subtractWeek() 
 		{
-			aminus.className = "activelayer";
-            aplus.className = "agelayer";
+			inputTime = true;
+
+			timeMinus.className = "activelayer";
+            timePlus.className = "agelayer";
             var a;
 
-            if(Age.value == "") {a = 0;}
-            else {a = parseInt(Age.value);}
+            if(time.value == "") {a = 0;}
+            else {a = parseInt(time.value);}
 
-            if(a < 1) {aminus.className = "agelayer";}
-            else {Age.value = a-1;}
+            if(a < 1) {timeMinus.className = "agelayer";}
+            else {time.value = a-1;}
 		}
 
 	   
@@ -201,7 +205,10 @@
     	}
 
 		function confirmExperiment(){
-			alert("You have successfully registered for this experiment!");
+			if(inputAge)
+				alert("You have successfully registered for this experiment!");
+			else
+				alert("Please enter your")
 		}
 
 		function consultDoctor(){
