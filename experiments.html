@@ -119,15 +119,7 @@
 
 
 
-	<script>
-		var ilnesses  = ["Allergies","Anxiety","Athritis","Asthma","Binge Eating","Breast Cancer","Bulimia","Chest Pain"];
-		var myilnesses = [];
-
-		document.querySelector('.select-field').addEventListener('click',()=>{
-			document.querySelector('.list').classList.toggle('show');	
-		});
-		
-
+	<script>	
 		var selected = false;
 		var id = 0;
 
@@ -156,7 +148,7 @@
 	   
 	   function refreshExperiment()
 	   {
-		    nextTile = (nextTitle + 1) % 3;
+		    nextTitle = (nextTitle + 1) % 3;
 			nextDescription = (nextDescription + 1) % 3;
 
 			var experimentTitle = document.getElementById("experiment-title");
