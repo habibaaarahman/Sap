@@ -27,11 +27,14 @@
 
 	<div class = contentwrap>
 	<div class = "wrapper" id = "checkup">
-		<div id = "experiment-title" class = "title" style = "width:100%">Eating less gluten</div>
+		<div id = "experiment-title" class = "title" style = "width:100%">Increasing sleep time</div>
 		<br>
 		<br>
-		<label class = "profilename">Review the most recent entries of your symptoms to gain new insights</label>
-		<br> 
+
+		<div id = "changer2">
+			<div id = "experiment-description" class = "profilename" style = "width:100%">Increasing sleep time</div>
+		</div>
+
 
 		
 		<a class= "gradient-button gradient-button-2" style = "background-color:red" onclick = "location.href='loghistory.html';" id="log">Consult doctor</a><br/>
@@ -121,21 +124,18 @@
 		var id = 0;
 
 		var experimentTitle = [
-				"Reported: headaches, depression and difficulty focusing",
-				"Reported: nausea and flu symptoms",
-				"Reported: headaches and difficulty focusing",
-				"Reported: stomachache, nausea and flu symptoms",
-				"Reported: weakness and achiness",
-				"Reported: difficulty breathing",
-				"Reported: depression and anxiety",
-				"Reported: depression and anxiety",
-				"Reported: depression",
-				"Reported: weakness"
+				"Increasing sleep time",
+				"Taking more walks",
+				"Trying a keto diet"
 			];
+			var currTitle = 0;
 
 	var experimentDescription = [
-
+		"In this experiment you will try to increase your normal sleep duration by 1 hour each day to reduce your headaches and symptoms of stress.",
+		"In this experiment you will try to increase the number of walks you take on average each week to decrease your rsk of heart disease.",
+		"In this experiment you will try to adopt a keto diet to promote your metabolic health."
 	];
+	var currDescription = 0;
 
 
 	   function refresh()
