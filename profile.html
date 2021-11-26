@@ -262,7 +262,7 @@
         	<label class = "title">Entry Information</label>
 			<br>
 			<br>
-			<div class="empty-insight" id="empty-div" style = "height:158px">
+			<div class="empty-insight-history" id="empty-div" style = "height:158px">
 				<div class="emptyemoji" style = "padding: 9px;">👈🏼</div>
 				<div class="emptytext">Select one of these insights to view data</div>
 			</div>
@@ -380,83 +380,77 @@
 			docnum.value = "";
 	   }
 
-	   
-	   function select(val)
-	   {
-			var entryInfo = document.getElementById("entry-info-text");
- 			entryInfo.classList.remove("test");
-
-			/*var hideDiv = document.getElementById("empty-div");
+	   /*var hideDiv = document.getElementById("empty-div");
 			var showDiv = document.getElementById("entry-details-block");
 
 			hideDiv.style.display = "none";
 			showDiv.style.display = "block"; */
 
-			entryInfo.innerHTML = entryContent[val - 1];
 
-			var item = document.getElementById(val);
+	   function select(val)
+	   {
+		var entryInfo = document.getElementById("entry-info-text");
+		entryInfo.classList.remove("test");
+
+		entryInfo.innerHTML = entryContent[val - 1];
+
+		var item = document.getElementById(val);
 
 
-			if(!selected)
+		if(!selected)
+		{
+			if(id != 0)
 			{
-				if(id != 0)
-				{
-					document.getElementById(id).className = "task";
-
-				}
-
-
-				id = val;
-				selected = true;
-
-				item.className = "selected";
-				
-				myilnesses.push(ilnesses[val]);
-
+				document.getElementById(id).className = "task";
 			}
-			  
+
+			id = val;
+			selected = true;
+
+			item.className = "selected";
+
+			myilnesses.push(ilnesses[val])
+		}
+		
+		else
+		{
+			if(val == id)
+			{
+				selected = false;
+
+				item.clasName = "task";
+			}
+
 			else
 			{
-				if(val == id)
-				{
-					selected = false;
+				document.getElementById(id).className = "task";
+				id = val;
 
-					item.clasName = "task";
-				}
+				item.className = "selected";
 
-				else
-				{
-
-					document.getElementById(id).className = "task";
-			
-					id = val;
-
-					item.className = "selected";
-
-					myilnesses.push(ilnesses[val]);
-
-				}
-
-
-				for( a in myilnesses)
-				{
-					if(myilnesses[a] == ilnesses[val])
-					{
-						break;
-					}
-				}
-
-				myilnesses.splice(a,1);
+				myilnesses.push(ilnesses[val])
 			}
 
 
-			list.innerHTML= "";
-
-			for (a in myilnesses)
+			for( a in myilnesses)
 			{
-				list.innerHTML += myilnesses[a] + "<br>";
+				if(myilnesses[a] == ilnesses[val])
+				{
+					break;
+				}
 			}
-	    }
+
+			myilnesses.splice(a,1);
+		}
+
+
+		list.innerHTML= "";
+
+		for (a in myilnesses)
+		{
+			list.innerHTML += myilnesses[a] + "<br>";
+		}
+	}
 
 	</script>
 </body>

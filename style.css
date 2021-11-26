@@ -953,7 +953,7 @@ display: grid;
     display: none;
 
 }
-.empty-insight{
+.empty-insight-history{
   width: 485x;
   height: 210px;
   display: block;
@@ -963,6 +963,7 @@ display: grid;
   align-items: center;
   justify-content: center;
   text-align: center;
+  
 
 }
 .emptyemoji{
@@ -983,14 +984,13 @@ display: grid;
 .empty-insight{
   width: 485x;
   height: 210px;
-  display: block;
+  display: none;
   border-radius: 10px;
   margin-right: 0px;
   background-color: rgba(171, 168, 168, 0.12);
   align-items: center;
   justify-content: center;
   text-align: center;
-
 }
 .emptyemoji{
    padding: 20px;
@@ -1066,7 +1066,7 @@ display: grid;
 }
 
 .symptoms-selected-div-block {
-    display: none;
+    display: block;
     overflow: auto;
     height: 120px;
     /* margin: 0px 25px 12px; */
