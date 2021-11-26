@@ -211,7 +211,7 @@
 		{
 			var validTime = true;
 
-			if(cycle == 0)
+			if(time.value === "string")
 			{
 				for(i = 0; i < time.length; i++)
 				{
@@ -223,7 +223,7 @@
 
 			if(!registered[registeredIndex])
 			{
-				if(time.value > 0 && (time.value === 'number' || (validTime && cycle == 0)))
+				if(time.value > 0 && (time.value === 'number' || validTime))
 				{
 					cycle++; 
 
