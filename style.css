@@ -798,6 +798,7 @@ background:purple;
 }
 .nav{
   width: 1070px;
+  margin-left:10px;
 }
 .insight{
   display: flex;
