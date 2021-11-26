@@ -213,7 +213,7 @@
 		{
 			if(!registered[registeredIndex])
 			{
-				if(inputTime || (time.value != "0" && parseInt(time.value) === "number"))
+				if((time.value != 0 && inputTime) || (time.value != 0 && time.value === "number"))
 				{
 					registered[registeredIndex] = true;
 
