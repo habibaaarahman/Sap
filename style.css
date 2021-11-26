@@ -756,9 +756,21 @@ h1 {
 }
 .progress-circle.progress-1:hover {
       background: black;
-      border:1px solid purple;
+      border:1px solid #f05c00;
       width: 122px;
       height: 122px;
+}
+.progress-circle.progress-2:hover {
+  background: black;
+  border:1px solid #f05c00;
+  width: 122px;
+  height: 122px;
+}
+.progress-circle.progress-3:hover {
+  background: black;
+  border:1px solid #f05c00;
+  width: 122px;
+  height: 122px;
 }
 ::-webkit-scrollbar {
 width: 5px;
