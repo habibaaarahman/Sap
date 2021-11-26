@@ -617,6 +617,11 @@ align-items: left;
   display: flex;
 
 }
+
+.last{
+  margin: 0px !important;
+}
+
 .button{
   display: grid;
   color: black;
@@ -628,6 +633,7 @@ align-items: left;
   width: 20%;
  background : white;
 }
+
 .buttonactive{
   color: white;
   display: grid;
@@ -787,7 +793,7 @@ background:purple;
   padding: 10px;
 }
 .nav{
-  width: 100%;
+  width: 1070px;
 }
 .insight{
   display: flex;
