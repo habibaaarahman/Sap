@@ -62,6 +62,15 @@ body{
   align-items: center;
   padding: 50px;
 }
+
+.type-of-log{
+  font-size: 11px;
+  padding: 7px;
+  color: #019055;
+  background-color: #E5f8e3;
+  margin-right: 30px;
+}
+
 .title{
 	font-size: 20px;
     color: Black;
