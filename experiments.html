@@ -123,8 +123,6 @@
 
 
 	<script>	
-		var cycle = 0;
-
 		var inputTime = false;
 
 		var notified = [false, false, false];
@@ -213,13 +211,6 @@
 
 		function confirmExperiment()
 		{
-			if(cycle == 0 && !inputTime)
-			{
-				time.value++;
-				cycle++;
-			}
-				
-
 			if(!registered[registeredIndex])
 			{
 				if((time.value != 0 && inputTime) || (time.value != 0 && time.value === 'number'))
