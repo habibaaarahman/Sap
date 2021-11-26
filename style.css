@@ -531,7 +531,7 @@ input[type = "checbox"]{
   align-items: center;
   text-align:left;
   background: #FFFFFF;
-  /*margin-left: 10px;*/
+  margin-left: 10px;
  
 }
 #checkup,
@@ -786,10 +786,12 @@ background:purple;
   left:65%;
   bottom:70%;
 }
+
 .contentwrap{
   display: flex;
   padding: 10px;
 }
+
 .mini{
   text-align:center;
   padding: 10px;
