@@ -1071,7 +1071,7 @@ display: grid;
     display: block;
     overflow: auto;
     height: 120px;
-    margin: 0px 25px 12px;
+    /* margin: 0px 25px 12px; */
     padding-right: 0px;
     padding-left: 0px;
     -webkit-box-orient: horizontal;
