@@ -836,6 +836,7 @@ background:purple;
   margin-bottom: 10px;
   margin-top: 15px;
 }
+/*
 .insight:hover{
   background-color: #f4f0fb;
   border: #9251f7;
@@ -843,6 +844,7 @@ background:purple;
   border-width: 0.5px;
   margin-top: 5px; 
 }
+*/
 .para{
   display: grid;
   margin-left: 20px;
