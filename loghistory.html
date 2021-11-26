@@ -91,6 +91,10 @@ input[type=text] {
   border-bottom: 1px solid #d4d4d4; 
 }
 
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
 
 
 </style>
@@ -153,6 +157,7 @@ function autocomplete(inp, arr) {
 }
 
 
+
 var entries = ["06/05/21 - back pain", "06/10/21 - back pain, achiness, tired", "06/18/21 - eye strain", "06/24/21 - eye strain, headaches", "07/01/21 - flu symptoms", "07/09/21 - stomachache", "07/20/21 - sore throat, common cold", "07/29/21 - stress, headaches", "08/08/21 - depression", "08/19/21 - nausea", "09/01/21 - headaches, depression", "09/09/21 - nausea, flu symptoms", "09/25/21 - headaches, difficulty focusing", "10/12/21 - weakness, achiness", "10/20/21 - difficulty breathing", "11/01/21 - depression, anxiety", "11/02/21 - depression, anxiety", "11/03/21 - depression", "11/04/21 - weakness"];
 
 
@@ -211,7 +216,7 @@ autocomplete(document.getElementById("inputEntry"), entries);
 
 
 	<div class = "contentwrap">
-		<div class = "nav-home">
+		<div class = "nav">
 			<div class="button" onclick = "location.href='homepage.html';">
 				<div class = "icon"><img src="home.png" width = "30px"></div>
 				<label>Home</label>
