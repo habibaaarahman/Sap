@@ -211,7 +211,7 @@
 			{
 				for(i = 0; i < time.length; i++)
 				{
-					if(time.value.charAt(i) === 'string')
+					if(parseInt(time.value.charAt(i)) == NaN)
 						validTime = false;
 				}
 			}
