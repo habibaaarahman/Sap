@@ -100,7 +100,11 @@
 			<br>
 			<br>
 
-			<div id = "entry-info" class = "symptoms-selected-div" style = "width:70%; font-size:30px; color:purple;"></div>
+			<div id = "entry-info" class = "symptoms-selected-div">
+		
+				<p id = "entry-info-text" class = "symptoms-selected-text"> </p>
+
+			</div>
 			
 
 			<div class = "avatar" style = "top:8px; left:330px">
@@ -208,7 +212,7 @@
 	   
 	   function select(val)
 	   {
-			var entryInfo = document.getElementById("entry-info");
+			var entryInfo = document.getElementById("entry-info-text");
 			entryInfo.innerHTML = entryContent[val - 1];
 
 			var item = document.getElementById(val);
