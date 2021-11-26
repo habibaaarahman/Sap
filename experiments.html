@@ -135,6 +135,9 @@
 		var notified = [false, false, false];
 		var notifiedIndex = 0;
 
+		var registered = [false, false, false];
+		var registeredIndex = 0;
+
 		var time = document.getElementById("Age");
 		var timePlus = document.getElementById("a+");
 		var timeMinus = document.getElementById("a-");
@@ -200,6 +203,7 @@
 	   function refreshExperiment()
 	   {
 		    notifiedIndex = (notifiedIndex + 1) % notified.length;
+			registeredIndex = (registeredIndex + 1) % registered.length
 
 		    nextTitle = (nextTitle + 1) % experimentTitles.length;
 			nextDescription = (nextDescription + 1) % experimentDescriptions.length;
@@ -219,10 +223,22 @@
 		{
 			var contents = document.getElementById("Age");
 
-			if(inputTime || (contents.value != "0" && parseInt(contents.value) === number))
-				alert("You have successfully registered for this experiment!");
+			if(!registered[registeredIndex])
+			{
+				if(inputTime || (contents.value != "0" && parseInt(contents.value) === number))
+				{
+					registered[registeredIndex] = true;
+					alert("You have successfully registered for this experiment!");
+				}
+
+				else
+					alert("Please enter the number of weeks (greater than 0) you'd like to register for this experiment above.");
+			}
+
+
 			else
-				alert("Please enter the number of weeks (greater than 0) you'd like to register for this experiment above.");
+				alert("You have already registered for this experiment");
+			
 		}
 
 		function consultDoctor()
