@@ -755,19 +755,19 @@ h1 {
   width: 1070px;
 }
 .progress-circle.progress-1:hover {
-      background: black;
+      background: #f05c00;
       border:1px solid #f05c00;
       width: 122px;
       height: 122px;
 }
 .progress-circle.progress-2:hover {
-  background: black;
+  background: #f05c00;
   border:1px solid #f05c00;
   width: 122px;
   height: 122px;
 }
 .progress-circle.progress-3:hover {
-  background: black;
+  background: #f05c00;
   border:1px solid #f05c00;
   width: 122px;
   height: 122px;
