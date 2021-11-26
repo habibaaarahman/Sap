@@ -37,7 +37,7 @@
 		<br>
 		<br>
 
-		<div id = "changer2" style = "top:200px">
+		<div id = "changer2">
 			<div class = "empty-insight">
 				<div id = "experiment-description" class = "profilename" style = "width:100%">In this experiment you will try to increase your normal sleep duration by 1 hour each day to reduce your headaches and symptoms of stress.</div>
 			</div>
@@ -48,7 +48,7 @@
 		<a class= "gradient-button gradient-button-2" style = "background-color:red" onclick = "location.href='loghistory.html';" id="log">Consult doctor</a><br/>
 
 		<div class = "avatar">
-			<img class="logo" src="test-tube.png" width = "150px">
+			<img class="logo" src="test-tube.png" width = "130px">
 		</div>
 	</div>
 
@@ -75,7 +75,7 @@
 			<br>
 			
 
-			<a class= "gradient-button gradient-button-2" style = "background-color:rgb(4, 216, 4); width:49%; top:140px" onclick = "location.href='loghistory.html';" id="log">Generate new experiment</a><br/>
+			<a class= "gradient-button gradient-button-2" style = "background-color:rgb(4, 216, 4); width:49%; top:140px" onclick="refreshExperiment()" id="log">Generate new experiment</a><br/>
     		<a class= "gradient-button gradient-button-2" style = "width:49%; left:270px; top:140px" onclick = "location.href='loghistory.html';" id="log">Register new experiment</a><br/>
 
 			<div class = "avatar" style = "left:-30px; top:130px">
@@ -131,19 +131,19 @@
 		var selected = false;
 		var id = 0;
 
-		var experimentTitle = [
+		var experimentTitles = [
 				"Increasing sleep time",
 				"Taking more walks",
 				"Trying a keto diet"
 			];
-			var currTitle = 0;
+			var nextTitle = 0;
 
-	var experimentDescription = [
+	var experimentDescriptions = [
 		"In this experiment you will try to increase your normal sleep duration by 1 hour each day to reduce your headaches and symptoms of stress.",
 		"In this experiment you will try to increase the number of walks you take on average each week to decrease your rsk of heart disease.",
 		"In this experiment you will try to adopt a keto diet to promote your metabolic health."
 	];
-	var currDescription = 0;
+	var nextDescription = 0;
 
 
 	   function refresh()
@@ -154,12 +154,16 @@
 	   }
 
 	   
-	   function select(val)
+	   function refreshExperiment()
 	   {
-			var entryInfo = document.getElementById("entry-info");
-			entryInfo.innerHTML = entryContent[val - 1];
+		    nextTile = (nextTitle + 1) % experimentTitles.length;
+			nextDescription = (nextDescription + 1) % experimentDescriptions.length;
 
-			var item = document.getElementById(val);
+			var experimentTitle = document.getElementById("experiment-title");
+			experimentTitle.innerHTML = experimentTitles[nextTitle];
+
+			var experimentDescription = document.getElementById("experiment-description");
+			experimentDescription.innerHTML = experimentDescriptions[nextDescription];
 	    }
 
 		function backButton(){
