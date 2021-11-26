@@ -191,15 +191,15 @@
 						<label class = "type-of-log" style = "margin-left: 0px;">
 							physical
 						</label>
-				 </label>
+				 	</label>
 			
-				 <label class = "title"></label>
-					   <label id = "4" class = "task" onclick = "select(this.id);" style = "display: flex;padding: 8px;justify-content: space-between;align-content: center;align-items: center; ">
+				
+					 <label id = "4" class = "task" onclick = "select(this.id);" style = "display: flex;padding: 8px;justify-content: space-between;align-content: center;align-items: center; ">
 						October 3rd 2021
 						<label class = "type-of-log" style = "margin-left: 0px;">
 							physical
 						</label>
-				 </label>
+				 	</label>
 			
 				   <label id = "5" class = "task" onclick = "select(this.id);" style = "display: flex;padding: 8px;justify-content: space-between;align-content: center;align-items: center; ">
 						October 12th 2021
@@ -392,6 +392,7 @@
 	   {
 			var entryInfo = document.getElementById("entry-info-text");
 			entryInfo.innerHTML = entryContent[val - 1];
+			
 			entryInfo.classList.remove("test");
 
 			var item = document.getElementById(val);
