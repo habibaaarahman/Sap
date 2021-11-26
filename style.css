@@ -1031,7 +1031,7 @@ display: grid;
 .symptoms-selected-div {
   display: grid;
   overflow: scroll;
-  height: 120px;
+  height: 180px;  
   margin: 0px 25px 12px;
   padding-right: 0px;
   padding-left: 0px;
