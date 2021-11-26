@@ -12,7 +12,6 @@
 </head>
 <br>
 <body style="background:#f0effa;display: grid;" >
-	<p class = "profilename" onload = "disclaimer()"></p>
 	
     <div class = "contentwrap">
 	<div class = "wrapper" id = "profileinfo">
@@ -282,6 +281,10 @@
         chart.draw(data, options);
 	   }
 	 }
+
+	 $(document).ready(function () {
+        disclaimer();
+     });
 
 	 function disclaimer()
 	 {
