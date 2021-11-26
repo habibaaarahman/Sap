@@ -399,16 +399,17 @@
 					document.getElementById(id).className = "task";
 				}
 
+				
+				hideDiv.style.display = "none";
+				showDiv.style.display = "block";
+
+
 				id = val;
 				selected = true;
 
 				item.className = "selected";
 				
 				myilnesses.push(ilnesses[val]);
-
-
-				hideDiv.style.display = "none";
-				showDiv.style.display = "block";
 
 			}
 			  
@@ -423,6 +424,9 @@
 
 				else
 				{
+					hideDiv.style.display = "none";
+					showDiv.style.display = "block";
+
 					document.getElementById(id).className = "task";
 					
 					id = val;
@@ -431,9 +435,6 @@
 
 					myilnesses.push(ilnesses[val]);
 
-					
-					hideDiv.style.display = "none";
-					showDiv.style.display = "block";
 
 				}
 
