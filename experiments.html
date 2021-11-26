@@ -215,23 +215,25 @@
         	window.open("insight.html?#");
     	}
 
-		function confirmExperiment(){
+		function confirmExperiment()
+		{
 			if(inputTime)
 				alert("You have successfully registered for this experiment!");
 			else
 				alert("Please enter the number of weeks you'd like to register for this experiment above.")
 		}
 
-		function consultDoctor(){
+		function consultDoctor()
+		{
 			if(!notifed[notifiedIndex])
 			{
 				notified[notifiedIndex] = true;
-				
+
 				alert("Your doctor has been notified.");
 			}
 	
 			else
-				alert("You have already notifed your doctor about this experiment.")
+				alert("You have already notifed your doctor about this experiment.");
 		}
 
 	</script>
