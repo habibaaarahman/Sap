@@ -262,7 +262,10 @@
         	<label class = "title">Entry Information</label>
 			<br>
 			<br>
-
+			<div class="empty-insight" id="empty-div">
+				<div class="emptyemoji">👈🏼</div>
+				<div class="emptytext">Select one of these insights to view data</div>
+			</div>
 			<div id = "entry-info" class = "symptoms-selected-div-block">
 				<p id = "entry-info-text" class = "symptoms-selected-text test"> </p>
 			</div>
@@ -380,6 +383,10 @@
 			var entryInfo = document.getElementById("entry-info-text");
  			entryInfo.classList.remove("test");
 
+			var hideDiv = document.getElementById("empty-div");
+			
+
+
 			entryInfo.innerHTML = entryContent[val - 1];
 
 			var item = document.getElementById(val);
@@ -390,6 +397,7 @@
 				if(id != 0)
 				{
 					document.getElementById(id).className = "task";
+					hidDiv.style.display = "none";
 				}
 
 				id = val;
@@ -412,6 +420,7 @@
 				else
 				{
 					document.getElementById(id).className = "task";
+					hidDiv.style.display = "none";
 					id = val;
 
 					item.className = "selected";
