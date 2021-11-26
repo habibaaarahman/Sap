@@ -124,7 +124,7 @@ function autocomplete(inp, arr) {
       this.parentNode.appendChild(a);
       /*for each item in the array...*/
       for (i = 0; i < arr.length; i++) {
-        /*check if the item starts with the same letters as the text field value:*/
+        /*check if the item starts with the same numbers as the text field value:*/
         if (arr[i].substr(0, val.length) == val) {
           /*create a DIV element for each matching element:*/
           b = document.createElement("DIV");
@@ -153,7 +153,7 @@ function autocomplete(inp, arr) {
 
 
 
-var entries = ["06/05/21 - back pain", "06/10/21 - back pain, achiness, tired", "06/18/21 - eye strain", "06/24/21 - eye strain, headaches", "07/01/21 - flu symptoms", "07/09/21 - stomachache", "07/20/21 - sore throat, common cold", "07/29/21 - stress, headaches", "08/08/21 - depression", "08/19/21 - nausea", "09/01/21 - headaches, depression", "09/09/21 - nausea, flu symptoms", "09/25/21 - headaches, difficulty focusing", "10/12/21 - weakness, achiness", "10/20/21 - difficulty breathing", "11/01/21 - depression, anxiety", "11/02/21 - depression, anxiety", "11/03/21 - depression", "11/04/21 - weakness"];
+var entries = ["12/04/20 - diarrhea, nausea, vomiting", "01/13/21 - stress, headaches", "02/18/21 - cramps, aches", "03/23/21 - dehydration, weakness", "04/15/21 - stomachache", "05/11/21 - stress, depression", "06/05/21 - back pain", "06/10/21 - back pain, achiness, tired", "06/18/21 - eye strain", "06/24/21 - eye strain, headaches", "07/01/21 - flu symptoms", "07/09/21 - stomachache", "07/20/21 - sore throat, common cold", "07/29/21 - stress, headaches", "08/08/21 - depression", "08/19/21 - nausea", "09/01/21 - headaches, depression", "09/09/21 - nausea, flu symptoms", "09/25/21 - headaches, difficulty focusing", "10/12/21 - weakness, achiness", "10/20/21 - difficulty breathing", "11/01/21 - depression, anxiety", "11/02/21 - depression, anxiety", "11/03/21 - depression", "11/04/21 - weakness"];
 
 
 autocomplete(document.getElementById("inputEntry"), entries);
