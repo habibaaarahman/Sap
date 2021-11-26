@@ -176,7 +176,11 @@
 
    	 	function subtractWeek() 
 		{
-			inputTime = true;
+			if(time.value > 1)
+				inputTime = true;
+			else
+				inputTime = false;
+
 
 			timeMinus.className = "activelayer";
             timePlus.className = "agelayer";
@@ -209,8 +213,6 @@
 		function confirmExperiment(){
 			if(inputTime)
 				alert("You have successfully registered for this experiment!");
-			else if(parseInt(time.value) == 0)
-				alert("You cannot run the experiment for 0 weeks!")
 			else
 				alert("Please enter the number of weeks you'd like to register for this experiment above.")
 		}
