@@ -614,11 +614,7 @@ justify-content: left;
 align-items: left;
 
 }
-.nav{
-  display: flex;
-  margin: left 2px;
 
-}
 
 .last{
   margin: 0px !important;
@@ -798,8 +794,10 @@ background:purple;
   padding: 10px;
 }
 .nav{
+  display: flex;
+  align-items: center;
   width: 1070px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .insight{
   display: flex;
