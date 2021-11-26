@@ -762,8 +762,8 @@ background:purple;
 }
 #checkup{
   overflow: visible;
-  min-width: 500px;
-  height: 630px;
+  min-width: 520.5px;
+  height: 625px;
 }
 #log{
   position: absolute;
