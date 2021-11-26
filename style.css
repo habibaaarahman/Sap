@@ -616,7 +616,7 @@ align-items: left;
 }
 .nav{
   display: flex;
-  margin-left:10px;
+  margin: left 2px;
 
 }
 
@@ -798,7 +798,7 @@ background:purple;
 }
 .nav{
   width: 1070px;
-  margin-left:10px;
+  margin-left: 20px;
 }
 .insight{
   display: flex;
