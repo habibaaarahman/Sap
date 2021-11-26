@@ -520,9 +520,7 @@ input[type = "checbox"]{
 }
 .selected{
   background: #f0effa;
-  border-width: 0.5px;
-  border: #9251F7;
-  border-color: #9251F7;
+  border:0.5px solid #9251F7;
   display: block;
   padding-left: 5px;
   color: black;
@@ -864,9 +862,8 @@ background:#9251F7;
 
 .insight:hover{
   background-color: #f4f0fb;
-  border: #9251f7;
+  border:0.5px solid #9251F7;
   padding: 10px;
-  border-width: 0.5px;
   margin-top: 5px; 
 }
 .para{
@@ -1031,8 +1028,7 @@ display: grid;
   border-radius: 10px;
   margin-bottom: 10px;
   background: #f0effa;
-  border-color: #9251F7;
-  border-width: 0.5px;
+  border:0.5px solid #9251F7;
 }
 .symptoms-selected-div {
   display: grid;
