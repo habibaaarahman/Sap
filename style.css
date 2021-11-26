@@ -843,7 +843,7 @@ background:purple;
   margin-top: 5px; 
 }
 .para{
-  display: grid;
+  display: flex;
   margin-left:20px;
 }
 .diagram{
