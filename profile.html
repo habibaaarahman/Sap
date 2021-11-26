@@ -386,6 +386,8 @@
 			var hideDiv = document.getElementById("empty-div");
 			var showDiv = document.getElementById("entry-details-block");
 
+			hideDiv.style.display = "none";
+			showDiv.style.display = "block";
 
 			entryInfo.innerHTML = entryContent[val - 1];
 
@@ -397,11 +399,8 @@
 				if(id != 0)
 				{
 					document.getElementById(id).className = "task";
-				}
 
-				
-				hideDiv.style.display = "none";
-				showDiv.style.display = "block";
+				}
 
 
 				id = val;
@@ -424,17 +423,14 @@
 
 				else
 				{
-					hideDiv.style.display = "none";
-					showDiv.style.display = "block";
 
 					document.getElementById(id).className = "task";
-					
+			
 					id = val;
 
 					item.className = "selected";
 
 					myilnesses.push(ilnesses[val]);
-
 
 				}
 
