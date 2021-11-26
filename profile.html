@@ -403,10 +403,10 @@
 				selected = true;
 
 				item.className = "selected";
-
+				
+				myilnesses.push(ilnesses[val]);
 				hideDiv.style.display = "none";
 				showDiv.style.display = "block";
-				myilnesses.push(ilnesses[val]);
 
 			}
 			  
@@ -426,10 +426,11 @@
 					id = val;
 
 					item.className = "selected";
+
+					myilnesses.push(ilnesses[val]);
 					hideDiv.style.display = "none";
 					showDiv.style.display = "block";
 
-					myilnesses.push(ilnesses[val]);
 				}
 
 
