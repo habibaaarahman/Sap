@@ -847,9 +847,10 @@ background:purple;
   margin-left:20px;
 }
 .diagram{
-  width: 50%;
+  width: 100%;
   justify-content: right;
   text-align:right;
+  align-items: right;
 }.illu{
   display: flex;
   margin-left: 20px;
