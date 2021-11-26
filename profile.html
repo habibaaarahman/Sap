@@ -396,8 +396,6 @@
 			{
 				if(id != 0)
 				{
-					hideDiv.style.display = "none";
-					showDiv.style.display = "block";
 					document.getElementById(id).className = "task";
 				}
 
@@ -406,7 +404,10 @@
 
 				item.className = "selected";
 
-				myilnesses.push(ilnesses[val])
+				hideDiv.style.display = "none";
+				showDiv.style.display = "block";
+				myilnesses.push(ilnesses[val]);
+
 			}
 			  
 			else
@@ -420,16 +421,15 @@
 
 				else
 				{
-					hideDiv.style.display = "none";
-					showDiv.style.display = "block";
-
 					document.getElementById(id).className = "task";
 					
 					id = val;
 
 					item.className = "selected";
+					hideDiv.style.display = "none";
+					showDiv.style.display = "block";
 
-					myilnesses.push(ilnesses[val])
+					myilnesses.push(ilnesses[val]);
 				}
 
 
