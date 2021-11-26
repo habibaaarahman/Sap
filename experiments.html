@@ -16,6 +16,12 @@
 
 		<div class = "profile">
 			<div class = "username">Experiments</div>
+
+			<div class = "wrapper" style = "top:37px;left:-181px">
+				<div width = "50%" style="text-align:left;color: blue" onclick="backButton()">
+				  < Back
+				</div>
+			</div>
 		</div>
 
 	</div>
@@ -152,62 +158,11 @@
 			entryInfo.innerHTML = entryContent[val - 1];
 
 			var item = document.getElementById(val);
-
-
-			if(!selected)
-			{
-				if(id != 0)
-				{
-					document.getElementById(id).className = "task";
-				}
-
-				id = val;
-				selected = true;
-
-				item.className = "selected";
-
-				myilnesses.push(ilnesses[val])
-			}
-			  
-			else
-			{
-				if(val == id)
-				{
-					selected = false;
-
-					item.clasName = "task";
-				}
-
-				else
-				{
-					document.getElementById(id).className = "task";
-					id = val;
-
-					item.className = "selected";
-
-					myilnesses.push(ilnesses[val])
-				}
-
-
-				for( a in myilnesses)
-				{
-					if(myilnesses[a] == ilnesses[val])
-					{
-						break;
-					}
-				}
-
-				myilnesses.splice(a,1);
-			}
-
-
-			list.innerHTML= "";
-
-			for (a in myilnesses)
-			{
-				list.innerHTML += myilnesses[a] + "<br>";
-			}
 	    }
+
+		function backButton(){
+        	window.open("insight.html?#");
+    	}
 
 	</script>
 </body>
