@@ -223,7 +223,7 @@
 
 			if(!registered[registeredIndex])
 			{
-				if((time.value > 0 || (time.value === 'number')) || (validTime && cycle == 0))
+				if(time.value > 0 && (time.value === 'number' || (validTime && cycle == 0)))
 				{
 					cycle++; 
 
