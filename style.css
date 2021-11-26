@@ -748,7 +748,7 @@ h1 {
 
 }
 .progress-circle.progress-3:after {
-  background-image: linear-gradient(90deg, #ebebeb 50%, transparent 50%, transparent), linear-gradient(360deg, #f05c0033 50%, #ebebeb 50%, #ebebeb);
+  background-image: linear-gradient(90deg, #ebebeb 50%, #f05c0033 50%, transparent), linear-gradient(360deg, #f05c0033 50%, #ebebeb 50%, #ebebeb);
 
 }
 #navbar{
