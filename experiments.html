@@ -123,6 +123,8 @@
 
 
 	<script>	
+		var cycle = 0;
+
 		var notified = [false, false, false];
 		var notifiedIndex = 0;
 
@@ -133,7 +135,6 @@
 		var timePlus = document.getElementById("a+");
 		var timeMinus = document.getElementById("a-");
 
-		var cycle = 0;
 
 		var experimentTitles = [
 				"Increasing sleep time",
@@ -142,6 +143,7 @@
 			];
 			var nextTitle = 0;
 
+
 	var experimentDescriptions = [
 		"In this experiment you will try to increase your normal sleep duration by 1 hour each day to reduce your headaches and symptoms of stress.",
 		" In this experiment you will try to increase the number of walks you take on average each week to decrease your risk of heart disease.",
@@ -149,6 +151,7 @@
 	];
 	var nextDescription = 0;
 
+	
 		
 	   function refresh()
 	   {
