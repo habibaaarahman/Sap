@@ -1066,7 +1066,7 @@ display: grid;
 }
 
 .symptoms-selected-div-block {
-    display: block;
+    display: none;
     overflow: auto;
     height: 120px;
     /* margin: 0px 25px 12px; */
