@@ -132,6 +132,9 @@
 	<script>	
 		var inputTime = false;
 
+		var notified = [false, false, false];
+		var notifiedIndex = 0;
+
 		var time = document.getElementById("Age");
 		var timePlus = document.getElementById("a+");
 		var timeMinus = document.getElementById("a-");
@@ -196,6 +199,8 @@
 	   
 	   function refreshExperiment()
 	   {
+		    notifiedIndex = (notifiedIndex + 1) % notified.length;
+
 		    nextTitle = (nextTitle + 1) % experimentTitles.length;
 			nextDescription = (nextDescription + 1) % experimentDescriptions.length;
 
@@ -218,7 +223,15 @@
 		}
 
 		function consultDoctor(){
-			alert("Your doctor has been notified.");
+			if(!notifed[notifiedIndex])
+			{
+				notified[notifiedIndex] = true;
+				
+				alert("Your doctor has been notified.");
+			}
+	
+			else
+				alert("You have already notifed your doctor about this experiment.")
 		}
 
 	</script>
