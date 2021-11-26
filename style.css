@@ -787,7 +787,7 @@ background:purple;
 }
 .contentwrap{
   display: flex;
-  padding: 10px;
+  /*padding: 10px;*/
 }
 .mini{
   text-align:center;
