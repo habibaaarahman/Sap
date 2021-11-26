@@ -16,14 +16,7 @@
 
 		<div class = "profile">
 			<div class = "username">Experiments</div>
-
-			<div class = "wrapper" style = "top:37px;left:-220px">
-				<div width = "50%" style="text-align:left;color: blue" onclick="backButton()">
-				  < Back
-				</div>
-			</div>
 		</div>
-
 	</div>
 
 		<div class = profilepic>
@@ -62,7 +55,7 @@
 			<label class = "profilename" style = "font-size:31px">Run this experiment for</label>
 
 			<div class="field">
-				<input type="number" placeholder="0" required style="width:15%; font-size:31px" id = "Age">
+				<input type="number" placeholder="0" required style="width:15%; font-size:31px" id = "time">
 
 				<div class = "ageselect" style = "height:105%">
 				  <li id ="a+" class = "agelayer" onclick="addWeek()"><label class = "prompt">+</label></li>
@@ -138,7 +131,7 @@
 		var registered = [false, false, false];
 		var registeredIndex = 0;
 
-		var time = document.getElementById("Age");
+		var time = document.getElementById("time");
 		var timePlus = document.getElementById("a+");
 		var timeMinus = document.getElementById("a-");
 
@@ -215,17 +208,12 @@
 			experimentDescription.innerHTML = experimentDescriptions[nextDescription];
 	    }
 
-		function backButton(){
-        	window.open("insight.html?#");
-    	}
 
 		function confirmExperiment()
 		{
-			var contents = document.getElementById("Age");
-
 			if(!registered[registeredIndex])
 			{
-				if(inputTime || (contents.value != "0" && parseInt(contents.value) === "number"))
+				if(inputTime || (time.value != "0" && parseInt(time.value) === "number"))
 				{
 					registered[registeredIndex] = true;
 
