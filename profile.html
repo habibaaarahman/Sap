@@ -101,7 +101,7 @@
 			<br>
 			<br>
 
-			<div id = "entry-info" class = "symptoms-selected-div">
+			<div id = "entry-info" class = "symptoms-selected-div-block">
 		
 				<p id = "entry-info-text" class = "symptoms-selected-text test"> </p>
 
@@ -192,6 +192,7 @@
 		var entryContent = [
 				"Reported: headaches, depression and difficulty focusing",
 				"head: pain (8)",
+				"mental: sleep (10)",
 				"Reported: nausea and flu symptoms",
 				"Reported: headaches and difficulty focusing",
 				"Reported: stomachache, nausea and flu symptoms",
@@ -249,12 +250,12 @@
 				else
 				{
 					document.getElementById(id).className = "task";
+					
 					id = val;
 
 					item.className = "selected";
 
 					myilnesses.push(ilnesses[val])
-					myillness.push(illness[val-1])
 				}
 
 
