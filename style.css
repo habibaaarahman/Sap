@@ -1127,3 +1127,12 @@ display: grid;
   align-items: center;
   background-color: transparent;
 }
+
+.log-history-container{
+  display: block;
+  align-content: flex-start;
+  padding: 20px;
+  background-color: #ddd;
+  width: 100%;
+  height: max-content;
+}
