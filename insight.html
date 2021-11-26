@@ -16,7 +16,7 @@
     <div class = "contentwrap">
 	<div class = "wrapper" id = "profileinfo">
 		<div class ="profile">
-			<div class = "username">Insights & Correlations</div>
+			<div class = "username" onload = "disclaimer()">Insights & Correlations</div>
 			
 		</div>
 
@@ -280,6 +280,11 @@
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
 	   }
+	 }
+
+	 function disclaimer()
+	 {
+		 alert("A friendly reminder: correlations do not implicate causation. Be sure to check with you doctor for more details regarding your symptoms.");
 	 }
    
 
