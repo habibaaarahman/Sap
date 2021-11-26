@@ -98,7 +98,6 @@ input[type=text] {
 
 
 
-<!--Make sure the form has the autocomplete function switched off:-->
 <form autocomplete="off">
   <div class="autocomplete" style="width:300px;">
     <input id="inputEntry" type="text" name="logHistory" placeholder="Search for entries by date (ex. 06/05/21)">
@@ -149,14 +148,13 @@ function autocomplete(inp, arr) {
         x[i].parentNode.removeChild(x[i]);
       }
     }
-  }
-
+  }	
 }
 
-/*An array containing all the country names in the world:*/
+
 var entries = ["06/05/21 - back pain", "06/10/21 - back pain, achiness, tired", "06/18/21 - eye strain", "06/24/21 - eye strain, headaches", "07/01/21 - flu symptoms", "07/09/21 - stomachache", "07/20/21 - sore throat, common cold", "07/29/21 - stress, headaches", "08/08/21 - depression", "08/19/21 - nausea", "09/01/21 - headaches, depression", "09/09/21 - nausea, flu symptoms", "09/25/21 - headaches, difficulty focusing", "10/12/21 - weakness, achiness", "10/20/21 - difficulty breathing", "11/01/21 - depression, anxiety", "11/02/21 - depression, anxiety", "11/03/21 - depression", "11/04/21 - weakness"];
 
-/*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+
 autocomplete(document.getElementById("inputEntry"), entries);
 </script>
 
