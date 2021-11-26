@@ -156,8 +156,8 @@
 	   
 	   function refreshExperiment()
 	   {
-		    nextTile = (nextTitle + 1) % experimentTitles.length;
-			nextDescription = (nextDescription + 1) % experimentDescriptions.length;
+		    nextTile = (nextTitle + 1) % 3;
+			nextDescription = (nextDescription + 1) % 3;
 
 			var experimentTitle = document.getElementById("experiment-title");
 			experimentTitle.innerHTML = experimentTitles[nextTitle];
