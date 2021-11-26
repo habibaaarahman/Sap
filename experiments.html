@@ -61,7 +61,7 @@
 			<br>
 			<label class = "profilename" style = "font-size:31px">Run this experiment for</label>
 
-			<div class="field">
+			<div class="field" id = "number">
 				<input type="number" placeholder="0" required style="width:15%; font-size:31px" id = "Age">
 
 				<div class = "ageselect" style = "height:105%">
@@ -217,10 +217,12 @@
 
 		function confirmExperiment()
 		{
-			if(inputTime)
+			var contents = document.getElementById("number");
+
+			if(inputTime || (contents.value != "0" && parseInt(contents.value) === number))
 				alert("You have successfully registered for this experiment!");
 			else
-				alert("Please enter the number of weeks you'd like to register for this experiment above.");
+				alert("Please enter the number (greater than 0) of weeks you'd like to register for this experiment above.");
 		}
 
 		function consultDoctor()
