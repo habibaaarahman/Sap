@@ -843,8 +843,13 @@ background:purple;
   margin-top: 5px; 
 }
 .para{
-  display: flex;
-  margin-left:20px;
+  display: grid;
+  margin-left: 20px;
+  justify-items: start;
+  width: 200px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
 }
 .diagram{
   width: 100%;
