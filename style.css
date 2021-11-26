@@ -795,13 +795,11 @@ background:purple;
 }
 .nav{
   display: flex;
-  align-items: center;
   width: 1070px;
   margin-left: 10px;
 }
 .nav-home{
   display: flex;
-  align-items: center;
   width: 1070px;
   margin-left: 20px;
 }
