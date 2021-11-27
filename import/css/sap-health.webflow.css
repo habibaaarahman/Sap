@@ -3223,6 +3223,7 @@ a {
 }
 
 .get-directions:hover {
+  border-radius: 5px;
   background-color: #f6d3d3;
 }
 
@@ -3248,6 +3249,7 @@ a {
 
 .call-doctor.non-urgent:hover {
   background-color: rgba(1, 144, 85, 0.11);
+  border-radius: 5px;
 }
 
 .popup-icon {
