@@ -8,18 +8,8 @@
   <link rel="stylesheet" href="style.css" />
   <title>Insights</title>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-   
+
 </head>
-
-<div class="message">
-    <div class="message_pad">
-        <div id="message">hi</div>
-        <div class="message_leave">
-
-        </div>
-    </div>
-</div>
-
 <br>
 <body style="background:#f0effa;display: grid;" >
 	
@@ -292,42 +282,13 @@
 	   }
 	 }
 
-	 // Save data to sessionStorage
-	sessionStorage.setItem('firstVisit', '1');
 
-	/* Fix size on document ready.*/
-	$(function()
-	{
-    	if (!sessionStorage.getItem('firstVisit') === "1")
-    	{
-       		$(".message").show(); 
-    	} 
+	 function disclaimer()
+	 {
+		 alert("A friendly reminder: correlations do not implicate causation. Be sure to check with your doctor for more details regarding your symptoms.");
+	 }
 
-    	//Close element.
-    	$(".message").click(function()
-    	{
-       		$(this).hide();
-    	});
-
-    	$(".message").css({
-        'height': $(document).height()+'px'
-    	});
-    	$(".message_pad").css({
-        	'left': ($(document).width()/2 - 500/2)+'px'
-    	});
-	});
-
-/*
-* Fix size on resize.
-*/
-$(window).resize(function(){
-    $(".message").css({
-        'height': $(document).height()+'px'
-    });
-    $(".message_pad").css({
-        'left': ($(document).width()/2 - 500/2)+'px'
-    });
-});
+	 window.onload = disclaimer();
    
 
     </script>
