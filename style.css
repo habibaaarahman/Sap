@@ -1008,18 +1008,29 @@ display: grid;
   bottom: 80%;
 }
 .correlation{
-  width: 485x;
+/*   width: 485x;
   height: 210px;
   padding: 10px;
   display: block;
   border-radius: 10px;
   margin-right: 0px;
-  /*background-color: rgba(171, 168, 168, 0.12);*/
+  background-color: rgba(171, 168, 168, 0.12);
   align-items: center;
   justify-content: center;
   text-align: left;
   color: black;
-  font-size: 14px;
+  font-size: 14px; */
+
+    height: 226px;
+    display: flex;
+    margin-right: 0px;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    color: black;
+    font-size: 14px;
+    flex-direction: column;
+    
 }
 .insightselected{
   display: flex;
