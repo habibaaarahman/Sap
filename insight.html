@@ -10,6 +10,16 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    
 </head>
+
+<div class="message">
+    <div class="message_pad">
+        <div id="message"></div>
+        <div class="message_leave">
+
+        </div>
+    </div>
+</div>
+
 <br>
 <body style="background:#f0effa;display: grid;" >
 	
@@ -150,9 +160,7 @@
 			</div>
 		</div>
 	</div>
-    <script type="text/javascript" >
-		   sessionStorage.setItem('firstVisit', '1');
-		   
+    <script type="text/javascript">
            var i1 = document.getElementById("in1");
 		   var i2 = document.getElementById("in2");
 		   var i3 = document.getElementById("in3");
@@ -284,13 +292,42 @@
 	   }
 	 }
 
-	 function disclaimer()
-	 {
-		if (!sessionStorage.getItem('firstVisit') === "1")
-			alert("A friendly reminder: correlations do not implicate causation. Be sure to check with your doctor for more details regarding your symptoms.");
-	 }
+	 // Save data to sessionStorage
+	sessionStorage.setItem('firstVisit', '1');
 
-	 window.onload = disclaimer;
+	/* Fix size on document ready.*/
+	$(function()
+	{
+    	if (!sessionStorage.getItem('firstVisit') === "1")
+    	{
+       		$(".message").show(); 
+    	} 
+
+    	//Close element.
+    	$(".message").click(function()
+    	{
+       		$(this).hide();
+    	});
+
+    	$(".message").css({
+        'height': $(document).height()+'px'
+    	});
+    	$(".message_pad").css({
+        	'left': ($(document).width()/2 - 500/2)+'px'
+    	});
+	});
+
+/*
+* Fix size on resize.
+*/
+$(window).resize(function(){
+    $(".message").css({
+        'height': $(document).height()+'px'
+    });
+    $(".message_pad").css({
+        'left': ($(document).width()/2 - 500/2)+'px'
+    });
+});
    
 
     </script>
