@@ -90,7 +90,54 @@
 		  
 			 </div>
 		</div>
-		
+		<div class="insight" id ="in4"onclick="drawChart(this.id);select(this.id);">
+			<div class="illu">
+				<img class="pic" src="down.png" width="40px" height="40px">
+			</div>
+			<div class="illu">
+				<img class="pic" src="screentime.png" width="40px" height="40px">
+			</div>
+			
+			<div class="para" style="text-align: left;">
+			<label class="title">Screen Time</label>
+			<label class="summary">2hrs</label>
+			 </div>
+			 <div class="diagram">
+		  
+			 </div>
+		</div>
+		<div class="insight" id ="in5"onclick="drawChart(this.id);select(this.id);">
+			<div class="illu">
+				<img class="pic" src="down.png" width="40px" height="40px">
+			</div>
+			<div class="illu">
+				<img class="pic" src="audio.png" width="40px" height="40px">
+			</div>
+			
+			<div class="para" style="text-align: left;">
+			<label class="title">Audio levels</label>
+			<label class="summary">5db(40 min)</label>
+			 </div>
+			 <div class="diagram">
+		  
+			 </div>
+		</div>
+		<div class="insight" id ="in6"onclick="drawChart(this.id);select(this.id);">
+			<div class="illu">
+				<img class="pic" src="down.png" width="40px" height="40px">
+			</div>
+			<div class="illu">
+				<img class="pic" src="water.png" width="40px" height="40px">
+			</div>
+			
+			<div class="para" style="text-align: left;">
+			<label class="title">Hydration</label>
+			<label class="summary">6Litres</label>
+			 </div>
+			 <div class="diagram">
+		  
+			 </div>
+		</div>
 		
 	</div>
 </div>
@@ -156,6 +203,9 @@
            var i1 = document.getElementById("in1");
 		   var i2 = document.getElementById("in2");
 		   var i3 = document.getElementById("in3");
+	           var i4 = document.getElementById("in4");
+	          var i5 = document.getElementById("in5"); 
+	           var i6 = document.getElementById("in6");
 		   var changer = document.getElementById("changer");
 		   var changer2 = document.getElementById("changer2");
 
@@ -164,16 +214,49 @@
 				   i1.className = "insightselected";
 				   i2.className = "insight";
 				   i3.className = "insight";
+				    i4.className = "insight";
+				    i5.className = "insight";
+				    i6.className = "insight";
 			   }
 			   if(val=="in2"){
 				   i1.className = "insight";
 				   i2.className = "insightselected";
 				   i3.className = "insight";
+				    i4.className = "insight";
+				    i5.className = "insight";
+				    i6.className = "insight";
 			   }
 			   if(val=="in3"){
 				   i1.className = "insight";
 				   i2.className = "insight";
 				   i3.className = "insightselected";
+				    i4.className = "insight";
+				    i5.className = "insight";
+				    i6.className = "insight";
+			   }
+			     if(val=="in4"){
+				   i1.className = "insight";
+				   i2.className = "insight";
+				   i3.className = "insight";
+				    i4.className = "insightselected";
+				    i5.className = "insight";
+				    i6.className = "insight";
+			   }
+			   if(val=="in5"){
+				   i1.className = "insight";
+				   i2.className = "insight";
+				   i3.className = "insight";
+				    i4.className = "insight";
+				    i5.className = "insightselected";
+				    i6.className = "insight";
+			   }
+			   if(val=="in6"){
+				   i1.className = "insight";
+				   i2.className = "insight";
+				   i3.className = "insight";
+				    i4.className = "insight";
+				    i5.className = "insight";
+				    i6.className = "insightselected";
 			   }
 		   }
 		   
@@ -281,6 +364,61 @@
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
+	   }
+		    if(val=="in4"){
+		   changer.innerHTML = "<div id = chart_div></div>";
+		   changer2.innerHTML = "<div class = \"correlation\">There was an  downward trend in your screen time this week<br>We also found that you reported less headaches and stress-related symptopms<br><br>Did you know : Sleeping can increase productivity? Start an experiment now<br><a class=\"gradient-button gradient-button-2\" href=\"experiments.html\" style=\"width: 100%; font-size: 16px;\" >Start experiment</a><br /></div>"
+		   console.log("here");
+	   var data = new google.visualization.DataTable();
+	   data.addColumn('string', 'Day');
+	   data.addColumn('number', 'Hours');
+	   data.addRows([
+		 ['Sun', 6],
+		 ['Mon', 5],
+		 ['Tue',3],
+		 ['Wed', 1],
+		 ['Thur', 2],
+		 ['Fri', 3],
+		 ['Sat', 4],
+	   ]);
+
+	   // Set chart options
+	   var options = {'title': "            Screen time for Nov 21st - Nov 27th\nDown 2 hours from last week",
+					  'width':500,
+					  'height':220,
+					  'legend':'bottom',
+					  is3D: true,
+				};
+
+	   // Instantiate and draw our chart, passing in some options.
+	   var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+	   chart.draw(data, options);
+	   }
+		 if(val=="in5"){
+		   changer.innerHTML = "<div id = chart_div></div>";
+		   changer2.innerHTML = "<div class = \"correlation\">There was an  decrease in your audio exposure this week<br>We also found that you reported less headaches and stress-related symptopms<br><br>Did you know : Wearing heaphones for prolonged periods can increase the risk of hearing loss Start an experiment now<br><a class=\"gradient-button gradient-button-2\" href=\"experiments.html\" style=\"width: 100%; font-size: 16px;\" >Start experiment</a><br /></div>"
+		   console.log("here");
+	   var data = new google.visualization.DataTable();
+	   var data = google.visualization.arrayToDataTable([
+      ['Mon', 20, 28, 38, 45],
+      ['Tue', 31, 38, 55, 66],
+      ['Wed', 50, 55, 77, 80],
+      ['Thu', 77, 77, 66, 50],
+      ['Fri', 68, 66, 22, 15]
+      // Treat first row as data as well.
+    ], true);
+
+	   // Set chart options
+	   var options = {'title': "            Audio Levels (Decibel Range) while using headphones for Nov 21st - Nov 27th\nDown 5dB and 40mins from last week",
+					  'width':500,
+					  'height':220,
+					  'legend':'bottom',
+					  is3D: true,
+				};
+
+	   // Instantiate and draw our chart, passing in some options.
+	   var chart = new google.visualization.CandlestickChart(document.getElementById('chart_div'));
+	   chart.draw(data, options);
 	   }
 	 }
 
