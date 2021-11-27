@@ -1,17 +1,12 @@
 # Sap
 Sap health
 
-Including illnesses in Dropdown menu(Styling not complete)
-- Working file : "profileinfo.html"
-- Look for comment <!---------List of checkboxes and options----------->
-- When incluiding illnesses with new letter:Copy paste below code, replace "?" with alphabet
-              
-              <label class="title">?</label>
-              
-              
-              
-- When including new illness : Copy paste below code, replace n with unique integer and "Ilness n" With name of ilness
-     
-          <label id="n" class="task" onclick = "select(this.id);">
-                  Illness n
-          </label>
+ High fidelity Propotype
+- Our submission includes a standalone website that is optimized for Google chrome
+- We have hard-coded a user profile to show the features of the website,for the purpose of this submission:
+  the onboarding flow would need to you to fill out fields but not validate their values( Fill the fields 
+  with any values).All values would leadto the same single-user interface
+- In the main part of the website : We used javaScript and HTML referencing to link pages
+ ![Image](/readme1.png)
+
+ 
