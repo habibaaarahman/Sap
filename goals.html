@@ -6,51 +6,254 @@
   <meta name="description" content="A description of the page and its contents" />
 
   <link rel="stylesheet" href="style.css" />
-  <title>Goals</title>
+  <title>Profile</title>
 </head>
 
-<body style="background:#f0effa;display: grid;">
+<body style="background:#eeedf3;display: grid;">
+
+	<div class = "contentwrap">
+	<div class = "wrapper" id = "profileinfo">
+
+		<div class = "profile">
+			<div class = "username">Goals & Experiments</div>
+		</div>
+	</div>
+
+		<div class = profilepic>
+			<img class = "logo" src="matthew.png" width = "70px">
+		</div>
+	</div>
+
 	<div class = contentwrap>
 	<div class = "wrapper" id = "checkup">
-		<label class = "profilename">Check up</label>
-	</div>
-	<div class = "wrapper" id = "goals">
-		<label class = "profilename">Goals</label>
-	</div>
-</div>
-   
-<div class = contentwrap>
-	<div class = "wrapper" id = "insights">
-		<label class = "profilename">Insights</label>
-	</div>
-</div>
-	
+		<div id = "experiment-title" class = "title" style = "width:100%; color: #9251F7;">Increasing sleep time</div>
+		<br>
+		<br>
+		<br>
 
-<div class = "contentwrap">
-		<div class = "nav-home">
-			<div class="button" onclick = "location.href='homepage.html';">
-				<div class = "icon"><img src="home.png" width = "30px"></div>
-				<label>Home</label>
-		    </div>
-			<div class="button" onclick = "location.href='import/checkup.html';">
-				<div class = "icon"><img src="checkup.png" width = "30px"></div>
-				<label>Checkup</label>
+		<div id = "changer2">
+			<div class = "empty-insight">
+				<p id = "experiment-description" class = "profilename" style = "width:100%; position:relative; top:7px; left:7px">In this experiment you will try to increase your normal sleep duration by 1 hour each day to reduce your headaches and symptoms of stress.</p>
 			</div>
-			<div class="buttonactive">
-				<div class = "icon"><img src="goals.png" width = "30px" ></div>
-				<label>Goals</label>
+		</div>
+
+		<label class = "title" style="color: #f05c00;">Experiment duration</label>
+		<br>
+		<br>
+
+		<div class = "changer" style = "position:relative; left:10px">
+		<label class = "profilename" style = "font-size:20px">Run this experiment for</label>
+
+		<div class="field">
+			<input type="number" placeholder="0" required style="width:15%; font-size:20px" id = "time">
+
+			<div class = "ageselect">
+			  <li id ="a+" class = "agelayer" onclick="addWeek()"><label class = "prompt">+</label></li>
+			  <li id ="a-"  class = "agelayer" onclick="subtractWeek()"><label class = "prompt">-</label></li>
 			</div>
-			<div class="button" onclick = "location.href='insight.html';">
-				<div class = "icon"><img src="insight.png" width = "30px"></div>
-				<label>Insight</label>
+	   </div>
+
+	   <label class = "profilename" style = "font-size:20px">weeks</label>
+	   </div>
+		
+		<a class= "gradient-button gradient-button-2" style = "background-color:red" onclick = "consultDoctor()" id="log">Consult doctor</a><br/>
+
+		<div class = "avatar" style = "top:5px; left:390px">
+			<img class="logo" src="exp2.png" width = "110px">
+		</div>
+	</div>
+
+	
+	<div class = "contentwrap" id = tab2>
+
+		
+
+
+			<div class = "avatar" style = "top:8px; left:390px">
+				<img class="logo" src="clock.png" width = "100px">
 			</div>
-			<div class="button" onclick = "location.href='profile.html';">
-				<div class = "icon"><img src="profile.png" width = "30px"></div>
-				<label>Log History</label>
+        </div>
+
+
+		<div class = "wrapper" id = "goals" style = "top:16px">
+			<label class = "title" style = "color: #019055">Set up experiment</label>
+			<br>
+			<br>
+			
+
+			<a class= "gradient-button gradient-button-2" style = "background-color:rgb(4, 216, 4); width:90%; top:80px; left:25px" onclick="refreshExperiment()" id="log">Generate new experiment</a><br/>
+    		<a class= "gradient-button gradient-button-2" style = "width:90%; left:25px; top:200px" onclick = "confirmExperiment()" id="log">Register new experiment</a><br/>
+
+			<div class = "avatar" style = "left:5px; top:70px">
+				<img class="logo" src="refresh.png" width = "120px">
+			</div>
+
+			<div class = "avatar" style = "left:25px; top:200px">
+				<img class="logo" src="plus-sign.png" width = "70px">
 			</div>
 		</div>
 	</div>
 </div>
 
+	
+
+<div class = "contentwrap">
+	<div class = "nav">
+		<div class="button" onclick = "location.href='homepage.html';">
+			<div class = "icon"><img src="home.png" width = "30px"></div>
+			<label>Home</label>
+		</div>
+		<div class="button" onclick = "location.href='import/checkup.html';">
+			<div class = "icon"><img src="checkup.png" width = "30px"></div>
+			<label>Checkup</label>
+		</div>
+		<div class="button" onclick = "location.href='goals.html';">
+			<div class = "icon"><img src="goals.png" width = "30px" ></div>
+			<label>Goals</label>
+		</div>
+		<div class="button" onclick = "location.href='insight.html';">
+			<div class = "icon"><img src="insight.png" width = "30px"></div>
+			<label>Insight</label>
+		</div>
+			
+		<div class="button" onclick = "location.href='profile.html';">
+			<div class = "icon"><img src="profile.png" width = "30px"></div>
+			<label>Log History</label>
+		</div>
+	</div>
+</div>
+
+
+
+	<script>	
+		var notified = [false, false, false];
+		var notifiedIndex = 0;
+
+		var registered = [false, false, false];
+		var registeredIndex = 0;
+
+		var time = document.getElementById("time");
+		var timePlus = document.getElementById("a+");
+		var timeMinus = document.getElementById("a-");
+
+
+		var experimentTitles = [
+				"Increasing sleep time",
+				"Taking more walks",
+				"Trying a keto diet"
+			];
+			var nextTitle = 0;
+
+
+	var experimentDescriptions = [
+		"In this experiment you will try to increase your normal sleep duration by 1 hour each day to reduce your headaches and symptoms of stress.",
+		"In this experiment you will try to increase the number of walks you take on average each week to decrease your risk of heart disease.",
+		"In this experiment you will try to maintain a keto diet to promote your metabolic health."
+	];
+	var nextDescription = 0;
+
+
+		
+	   function refresh()
+	   {
+			docname.value = "";
+			docem.value = "";
+			docnum.value = "";
+	   }
+
+	   function addWeek() 
+	   {
+		   timePlus.className = "activelayer";
+           timeMinus.className = "agelayer";
+
+
+           var a;
+
+           if(time.value == "") {a = 0;}
+           else {a = parseInt(time.value);}
+          
+           time.value = a+1;
+        }
+
+   	 	function subtractWeek() 
+		{
+			timeMinus.className = "activelayer";
+            timePlus.className = "agelayer";
+
+
+            var a;
+
+            if(time.value == "") {a = 0;}
+            else {a = parseInt(time.value);}
+
+            if(a < 1) {timeMinus.className = "agelayer";}
+            else {time.value = a-1;}
+		}
+
+	   
+	   function refreshExperiment()
+	   {
+		    notifiedIndex = (notifiedIndex + 1) % notified.length;
+			registeredIndex = (registeredIndex + 1) % registered.length;
+
+		    nextTitle = (nextTitle + 1) % experimentTitles.length;
+			nextDescription = (nextDescription + 1) % experimentDescriptions.length;
+
+			var experimentTitle = document.getElementById("experiment-title");
+			experimentTitle.innerHTML = experimentTitles[nextTitle];
+
+			var experimentDescription = document.getElementById("experiment-description");
+			experimentDescription.innerHTML = experimentDescriptions[nextDescription];
+	    }
+
+
+		function confirmExperiment()
+		{
+			var validTime = true;
+
+			if(time.value === "string")
+			{
+				for(i = 0; i < time.length; i++)
+				{
+					if(parseInt(time.value.charAt(i)) == NaN)
+						validTime = false;
+				}
+			}
+			
+
+			if(!registered[registeredIndex])
+			{
+				if(time.value > 0 && (time.value === 'number' || validTime))
+				{
+					registered[registeredIndex] = true;
+
+					alert("You have successfully registered for this experiment!");
+				}
+
+				else
+					alert("Please enter the number of weeks (greater than 0) you'd like to register for this experiment above.");
+			}
+
+
+			else
+				alert("You have already registered for this experiment.");
+			
+		}
+
+
+		function consultDoctor()
+		{
+			if(!notified[notifiedIndex])
+			{
+				notified[notifiedIndex] = true;
+
+				alert("Your doctor has been notified.");
+			}
+	
+			else
+				alert("You have already notified your doctor about this experiment.");
+		}
+
+	</script>
 </body>
 </html>
