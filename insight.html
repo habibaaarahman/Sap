@@ -284,10 +284,10 @@
 
 	 function disclaimer()
 	 {
+		sessionStorage.setItem('firstVisit', '1');
+		
 		if (!sessionStorage.getItem('firstVisit') === "1")
 			alert("A friendly reminder: correlations do not implicate causation. Be sure to check with your doctor for more details regarding your symptoms.");
-			
-		sessionStorage.setItem('firstVisit', '1');
 	 }
 
 	 window.onload = disclaimer;
