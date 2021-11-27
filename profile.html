@@ -153,7 +153,13 @@
 			  }	
 			}
 			
-			
+
+			/*execute a function when someone clicks in the document:*/
+			document.addEventListener("click", function (e) {
+    			closeAllLists(e.target);
+			});
+
+
 			
 			var entries = ["12/04/20 - diarrhea, nausea, vomiting", "01/13/21 - stress, headaches", "02/18/21 - cramps, aches", "03/23/21 - dehydration, weakness", "04/15/21 - stomachache", "05/11/21 - stress, depression", "06/05/21 - back pain", "06/10/21 - back pain, achiness, tired", "06/18/21 - eye strain", "06/24/21 - eye strain, headaches", "07/01/21 - flu symptoms", "07/09/21 - stomachache", "07/20/21 - sore throat, common cold", "07/29/21 - stress, headaches", "08/08/21 - depression", "08/19/21 - nausea", "09/01/21 - headaches, depression", "09/09/21 - nausea, flu symptoms", "09/25/21 - headaches, difficulty focusing", "10/12/21 - weakness, achiness", "10/20/21 - difficulty breathing", "11/01/21 - depression, anxiety", "11/02/21 - depression, anxiety", "11/03/21 - depression", "11/04/21 - weakness"];
 			
@@ -246,7 +252,7 @@
 		</div>
 	</div>
 		<label class = "summary" style="color:orange; position:relative; top:13px; left:29.5px; font-size:19px;">You logged for 5 days in a row! Keep it up!</label>
-		<a class= "gradient-button gradient-button-2" style = "height:20%" location.href='import/physical-checkup.html'; id="log">Log your symptoms</a><br/>
+		<a class= "gradient-button gradient-button-2" style = "height:10%" location.href='import/physical-checkup.html'; id="log">Log your symptoms</a><br/>
 
 
 		<div class = "avatar" style = "top:500px; left:10px">
