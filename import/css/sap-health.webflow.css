@@ -1125,12 +1125,12 @@ a {
 }
 
 .submit-entry-button:hover {
-  background-color: #7636df;
+  background-color: #7636df !important;
   color: #fff;
 }
 
 .submit-entry-button:active {
-  background-color: #7636df;
+  background-color: #7636df !important;
 }
 
 .image-2 {
