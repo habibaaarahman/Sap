@@ -155,7 +155,33 @@
 
 
 			
-			var entries = ["12/04/20 - diarrhea, nausea, vomiting", "01/13/21 - stress, headaches", "02/18/21 - cramps, aches", "03/23/21 - dehydration, weakness", "04/15/21 - stomachache", "05/11/21 - stress, depression", "06/05/21 - back pain", "06/10/21 - back pain, achiness, tired", "06/18/21 - eye strain", "06/24/21 - eye strain, headaches", "07/01/21 - flu symptoms", "07/09/21 - stomachache", "07/20/21 - sore throat, common cold", "07/29/21 - stress, headaches", "08/08/21 - depression", "08/19/21 - nausea", "09/01/21 - headaches, depression", "09/09/21 - nausea, flu symptoms", "09/25/21 - headaches, difficulty focusing", "10/12/21 - weakness, achiness", "10/20/21 - difficulty breathing", "11/01/21 - depression, anxiety", "11/02/21 - depression, anxiety", "11/03/21 - depression", "11/04/21 - weakness"];
+			var entries = ["12/04/20 - diarrhea, nausea, vomiting", 
+			"01/13/21 - stress, headaches", 
+			"02/18/21 - cramps, aches", 
+			"03/23/21 - dehydration, weakness", 
+			"04/15/21 - stomachache", 
+			"05/11/21 - stress, depression, fatigue", 
+			"06/05/21 - back pain", 
+			"06/10/21 - back pain, achiness", 
+			"06/18/21 - eye strain, fatigue", 
+			"06/24/21 - eye strain, headaches", 
+			"07/01/21 - flu symptoms", 
+			"07/09/21 - stomachache", 
+			"07/20/21 - sore throat, common cold", 
+			"07/29/21 - stress, headaches", 
+			"08/08/21 - depression", 
+			"08/19/21 - nausea", 
+			"09/01/21 - headaches, depression, difficulty focusing", 
+			"09/09/21 - nausea, flu symptoms", 
+			"09/25/21 - headaches, difficulty focusing",
+			"10/03/21 - stomachache, nausea and flu symptoms",
+			"10/12/21 - weakness, achiness", 
+			"10/20/21 - difficulty breathing", 
+			"11/01/21 - stress, burnout, anxiety", 
+			"11/02/21 - stress", 
+			"11/03/21 - stress and burnout", 
+			"11/04/21 - weakness"
+		];
 			
 			
 			autocomplete(document.getElementById("inputEntry"), entries);
@@ -181,14 +207,14 @@
 				  <label id = "2" class = "task" onclick = "select(this.id);" style = "display: flex;padding: 8px;justify-content: space-between;align-content: center;align-items: center;">  
 						November 3rd 2021
 						<label class = "type-of-log" style = "margin-left: 0px;">
-							physical
+							mental
 						</label>
 				  </label>
 			
 				   <label id = "3" class = "task" onclick = "select(this.id);" style = "display: flex;padding: 8px;justify-content: space-between;align-content: center;align-items: center;">
 						November 2nd 2021  
 						<label class = "type-of-log" style = "margin-left: 0px;">
-							physical
+							mental
 						</label>
 				 	</label>
 			
@@ -196,7 +222,7 @@
 					 <label id = "4" class = "task" onclick = "select(this.id);" style = "display: flex;padding: 8px;justify-content: space-between;align-content: center;align-items: center;">
 						November 1st 2021
 						<label class = "type-of-log" style = "margin-left: 0px;">
-							physical
+							mental
 						</label>
 				 	</label>
 			
@@ -305,7 +331,7 @@
 				<div class = "mini" style = "text-align: left;">
 					<img class="pic" src="sleep1.png" width="30px" height="30px">
 					<label class = "summary">
-						Stress is most associated with eye pain
+						Stress is most associated with burnout
 					</label>
 			    </div>
 			</div>
@@ -358,18 +384,16 @@
 		var id = 0;
 
 		var entryContent = [
-				"headaches, depression and difficulty focusing",
-				"head: pain (8)",
- 				"mental: sleep (10)",
- 				"nausea and flu symptoms <br> nauea <br>",
-				"headaches and difficulty focusing",
-				"stomachache, nausea and flu symptoms",
-				"weakness and achiness",
-				"difficulty breathing",
-				"depression and anxiety",
-				"depression and anxiety",
-				"depression",
-				"weakness"
+				"head: ache (8) <br> body: sleepiness (10) <br> mental: overthinking (8)",
+				"body: nausea (9) <br> body: fever: (7)",
+				"head: throbbing pain (10) <br> mental: distracted (8)",
+				"abdomen: stomach pain (6) <br> body: nausea (4) <br> body: fever (6)",
+				"body: muscle weakness (5) <br> body: mutliple stiff joints (7)",
+				"chest: trouble breathing (8)",
+				"body: inability to sleep (9) <br> body: fatigue (10) <br> mental: depression (6) <br> mental: anxious (6)",
+				"body: inability to sleep (8) <br> body: fatigue (9) <br> mental: depression (4)",
+				"body: sleepiness (8) <br> body: fatigue (8) <br> mental: depression (6)",
+				"body: muscle weakness (7)"
 			];
 
 
@@ -385,7 +409,7 @@
 		function select(val)
 	   {
 			var entryInfo = document.getElementById("entry-info-text");
-			entryInfo.innerHTML = entryContent[val - 1];
+			entryInfo.innerHTML = entryContent[(entryContent) - 1 - val];
 			
 			entryInfo.classList.remove("test");
 
