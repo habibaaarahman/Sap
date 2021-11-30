@@ -11,7 +11,6 @@ NOTES
   with any values).All values would lead to the same single-user interface
 
 - In the main part of the website : We used javaScript and HTML referencing to link pages
- ![Image](/readme1.PNG) 
 
 
 
